@@ -55,6 +55,14 @@ class MyTest(unittest.TestCase):
         # See if the self.myclass object exists
         self.assertTrue(result)
 
+    def test_save(self):
+        """Check that save operates cleanly"""
+
+        self.myclass = Presentation(title='My Title', author='My Name', dated=None,
+            template_name="gray")
+        
+        self.myclass.save( filename=os.path.join(here,'my_ppt'), launch=False)
+
 
 if __name__ == '__main__':
     # Can test just this file from command prompt
