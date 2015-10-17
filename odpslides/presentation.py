@@ -43,9 +43,13 @@ import os
 import sys
 import zipfile
 import time
+from copy import deepcopy
 
 from odpslides.template_xml_file import TemplateXML_File
 from odpslides.find_obj import find_elem_w_attrib, NS_attrib, NS
+
+from odpslides.master_styles import init_master_styles
+from odpslides.content import add_title_chart
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -117,7 +121,7 @@ class Presentation(object):
         :type  dated: str, unicode or None
 
         :keyword str template_name: Name of presentation template 
-            (can be "plain", "blue", "gray")  (default=="plain")
+            (can be "plain", "grad", "gray")  (default=="plain")
         
         :return: None
         :rtype: None
@@ -126,17 +130,41 @@ class Presentation(object):
         
         self.filename = None
         self.template_name = template_name
-        self.template_fname = 'ppt_%s.odp'%template_name.lower()
+        self.template_fname = 'ppt_all_layouts_%s.odp'%template_name.lower()
         self.slideL = [] # list of slide pages content
         
-
+        # ................. Need to do some prep work with content_xml_obj ...............
+        # Get ref auto_styles and presentation sections for document
         self.content_xml_obj = load_template_xml_from_odp( self.template_fname, 'content.xml' )
+        
+        # Need styles info as part of prep work
+        self.styles_xml_obj = load_template_xml_from_odp( self.template_fname, 'styles.xml' )
+        
+        init_master_styles( self )
+        
+        # Get ref auto_styles sections for document
+        self.auto_styles = self.content_xml_obj.find('office:automatic-styles')
+        print('auto_styles =', self.auto_styles)
+        self.body_presentation = self.content_xml_obj.find('office:body/office:presentation')
+        print('presentation =', self.body_presentation)
+        add_title_chart( self, title='My Title', subtitle='My Subtitle' )
+        
+        
+        #self.ref_auto_styles = deepcopy( self.auto_styles )
+        self.new_styleL = [] # style:style elements to be added to auto_styles
+        self.auto_styles.clear_children() # <== add new_styleL when saveing
+        
+        # Get ref presentation sections for document
+        #self.ref_presentation = deepcopy( self.body_presentation )
+        self.new_draw_pageL = [] # draw:page elements to be added to presentation
+        self.body_presentation.clear_children() # <== add new_draw_pageL when saving
+        # ............... end of content_xml_obj prep work .......................
+        
         self.meta_xml_obj = load_template_xml_from_odp( self.template_fname, 'meta.xml' )
         self.settings_xml_obj = load_template_xml_from_odp( self.template_fname, 'settings.xml' )
         
         
         self.mimetype_str = 'application/vnd.oasis.opendocument.presentation'
-        self.styles_xml_obj = load_template_xml_from_odp( self.template_fname, 'styles.xml' )
         
         # Need to fix attribute xmlns:number in all the date-style entries... An error in ElementTree
         #dateStyleL = find_elem_w_attrib('office:automatic-styles/number:date-style', self.styles_xml_obj, self.styles_xml_obj.rev_nsOD, return_list=True)
@@ -233,6 +261,16 @@ class Presentation(object):
             full_png_path = os.path.join( here, 'templates', 'image1.png' )
             zipfileobj.write( full_png_path, 'media/image1.png')
 
+        #  ========== content.xml ===================
+        # Rebuild content_xml_obj for each save
+        self.auto_styles.clear_children() # <== add new_styleL when saveing
+        self.body_presentation.clear_children() # <== add new_draw_pageL when saving
+
+        for new_style in self.new_styleL:# style:style elements to be added to auto_styles
+            self.auto_styles.append( new_style )
+            
+        for new_draw_page in self.new_draw_pageL:# draw:page elements to be added to presentation
+            self.body_presentation.append( new_draw_page )
 
         zipfile_insert( zipfileobj, 'content.xml', self.content_xml_obj.tostring())
         
@@ -254,6 +292,6 @@ class Presentation(object):
 
 if __name__ == '__main__':
     C = Presentation(title='My Title', author='My Name', dated=None,
-        template_name="gray")
+        template_name="plain")
         
-    C.save( filename='my_ppt', launch=False)
+    C.save( filename='my_ppt', launch=0)

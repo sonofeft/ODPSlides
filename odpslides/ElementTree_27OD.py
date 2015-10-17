@@ -416,6 +416,9 @@ class Element(object):
         self._children = []
         self.text = self.tail = None
 
+    def clear_children(self):
+        self._children = []
+
     ##
     # Gets an element attribute.  Equivalent to <b>attrib.get</b>, but
     # some implementations may handle this a bit more efficiently.

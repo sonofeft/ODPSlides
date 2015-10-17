@@ -56,3 +56,5 @@ docs/_build/
 # PyBuilder
 target/
 odpslides/tests/my_ppt.odp
+odpslides/my_ppt.odp
+odpslides/backup/content.py

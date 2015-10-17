@@ -345,6 +345,9 @@ class Element:
         self._children = []
         self.text = self.tail = None
 
+    def clear_children(self):
+        self._children = []
+
     def get(self, key, default=None):
         """Get element attribute.
 
