@@ -419,6 +419,9 @@ class Element(object):
     def clear_children(self):
         self._children = []
 
+    def clear_attrib(self):
+        self.attrib.clear()
+
     ##
     # Gets an element attribute.  Equivalent to <b>attrib.get</b>, but
     # some implementations may handle this a bit more efficiently.

@@ -147,7 +147,6 @@ class Presentation(object):
         print('auto_styles =', self.auto_styles)
         self.body_presentation = self.content_xml_obj.find('office:body/office:presentation')
         print('presentation =', self.body_presentation)
-        add_title_chart( self, title='My Title', subtitle='My Subtitle' )
         
         
         #self.ref_auto_styles = deepcopy( self.auto_styles )
@@ -265,6 +264,9 @@ class Presentation(object):
         # Rebuild content_xml_obj for each save
         self.auto_styles.clear_children() # <== add new_styleL when saveing
         self.body_presentation.clear_children() # <== add new_draw_pageL when saving
+        
+        for new_page in self.slideL:
+            self.body_presentation.append( new_page )
 
         for new_style in self.new_styleL:# style:style elements to be added to auto_styles
             self.auto_styles.append( new_style )
@@ -288,10 +290,14 @@ class Presentation(object):
         if launch:
             self.launch_application()
 
-
+    def add_title_chart( self, title='My Title', subtitle='My Subtitle' ):
+        
+        add_title_chart( self, title=title, subtitle=subtitle )
 
 if __name__ == '__main__':
     C = Presentation(title='My Title', author='My Name', dated=None,
         template_name="plain")
         
-    C.save( filename='my_ppt', launch=0)
+    C.add_title_chart( title='My Title', subtitle='My Subtitle' )
+    C.save( filename='my_ppt', launch=1)
+    

@@ -348,6 +348,10 @@ class Element:
     def clear_children(self):
         self._children = []
 
+    def clear_attrib(self):
+        self.attrib.clear()
+
+
     def get(self, key, default=None):
         """Get element attribute.
 

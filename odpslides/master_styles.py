@@ -9,12 +9,21 @@ These will act as templates for adding charts.
 
 from odpslides.find_obj import find_elem_w_attrib, elem_set, NS_attrib, NS
 
-_next_a_style_name_int = 0 # used for nameing styles (ex. draw:style-name="a123")
+_max_style_name_int = 0 # used for nameing styles (ex. draw:style-name="a123")
+_max_draw_id_int = 0 # some internal use ???
+
+
 def get_next_a_style():
     """Returns a string like "a123"  """
-    global _next_a_style_name_int
-    _next_a_style_name_int += 1
-    return _next_a_style_name_int
+    global _max_style_name_int
+    _max_style_name_int += 1
+    return 'a%i'%_max_style_name_int
+    
+def get_next_draw_id():
+    """Returns a string like "id123"  """
+    global _max_draw_id_int
+    _max_draw_id_int += 1
+    return 'id%i'%_max_draw_id_int
     
 
 def init_master_styles( presObj ):
@@ -25,26 +34,41 @@ def init_master_styles( presObj ):
     Note:  presentation:object values == presentation:class values
     (i.e. object, subtitle, outline, footer, title, page-number, table, date-time)
     """
-    global _next_a_style_name_int
+    global _max_style_name_int, _max_draw_id_int
     
     # Make some shorter names
     tree_styles = presObj.styles_xml_obj
     tree_content = presObj.content_xml_obj
+    #print(NS('draw:id', tree_styles.rev_nsOD))
     
-    # Find the highest value of _next_a_style_name_int
+    # Find the highest value of _max_style_name_int
+    presObj.style_name_elem_from_nameD = {} # index=style-name (ex. "a123"), value=elem
     for elem in tree_styles.root.iter():
-        aval1 = elem.get( NS('draw:style-name', tree_styles.rev_nsOD) )
-        aval2 = elem.get( NS('text:style-name', tree_styles.rev_nsOD) )
-        aval3 = elem.get( NS('presentation:style-name', tree_styles.rev_nsOD) )
-        for aval in [aval1, aval2, aval3]:
-            if aval:
+        #aval1 = elem.get( NS('draw:style-name', tree_styles.rev_nsOD) )
+        #aval2 = elem.get( NS('text:style-name', tree_styles.rev_nsOD) )
+        #aval3 = elem.get( NS('presentation:style-name', tree_styles.rev_nsOD) )
+        #for aval in [aval1, aval2, aval3]:
+        for aname,aval in elem.items():
+            if aname.endswith('}style-name') and aval.startswith('a'):
                 try:
                     aint = int( aval[1:] )
-                    if aint > _next_a_style_name_int:
-                        _next_a_style_name_int = aint
+                    if aint > _max_style_name_int:
+                        _max_style_name_int = aint
+                    presObj.style_name_elem_from_nameD[aval] = elem
                 except:
                     pass
-    print('Highest value of style from styles.xml is "a%i"'%_next_a_style_name_int)
+                    
+                    
+            if aname == '{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id' and aval.startswith('id'):
+                try:
+                    idint = int( aval[2:] )
+                    if idint > _max_draw_id_int:
+                        _max_draw_id_int = idint
+                except:
+                    pass
+                
+    print('Highest value of style   from styles.xml is "a%i"'%_max_style_name_int)
+    print('Highest value of draw id from styles.xml is "id%i"'%_max_draw_id_int)
     print()
     
     # Build a lookup to select proper style:presentation-page-layout when 
@@ -58,11 +82,13 @@ def init_master_styles( presObj ):
 
     # =================== styles info =========================
     print('='*77)
+
+    # index=style:name of presentation-page-layout,  value=elem
     pres_page_layout_styleL = tree_styles.findall('office:styles/style:presentation-page-layout') # Element objects
     print('Number of presentation-page-layout styles = %i'%len(pres_page_layout_styleL))
-    #page_layout_elem_from_nameD = {} # index=layout name,  value=elem
-    #for pres_page_layout in pres_page_layout_styleL:
-    #    page_layout_elem_from_nameD[ pres_page_layout.get( NS('style:name', tree_styles.rev_nsOD) ) ] = pres_page_layout
+    presObj.page_layout_elem_from_nameD = {} # index=layout name,  value=elem
+    for pres_page_layout in pres_page_layout_styleL:
+        presObj.page_layout_elem_from_nameD[ pres_page_layout.get( NS('style:name', tree_styles.rev_nsOD) ) ] = pres_page_layout
 
     #land_port_styleL =  tree_styles.findall('office:automatic-styles/style:page-layout') # Element objects
     #print('Number of land_port_styleL = %i'%len(land_port_styleL))
@@ -80,7 +106,7 @@ def init_master_styles( presObj ):
     print('Number of master-page styles = %i'%len(master_page_styleL))
 
     # Will need master page Element objects when generating new pages
-    presObj.master_page_elem_from_nameD = {} # index=master name, value=elem
+    presObj.master_page_elem_from_nameD = {} # index=master name, value=elem (master-page Element)
     for master_page in master_page_styleL:
         name = master_page.get('{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name')
         #print( 'Master Page Name = %s'%name )
@@ -95,12 +121,11 @@ def init_master_styles( presObj ):
     print('='*77)
 
     presObj.matching_layout_nameD = {} # index=draw:master-page-name, value=presentation:presentation-page-layout-name
+    presObj.draw_page_elem_from_nameD = {} # index=draw:master-page-name, value=Element obj for draw:page
     for page in page_contentL:
         master_name = page.get( NS('draw:master-page-name', tree_content.rev_nsOD) )
         layout_name = page.get( NS('presentation:presentation-page-layout-name', tree_content.rev_nsOD) )
         print('used master="%60s",  layout="%s"'%(master_name, layout_name)  )
         presObj.matching_layout_nameD[master_name] = layout_name
+        presObj.draw_page_elem_from_nameD[master_name] = page
 
-
-
-    
