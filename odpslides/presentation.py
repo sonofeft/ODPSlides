@@ -101,6 +101,9 @@ def zipfile_insert( zipfileobj, filename, data):
     info.compress_type = zipfile.ZIP_DEFLATED
     zipfileobj.writestr(info, data)
 
+def clear_children( parent ):
+    for child in parent.getchildren():
+        parent.remove( child )
 
 class Presentation(object):
     """
@@ -151,12 +154,12 @@ class Presentation(object):
         
         #self.ref_auto_styles = deepcopy( self.auto_styles )
         self.new_styleL = [] # style:style elements to be added to auto_styles
-        self.auto_styles.clear_children() # <== add new_styleL when saveing
+        clear_children( self.auto_styles ) # <== add new_styleL when saveing
         
         # Get ref presentation sections for document
         #self.ref_presentation = deepcopy( self.body_presentation )
         self.new_draw_pageL = [] # draw:page elements to be added to presentation
-        self.body_presentation.clear_children() # <== add new_draw_pageL when saving
+        clear_children( self.body_presentation ) # <== add new_draw_pageL when saving
         # ............... end of content_xml_obj prep work .......................
         
         self.meta_xml_obj = load_template_xml_from_odp( self.template_fname, 'meta.xml' )
@@ -262,8 +265,8 @@ class Presentation(object):
 
         #  ========== content.xml ===================
         # Rebuild content_xml_obj for each save
-        self.auto_styles.clear_children() # <== add new_styleL when saveing
-        self.body_presentation.clear_children() # <== add new_draw_pageL when saving
+        clear_children( self.auto_styles ) # <== add new_styleL when saveing
+        clear_children( self.body_presentation ) # <== add new_draw_pageL when saving
         
         for new_page in self.slideL:
             self.body_presentation.append( new_page )

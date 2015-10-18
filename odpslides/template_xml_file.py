@@ -303,6 +303,7 @@ if __name__ == "__main__":
     ss = TFile.find( 'office:body/office:spreadsheet' )
     print( 'ss =', ss )
     print( 'ss.tag =', ss.tag )
+    print( 'type(ss) =', type(ss) )
     print()
 
     ss2 = TFile.find('{urn:oasis:names:tc:opendocument:xmlns:office:1.0}spreadsheet')

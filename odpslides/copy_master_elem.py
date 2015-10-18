@@ -31,7 +31,7 @@ def new_draw_page(presObj, master_elem): # master_elem is master-page Element
     new_style_obj = deepcopy( presObj.style_name_elem_from_nameD[old_aval] )
     
     # turn style:master-page into draw:page 
-    new_style_obj.clear_attrib()
+    new_style_obj.attrib.clear()
     new_style_obj.tag = NS('draw:page', tree_content.rev_nsOD)
     new_style_obj.set( NS('style:family', tree_content.rev_nsOD), "drawing-page")
     

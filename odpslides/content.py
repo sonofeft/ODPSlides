@@ -8,7 +8,7 @@ Fill the Presentation objects lists: new_styleL and new_draw_pageL
 """
 from collections import OrderedDict
 from odpslides.find_obj import find_elem_w_attrib, elem_set, NS_attrib, NS
-from odpslides.pres_class_obj import get_pres_class_obj
+from odpslides.pres_class_obj import get_presentation_class_obj
 from odpslides.copy_master_elem import new_draw_page
 
 def add_title_chart( presObj, title='My Title', subtitle='My Subtitle' ):
@@ -42,7 +42,8 @@ def add_title_chart( presObj, title='My Title', subtitle='My Subtitle' ):
         master_elem_draw_frame = master_elem_draw_frameL[i]
         print( placeholder_elem.tag,  master_elem_draw_frame.tag)
         
-        draw_frame = get_pres_class_obj(presObj, placeholder_elem, master_elem_draw_frame)
+        draw_frame = get_presentation_class_obj(presObj, placeholder_elem, master_elem_draw_frame,
+            **{'title':title, 'subtitle':subtitle})
         
         if draw_frame is not None:
             draw_page.append( draw_frame )
@@ -50,12 +51,4 @@ def add_title_chart( presObj, title='My Title', subtitle='My Subtitle' ):
     
     presObj.slideL.append( draw_page )
     
-    for elem in draw_page.iter():
-        if elem.tag == '{urn:oasis:names:tc:opendocument:xmlns:style:1.0}master-page':
-            print('WARN', elem)
-            
-        for atr,val in elem.items():
-            if atr == '{urn:oasis:names:tc:opendocument:xmlns:style:1.0}master-page':
-                print('WARN', atr,val)
-        
     
