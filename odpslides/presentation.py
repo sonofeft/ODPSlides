@@ -49,7 +49,7 @@ from odpslides.template_xml_file import TemplateXML_File
 from odpslides.find_obj import find_elem_w_attrib, NS_attrib, NS
 
 from odpslides.master_styles import init_master_styles
-from odpslides.content import add_title_chart
+from odpslides.content import add_title_chart, add_title_text_chart
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -293,13 +293,20 @@ class Presentation(object):
             self.launch_application()
 
     def add_title_chart( self, title='My Title', subtitle='My Subtitle' ):
-        
         add_title_chart( self, title=title, subtitle=subtitle )
+        
+    def add_title_text_chart( self, title='My Title', 
+                             outline='A long drawn-out piece of text\rWith multiple lines.' ):
+        add_title_text_chart(self, title=title, outline=outline)
 
 if __name__ == '__main__':
     C = Presentation(title='My Title', author='My Name', dated=None,
         template_name="plain")
         
     C.add_title_chart( title='My Title', subtitle='My Subtitle' )
+    
+    sL = ['1st','\t2nd','\t\t3rd','            4th','Normal 1st','    Indent 2nd']
+    C.add_title_text_chart( title='My Outline Title', outline=sL )
+    
     C.save( filename='my_ppt', launch=1)
     

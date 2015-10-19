@@ -93,7 +93,7 @@ setup(
     # your project is installed.
     install_requires = requires,  # read from requirements.txt
 
-    tests_require = ['nose','coverage'], # ...OR... ['pytest','pytest-cov']
+    tests_require = ['nose'], # ...OR... ['pytest','pytest-cov']
     test_suite='odpslides.tests', # allows "setup.py test" to work
 
     # List additional groups of dependencies here (e.g. development
@@ -102,7 +102,6 @@ setup(
     # $ pip install -e .[dev,test]
     extras_require = {
         'dev': ['check-manifest'],
-        'test': ['coverage'],
     },
 
     zip_safe= False,

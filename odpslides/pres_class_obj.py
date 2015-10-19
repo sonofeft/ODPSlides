@@ -8,7 +8,7 @@ Build each of the presentation:class objects.
 """
 from odpslides.find_obj import find_elem_w_attrib, elem_set, NS_attrib, NS
 import odpslides.copy_master_elem as copy_master_elem
-
+from copy import deepcopy
 
 def get_presentation_class_obj(presObj, placeholder_elem, master_elem_draw_frame,
                                    **inpD):
@@ -55,6 +55,37 @@ def get_presentation_class_obj(presObj, placeholder_elem, master_elem_draw_frame
         
         return draw_frame
 
+    
+    elif pres_object_name == 'outline':
+        draw_frame = copy_master_elem.copy(presObj, master_elem_draw_frame )
+        if 'outlineL' in inpD:
+            #print('Found title in inpD with value =',inpD['title'])
+            text_box = draw_frame.find( 'draw:text-box', tree_content.rev_nsOD )
+            text_listL = draw_frame.findall( 'draw:text-box/text:list', tree_content.rev_nsOD )
+            max_indent = len( text_listL )-1
+            
+            if (text_box is not None) and text_listL:
+                print('max_indent = %i'%max_indent)
+                text_box.clear_children()
+                
+                for n, sInp in inpD['outlineL']:
+                    n = min(n, max_indent)
+                    text_list = deepcopy( text_listL[n] )
+                    
+                    text_span = None
+                    target_tag = NS('text:span', tree_content.rev_nsOD)
+                    for elem in text_list.iter():
+                        if elem.tag == target_tag:
+                            text_span = elem
+                            break
+                    
+                    if text_span is not None:
+                        text_span.text = sInp
+                        text_box.append( text_list )
+        
+        return draw_frame
+
+    # If nothing specific is done, return None
     return None
     
     
