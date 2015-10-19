@@ -102,8 +102,7 @@ def zipfile_insert( zipfileobj, filename, data):
     zipfileobj.writestr(info, data)
 
 def clear_children( parent ):
-    for child in parent.getchildren():
-        parent.remove( child )
+    parent.clear_children()
 
 class Presentation(object):
     """

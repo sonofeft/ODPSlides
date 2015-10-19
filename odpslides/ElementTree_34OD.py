@@ -1663,7 +1663,7 @@ class XMLParser:
             del self.parser, self._parser
             del self.target, self._target
 
-
+# ............ ODPSlides needs to disable C accelerators ...............
 # Import the C accelerators
 try:
     # Element is going to be shadowed by the C implementation. We need to keep
@@ -1672,6 +1672,6 @@ try:
     _Element_Py = Element
 
     # Element, SubElement, ParseError, TreeBuilder, XMLParser
-    from _elementtree import *
+    #from _elementtree import *
 except ImportError:
     pass
