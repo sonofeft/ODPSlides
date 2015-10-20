@@ -67,8 +67,30 @@ def get_presentation_class_obj(presObj, placeholder_elem, master_elem_draw_frame
         
         return draw_frame
     
+    elif pres_object_name == 'footer' and presObj.footer:
+        draw_frame = copy_master_elem.copy(presObj, master_elem_draw_frame )
+            
+        text_span = draw_frame.find( 'draw:text-box/text:p/text:span', tree_content.rev_nsOD )
+        if text_span is not None:
+            text_span.text = '%s'%presObj.footer
+        
+        if presObj.footer_font_color:
+            hex_col_str = getValidHexStr( presObj.footer_font_color, "#000000") # default to black
+            set_all_font_colors(presObj, draw_frame, hex_col_str )
+        
+        return draw_frame
     
-    if pres_object_name == 'title':
+    elif pres_object_name == 'page-number' and presObj.show_page_number:
+        draw_frame = copy_master_elem.copy(presObj, master_elem_draw_frame )
+        
+        if presObj.page_number_font_color:
+            hex_col_str = getValidHexStr( presObj.page_number_font_color, "#000000") # default to black
+            set_all_font_colors(presObj, draw_frame, hex_col_str )
+        
+        return draw_frame
+    
+    
+    elif pres_object_name == 'title':
         draw_frame = copy_master_elem.copy(presObj, master_elem_draw_frame )
         if 'title' in inpD:
             #print('Found title in inpD with value =',inpD['title'])

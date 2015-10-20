@@ -120,8 +120,8 @@ class Presentation(object):
     def __init__(self, title='My Title', author='My Name', 
         template_name="plain", 
         show_date=False, date_font_color='gray',
-        footer="",
-        show_page_number=False):
+        footer="", footer_font_color='gray',
+        show_page_number=False, page_number_font_color="gray"):
             
         """
         Inits Presentation with filename and blank content.
@@ -138,6 +138,10 @@ class Presentation(object):
         :type  show_date: bool
         :keyword None date_font_color:  (default=="gray")
         :type  date_font_color: str or unicode
+        :keyword None footer_font_color:  (default=="gray")
+        :type  footer_font_color: str or unicode
+        :keyword None page_number_font_color:  (default=="gray")
+        :type  page_number_font_color: str or unicode
         
         :keyword str footer: Text put at bottom of every page (default=="")
         :type  footer: str or unicode
@@ -158,7 +162,10 @@ class Presentation(object):
         self.date_font_color = date_font_color
         
         self.footer = footer
+        self.footer_font_color = footer_font_color
+        
         self.show_page_number = show_page_number
+        self.page_number_font_color = page_number_font_color
         
         self.slideL = [] # list of slide pages content
         
@@ -351,8 +358,8 @@ if __name__ == '__main__':
     C = Presentation(title='My Title', author='My Name',
         template_name="plain", 
         show_date=True, date_font_color='coral',
-        footer="",
-        show_page_number=False)
+        footer="testing 123", footer_font_color='lime',
+        show_page_number=True, page_number_font_color='dm')
         
     C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color="darkmagenta",
                         subtitle_font_color="darkcyan")

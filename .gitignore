@@ -2,6 +2,11 @@
 __pycache__/
 *.py[cod]
 
+backup/
+
+odpslides/tests/*.odp
+odpslides/examples/*.odp
+
 # C extensions
 *.so
 
@@ -58,5 +63,3 @@ target/
 odpslides/tests/my_ppt.odp
 odpslides/my_ppt.odp
 odpslides/backup/content.py
-odpslides/my_ppt.odp
-odpslides/my_ppt.odp
