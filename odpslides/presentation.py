@@ -44,11 +44,12 @@ import sys
 import zipfile
 import time
 from copy import deepcopy
+import datetime
 
 from odpslides.template_xml_file import TemplateXML_File
 from odpslides.find_obj import find_elem_w_attrib, NS_attrib, NS
 
-from odpslides.master_styles import init_master_styles
+from odpslides.master_styles import init_master_styles, get_next_a_style
 from odpslides.content import add_title_chart, add_title_text_chart
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -104,14 +105,24 @@ def zipfile_insert( zipfileobj, filename, data):
 def clear_children( parent ):
     parent.clear_children()
 
+class BadNewStyleError(Exception):
+     def __init__(self, value):
+         self.value = value
+     def __str__(self):
+         return repr(self.value)
+
 class Presentation(object):
     """
     Creates OpenDocument Presentations for Microsoft PowerPoint, LibreOffice and OpenOffice.
     Output is a *.odp file.
     """
 
-    def __init__(self, title='My Title', author='My Name', dated=None,
-        template_name="plain"):
+    def __init__(self, title='My Title', author='My Name', 
+        template_name="plain", 
+        show_date=False, date_font_color='gray',
+        footer="",
+        show_page_number=False):
+            
         """
         Inits Presentation with filename and blank content.
         
@@ -119,11 +130,20 @@ class Presentation(object):
         :type  title: str or unicode
         :keyword str author: Name of Author, put on main title page (default=='My Name')
         :type  author: str or unicode
-        :keyword None dated: Date put on main title page (if blank then today) (default==None)
-        :type  dated: str, unicode or None
 
         :keyword str template_name: Name of presentation template 
             (can be "plain", "grad", "gray")  (default=="plain")
+            
+        :keyword bool show_date: Flag to show current date or date_text string (default==False)
+        :type  show_date: bool
+        :keyword None date_font_color:  (default=="gray")
+        :type  date_font_color: str or unicode
+        
+        :keyword str footer: Text put at bottom of every page (default=="")
+        :type  footer: str or unicode
+                
+        :keyword bool show_page_number: Flag to show page numbers or not (default==False)
+        :type  show_page_number: bool
         
         :return: None
         :rtype: None
@@ -133,6 +153,13 @@ class Presentation(object):
         self.filename = None
         self.template_name = template_name
         self.template_fname = 'ppt_all_layouts_%s.odp'%template_name.lower()
+                
+        self.show_date = show_date
+        self.date_font_color = date_font_color
+        
+        self.footer = footer
+        self.show_page_number = show_page_number
+        
         self.slideL = [] # list of slide pages content
         
         # ................. Need to do some prep work with content_xml_obj ...............
@@ -188,6 +215,23 @@ class Presentation(object):
         t = time.localtime()
         stamp = "%04d-%02d-%02dT%02d:%02d:%02d" % (t[0], t[1], t[2], t[3], t[4], t[5])
         return stamp
+
+    def add_new_a_style(self, style_elem):
+        """
+        get new style:name for style_elem and add it to self.new_styleL as well
+        as self.style_name_elem_from_nameD
+        """
+        
+        new_a_val = get_next_a_style()
+        style_elem.set( '{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name', new_a_val )
+        self.new_styleL.append( style_elem )
+        self.style_name_elem_from_nameD[new_a_val] = style_elem
+        
+        if style_elem is None:
+            raise BadNewStyleError('None for new style')
+            
+        return new_a_val
+        
 
     # make sure any added Element objects are in nsOD, rev_nsOD and qnameOD of parent_obj
     def add_tag(self, tag, parent_obj ):
@@ -292,21 +336,30 @@ class Presentation(object):
         if launch:
             self.launch_application()
 
-    def add_title_chart( self, title='My Title', subtitle='My Subtitle' ):
-        add_title_chart( self, title=title, subtitle=subtitle )
+    def add_title_chart( self, title='My Title', subtitle='My Subtitle', title_font_color=None,
+                            subtitle_font_color=None):
+        add_title_chart( self, title=title, subtitle=subtitle, title_font_color=title_font_color,
+                         subtitle_font_color=subtitle_font_color)
         
-    def add_title_text_chart( self, title='My Title', 
-                             outline='A long drawn-out piece of text\rWith multiple lines.' ):
-        add_title_text_chart(self, title=title, outline=outline)
+    def add_title_text_chart( self, title='My Title', title_font_color=None,
+                             outline='A long drawn-out piece of text\rWith multiple lines.',
+                             outline_font_color=None):
+        add_title_text_chart(self, title=title, outline=outline, title_font_color=title_font_color,
+                             outline_font_color=outline_font_color)
 
 if __name__ == '__main__':
-    C = Presentation(title='My Title', author='My Name', dated=None,
-        template_name="plain")
+    C = Presentation(title='My Title', author='My Name',
+        template_name="plain", 
+        show_date=True, date_font_color='coral',
+        footer="",
+        show_page_number=False)
         
-    C.add_title_chart( title='My Title', subtitle='My Subtitle' )
+    C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color="darkmagenta",
+                        subtitle_font_color="darkcyan")
     
-    sL = ['1st','\t2nd','\t\t3rd','            4th','Normal 1st','    Indent 2nd']
-    C.add_title_text_chart( title='My Outline Title', outline=sL )
+    sL = ['1st','\t2nd','\t\t3rd','            4th','Normal < 1st but > 9','    Indent 2nd']
+    C.add_title_text_chart( title='My Outline Title', outline=sL, title_font_color="darkgreen",
+                            outline_font_color="darkblue")
     
     C.save( filename='my_ppt', launch=1)
     

@@ -6,9 +6,34 @@ from __future__ import print_function
 Build each of the presentation:class objects.
 (i.e. object, subtitle, outline, footer, title, page-number, table, date-time)
 """
+from copy import deepcopy
+
+from color_utils import getValidHexStr
 from odpslides.find_obj import find_elem_w_attrib, elem_set, NS_attrib, NS
 import odpslides.copy_master_elem as copy_master_elem
-from copy import deepcopy
+
+COLOR_TAG = '{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color'
+TEXT_STYLE_NAME_ATTR_TAG = '{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name'
+TEXT_SPAN_TAG = '{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span'
+
+def set_all_font_colors(presObj, draw_frame, hex_col_str ):
+    print('_'*55)
+    print('Setting all text:style-name to color=',hex_col_str)
+    for elem in draw_frame.iter():
+        if elem.tag == TEXT_SPAN_TAG:
+            
+            # find text:style-name 
+            style_name = elem.get( TEXT_STYLE_NAME_ATTR_TAG, None )
+            if style_name is not None:
+                print('    found text:style-name element')
+                
+                style_elem = presObj.style_name_elem_from_nameD[ style_name ]
+                for selem in style_elem.iter():
+                    scolor = selem.get(COLOR_TAG, None)
+                    if scolor is not None:
+                        print('        found fo:color element')
+                        selem.set( COLOR_TAG, hex_col_str )
+
 
 def get_presentation_class_obj(presObj, placeholder_elem, master_elem_draw_frame,
                                    **inpD):
@@ -33,6 +58,16 @@ def get_presentation_class_obj(presObj, placeholder_elem, master_elem_draw_frame
     
     pres_object_name = placeholder_elem.get( NS('presentation:object', tree_styles.rev_nsOD) )
     
+    if pres_object_name == 'date-time' and presObj.show_date:
+        draw_frame = copy_master_elem.copy(presObj, master_elem_draw_frame )
+        
+        if presObj.date_font_color:
+            hex_col_str = getValidHexStr( presObj.date_font_color, "#000000") # default to black
+            set_all_font_colors(presObj, draw_frame, hex_col_str )
+        
+        return draw_frame
+    
+    
     if pres_object_name == 'title':
         draw_frame = copy_master_elem.copy(presObj, master_elem_draw_frame )
         if 'title' in inpD:
@@ -41,6 +76,10 @@ def get_presentation_class_obj(presObj, placeholder_elem, master_elem_draw_frame
             
             if text_span is not None:
                 text_span.text = inpD['title']
+                
+            if 'title_font_color' in inpD:
+                hex_col_str = getValidHexStr( inpD['title_font_color'], "#000000") # default to black
+                set_all_font_colors(presObj, draw_frame, hex_col_str )
         
         return draw_frame
     
@@ -52,6 +91,10 @@ def get_presentation_class_obj(presObj, placeholder_elem, master_elem_draw_frame
             
             if text_span is not None:
                 text_span.text = inpD['subtitle']
+                
+            if 'subtitle_font_color' in inpD:
+                hex_col_str = getValidHexStr( inpD['subtitle_font_color'], "#999999") # default to gray
+                set_all_font_colors(presObj, draw_frame, hex_col_str )
         
         return draw_frame
 
@@ -82,6 +125,10 @@ def get_presentation_class_obj(presObj, placeholder_elem, master_elem_draw_frame
                     if text_span is not None:
                         text_span.text = sInp
                         text_box.append( text_list )
+                
+            if 'outline_font_color' in inpD:
+                hex_col_str = getValidHexStr( inpD['outline_font_color'], "#000000") # default to black
+                set_all_font_colors(presObj, draw_frame, hex_col_str )
         
         return draw_frame
 

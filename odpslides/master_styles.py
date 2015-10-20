@@ -41,6 +41,9 @@ def init_master_styles( presObj ):
     tree_content = presObj.content_xml_obj
     #print(NS('draw:id', tree_styles.rev_nsOD))
     
+    STYLE_NAME_ATTRIB_NAME = NS('style:name', tree_styles.rev_nsOD)
+    DRAW_ID_ATTRIB_NAME = NS('draw:id', tree_styles.rev_nsOD)
+    
     # Find the highest value of _max_style_name_int
     presObj.style_name_elem_from_nameD = {} # index=style-name (ex. "a123"), value=elem
     for elem in tree_styles.root.iter():
@@ -48,18 +51,22 @@ def init_master_styles( presObj ):
         #aval2 = elem.get( NS('text:style-name', tree_styles.rev_nsOD) )
         #aval3 = elem.get( NS('presentation:style-name', tree_styles.rev_nsOD) )
         #for aval in [aval1, aval2, aval3]:
-        for aname,aval in elem.items():
-            if aname.endswith('}style-name') and aval.startswith('a'):
+        aval = elem.get(STYLE_NAME_ATTRIB_NAME, None)
+        #for aname,aval in elem.items():
+        if aval is not None:
+            #if aname.endswith('}style-name') and aval.startswith('a'):
+            if aval.startswith('a'):
                 try:
                     aint = int( aval[1:] )
                     if aint > _max_style_name_int:
                         _max_style_name_int = aint
                     presObj.style_name_elem_from_nameD[aval] = elem
                 except:
-                    pass
+                    print('FAILED to get integer of style: "%s"'%aval)
                     
-                    
-            if aname == '{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id' and aval.startswith('id'):
+        id_val = elem.get(DRAW_ID_ATTRIB_NAME, None)
+        if id_val is not None:
+            if id_val.startswith('id'):
                 try:
                     idint = int( aval[2:] )
                     if idint > _max_draw_id_int:
