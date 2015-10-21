@@ -43,6 +43,11 @@ def init_master_styles( presObj ):
     
     STYLE_NAME_ATTRIB_NAME = NS('style:name', tree_styles.rev_nsOD)
     DRAW_ID_ATTRIB_NAME = NS('draw:id', tree_styles.rev_nsOD)
+    DRAW_GRADIENT_TAG = NS('draw:gradient', tree_styles.rev_nsOD)
+    DRAW_START_COLOR_ATTR = NS('draw:start-color', tree_styles.rev_nsOD)
+    DRAW_END_COLOR_ATTR = NS('draw:end-color', tree_styles.rev_nsOD)
+    DRAW_ANGLE_ATTR = NS('draw:angle', tree_styles.rev_nsOD)
+    DRAW_STYLE_ATTR = NS('draw:style', tree_styles.rev_nsOD)
     
     # Find the highest value of _max_style_name_int
     presObj.style_name_elem_from_nameD = {} # index=style-name (ex. "a123"), value=elem
@@ -73,7 +78,18 @@ def init_master_styles( presObj ):
                         _max_draw_id_int = idint
                 except:
                     pass
-                
+
+        if elem.tag == DRAW_GRADIENT_TAG:
+            elem.set(DRAW_ANGLE_ATTR, '%s'%presObj.grad_angle)
+            elem.set(DRAW_STYLE_ATTR, '%s'%presObj.grad_style)
+            
+            if presObj.grad_start_color:
+                elem.set(DRAW_START_COLOR_ATTR, presObj.grad_start_color)
+            
+            if presObj.grad_end_color:
+                elem.set(DRAW_END_COLOR_ATTR,  presObj.grad_end_color)
+
+
     print('Highest value of style   from styles.xml is "a%i"'%_max_style_name_int)
     print('Highest value of draw id from styles.xml is "id%i"'%_max_draw_id_int)
     print()

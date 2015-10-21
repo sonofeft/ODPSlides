@@ -15,7 +15,5 @@ TODO
 * Bullet chars are "funky" in OpenOffice/LibreOffice
   (LEAVE IT FOR NOW... LOOKS LIKE ALL ARE BY DESIGN)
 
-* Set font color
-
-* Date mysteriously appears
+* Beef up unittests
 

@@ -119,6 +119,7 @@ class Presentation(object):
 
     def __init__(self, title='My Title', author='My Name', 
         template_name="plain", 
+        grad_start_color="", grad_end_color="", grad_angle=0, grad_style='linear',
         show_date=False, date_font_color='gray',
         footer="", footer_font_color='gray',
         show_page_number=False, page_number_font_color="gray"):
@@ -133,7 +134,19 @@ class Presentation(object):
 
         :keyword str template_name: Name of presentation template 
             (can be "plain", "grad", "gray")  (default=="plain")
-            
+
+        :keyword str grad_start_color: Gradient start color if template_name is "grad" (default=="")
+        :type  grad_start_color: str or unicode
+        :keyword str grad_end_color: Gradient end color if template_name is "grad" (default=="")
+        :type  grad_end_color: str or unicode
+        
+        :keyword int grad_angle: Angle of gradient if template_name is "grad" (default==0)
+        :type grad_angle: int
+        
+        :keyword str grad_style: Style of gradient = linear, radial, axial, rectangular, ellipsoid or square.
+                                 LibreOffice seems to struggle with some grad_style settings.(default==linear)
+        :type grad_style: str or unicode
+
         :keyword bool show_date: Flag to show current date or date_text string (default==False)
         :type  show_date: bool
         :keyword None date_font_color:  (default=="gray")
@@ -157,6 +170,11 @@ class Presentation(object):
         self.filename = None
         self.template_name = template_name
         self.template_fname = 'ppt_all_layouts_%s.odp'%template_name.lower()
+        
+        self.grad_start_color = grad_start_color
+        self.grad_end_color = grad_end_color
+        self.grad_angle = grad_angle
+        self.grad_style = grad_style
                 
         self.show_date = show_date
         self.date_font_color = date_font_color
@@ -356,7 +374,8 @@ class Presentation(object):
 
 if __name__ == '__main__':
     C = Presentation(title='My Title', author='My Name',
-        template_name="plain", 
+        template_name="grad", 
+        grad_start_color="#99ff99", grad_end_color="#ffffff", grad_angle=0, grad_style='linear',
         show_date=True, date_font_color='coral',
         footer="testing 123", footer_font_color='lime',
         show_page_number=True, page_number_font_color='dm')
