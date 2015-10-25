@@ -10,8 +10,9 @@ import zipfile
 import time
 import datetime
 
-from zip_file import zipfile_insert
-import init_internal_odp_files
+from odpslides.zip_file import zipfile_insert
+import odpslides.init_internal_odp_files as init_internal_odp_files
+from odpslides.page import Page
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -56,7 +57,7 @@ class Presentation(object):
         self.new_content_styleL = [] # style:style elements to be added to auto_styles
         self.new_content_pageL = [] # draw:page elements to be added to presentation
         
-
+        # style names and id values start at 0 (i.e. "a0", "a1", ... and "id0", "id1", ...)
         self.max_style_name_int = -1 # used for nameing styles (ex. draw:style-name="a123")
         self.max_draw_id_int = -1 # some internal use ???
 
@@ -140,9 +141,9 @@ class Presentation(object):
         for style_elem in self.new_content_styleL:
             content_elem.acclimate_new_elem( style_elem )
             auto_style_elem.append( style_elem )
-        for draw_page in self.new_content_pageL:
-            content_elem.acclimate_new_elem( draw_page )
-            body_pres_elem.append( draw_page )
+        for page in self.new_content_pageL:
+            content_elem.acclimate_new_elem( page.draw_page )
+            body_pres_elem.append( page.draw_page )
         
         # <<<<<<<<<<<<<<<< Add new content objects here ===================
         zipfile_insert( zipfileobj, 'content.xml', content_elem)
@@ -161,10 +162,15 @@ class Presentation(object):
         if launch:
             self.launch_application()
  
+
+    def add_title_chart( self, title='My Title', subtitle='My Subtitle', title_font_color='',
+                            subtitle_font_color=''):
+                                
+        inpD = {'title_font_color':title_font_color, 'subtitle_font_color':subtitle_font_color}
+        new_page = Page( self, page_type="plain", disp_name="Title Slide", **inpD)
+        self.new_content_pageL.append( new_page )
  
 if __name__ == '__main__':
-    
-    import plain_pages
     
     C = Presentation(title='My Title', author='My Name',
         background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
@@ -173,7 +179,7 @@ if __name__ == '__main__':
         footer="testing 123", footer_font_color='lime',
         show_page_number=True, page_number_font_color='dm')
     
-    plain_pages.add_title_chart( C, title='My Title', subtitle='My Subtitle', title_font_color='dm',
+    C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='dm',
                         subtitle_font_color='coral')
     
     C.save( filename='my_ppt.odp', launch=0 )

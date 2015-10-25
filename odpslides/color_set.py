@@ -3,8 +3,8 @@ from __future__ import unicode_literals
 from __future__ import absolute_import
 from __future__ import print_function
 
-from color_utils import getValidHexStr
-from namespace import XMLNS_STR, force_to_short, force_to_tag
+from odpslides.color_utils import getValidHexStr
+from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 
 DRAW_FRAME_TAG = force_to_tag( 'draw:frame' )
 TEXT_SPAN_TAG =  force_to_tag( 'text:span' )

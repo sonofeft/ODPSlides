@@ -7,6 +7,7 @@ graft odpslides
 recursive-include odpslides/examples *
 recursive-include odpslides/tests *
 prune */__pycache__
+prune */code_gen
 global-exclude *.py[co]
 
 # for data files use something like:
