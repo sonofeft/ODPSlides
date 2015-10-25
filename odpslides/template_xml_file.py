@@ -208,7 +208,7 @@ class TemplateXML_File(object):
         """Find Element within root OR elem_obj.
            path format is: 'office:body/office:spreadsheet'
         """
-        if elem_obj:
+        if elem_obj is not None:
             return elem_obj.find( path, self.rev_nsOD )
         else:
             return self.root.find( path, self.rev_nsOD )
@@ -265,7 +265,7 @@ class TemplateXML_File(object):
         """
         Create a new Element object.
         name format can be 'table:table' OR '{urn:oasis:names:tc:opendocument:xmlns:table:1.0}table'
-        (i.e. can be path format OR tab format)
+        (i.e. can be path format OR tag format)
         attribOD is an OrderedDict in order to preserve attribute order.
         """
 
