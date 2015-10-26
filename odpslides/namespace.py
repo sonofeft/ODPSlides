@@ -27,7 +27,7 @@ def python_param_from_tag( tag ):
 def force_to_short( short_or_tag ):
     """force into tag format like: 'table:table' """
     
-    # Just in case, eliminate any special file prefix
+    # Just in case, eliminate any special/custom file prefix
     short_or_tag = short_or_tag.split('|')[-1]
     
     if short_or_tag.find('}') >= 0:
@@ -51,11 +51,22 @@ def force_to_tag( path_or_tag ):
     if path_or_tag.startswith('{'):
         return path_or_tag
 
-    sL = path_or_tag.split(':')
-    if len(sL)!=2:
-        return path_or_tag
+    
+    pathL = path_or_tag.split('/')
+    ansL = []
+    for path in pathL:
+        
+        sL = path.split(':')
+        if len(sL)!=2:
+            print('...ERROR... in force_to_tag: %s'%path_or_tag)
+            return path_or_tag # bail out if any part is wrong
 
-    return '{%s}%s'%( ODF_NAMESPACES[sL[0]], sL[1] )
+        tag_part = '{%s}%s'%( ODF_NAMESPACES[sL[0]], sL[1] )
+        
+        ansL.append( tag_part )
+    return '/'.join( ansL )
+
+
 
 
 ODF_NAMESPACES = {
@@ -104,7 +115,7 @@ XMLNS_STR = ' '.join( ['xmlns:%s="%s"'%(sh,tag) for sh,tag in ODF_NAMESPACES.ite
 
 if __name__ == "__main__":
     
-    from odscharts.template_xml_file import TemplateXML_File
+    from odpslides.template_xml_file import TemplateXML_File
     import sys
     
     

@@ -29,7 +29,8 @@ def set_drawframe_font_color( presObj, draw_page, frame_class='title', font_colo
                         aNNN = subelem.get( TEXT_STYLE_NAME_ATTR, '' )
                         a_int = int( aNNN[1:] )
                         if a_int >= len(presObj.new_content_styleL):
-                            print( 'Bad style index = %i, when len new_content_styleL = %i'%(a_int, len(presObj.new_content_styleL)) )
+                            print( 'Bad style index = %i, when len new_content_styleL = %i'%\
+                                  (a_int, len(presObj.new_content_styleL)) )
                         else:
                             span_elem = presObj.new_content_styleL[ a_int ]
                             for sub_span_elem in span_elem.iter():

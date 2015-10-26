@@ -3,31 +3,26 @@ from __future__ import unicode_literals
 from __future__ import absolute_import
 from __future__ import print_function
 
+from namespace import XMLNS_STR, force_to_short, force_to_tag, ODF_NAMESPACES
 
-def NS( path_or_tag, nsOD ): 
-    """force into tag format like: '{urn:oasis:names:tc:opendocument:xmlns:table:1.0}table' """
-    if path_or_tag.startswith('{'):
-        return path_or_tag
+
+def NS( path_or_tag ): 
+    """
+    force into tag format like: '{urn:oasis:names:tc:opendocument:xmlns:table:1.0}table' 
     
-    pathL = path_or_tag.split('/')
-    ansL = []
-    for path in pathL:    
-        sL = path_or_tag.split(':')
-        if len(sL)!=2:
-            ansL.append( path )
-        else:
-            ansL.append( '{%s}%s'%( nsOD[sL[0]], sL[1] ) )
-    return '/'.join( ansL )
-
+    (This is for backward compatibility... this is same as "force_to_tag".
+    """
+    return force_to_tag( path_or_tag )
+    
         
-def NS_attrib( attD, nsOD ):
+def NS_attrib( attD ):
     """
     Convert a dictionary of attrib to tag format 
     like: '{urn:oasis:names:tc:opendocument:xmlns:table:1.0}table' : 'value'
     """
     D = {}
     for key,val in attD.items():
-        D[ NS(key, nsOD) ] = val
+        D[ NS(key) ] = val
     return D
 
 
@@ -77,4 +72,17 @@ def find_elem_w_attrib(path_or_tag, parent, nsOD, attrib=None, nth_match=0, retu
         # an extra line just to remind me of the tuple returned
         elem, i_match = returnL[nth_match]
         return elem, i_match
+   
+
+if __name__ == "__main__":
+    
+    
+    print( NS( 'draw:page'  ) )
+    print( NS( 'draw:page/draw:frame'  ) )
+    print('............................')
+    print( force_to_tag( 'draw:page'  ) )
+    print( force_to_tag( 'draw:page/draw:frame'  ) )
+    
+    print('............................')
+    print( NS_attrib( {'draw:id':'id1'}  ) )
     

@@ -13,6 +13,7 @@ import datetime
 from odpslides.zip_file import zipfile_insert
 import odpslides.init_internal_odp_files as init_internal_odp_files
 from odpslides.page import Page
+from odpslides.color_utils import getValidHexStr
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -24,7 +25,7 @@ class Presentation(object):
     """
 
     def __init__(self, title='My Title', author='My Name', 
-        background_image="",
+        background_image="", background_color="white",
         grad_start_color="", grad_end_color="", grad_angle=0, grad_draw_style='linear',
         show_date=False, date_font_color='gray',
         footer="", footer_font_color='gray',
@@ -34,6 +35,7 @@ class Presentation(object):
         self.filename = None
         
         self.background_image = background_image
+        self.background_color = getValidHexStr( background_color, "#ffffff" ) # default to white
         
         # keep a list of images for inclusion in ODP file
         self.imageL = [] # will end up as 1-based image names (image1, image2, etc.)
@@ -164,16 +166,25 @@ class Presentation(object):
  
 
     def add_title_chart( self, title='My Title', subtitle='My Subtitle', title_font_color='',
-                            subtitle_font_color=''):
-                                
-        inpD = {'title_font_color':title_font_color, 'subtitle_font_color':subtitle_font_color}
-        new_page = Page( self, page_type="plain", disp_name="Title Slide", **inpD)
+                            subtitle_font_color='',background_color=""):
+        
+        if background_color:
+            background_color = getValidHexStr( background_color, "#ffffff" ) # default to white
+        else:
+            background_color = self.background_color
+        
+        inpD = {'title':'My Title', 'subtitle':'My Subtitle', 'background_color':background_color,
+                'title_font_color':title_font_color, 'subtitle_font_color':subtitle_font_color}
+                    
+        new_page = Page( self, disp_name="Title Slide", **inpD)
+        
         self.new_content_pageL.append( new_page )
  
 if __name__ == '__main__':
     
     C = Presentation(title='My Title', author='My Name',
         background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
+        background_color='#666666',
         grad_start_color="#99ff99", grad_end_color="#ffffff", grad_angle=0, grad_draw_style='linear',
         show_date=True, date_font_color='coral',
         footer="testing 123", footer_font_color='lime',

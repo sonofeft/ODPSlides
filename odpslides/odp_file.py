@@ -105,15 +105,15 @@ class ODPFile( object ):
         
         
         self.office_styles_elem = self.styles_xml_obj.root.find(\
-                                  NS('office:styles', self.styles_xml_obj.rev_nsOD) )
+                                  NS('office:styles') )
         print('!!!!!!!!!! office_styles_elem =',self.office_styles_elem)
         
         self.office_automatic_styles_elem = self.styles_xml_obj.root.find(\
-                                            NS('office:automatic-styles', self.styles_xml_obj.rev_nsOD) )
+                                            NS('office:automatic-styles') )
         print('!!!!!!!!!! office_automatic_styles_elem =',self.office_automatic_styles_elem)
         
         self.office_master_styles_elem = self.styles_xml_obj.root.find(\
-                                         NS('office:master-styles', self.styles_xml_obj.rev_nsOD) )
+                                         NS('office:master-styles') )
         print('!!!!!!!!!! office_master_styles_elem =',self.office_master_styles_elem)
         
         
@@ -169,18 +169,18 @@ class ODPFile( object ):
         # Make some shorter names
         tree_styles = self.styles_xml_obj
         tree_content = self.content_xml_obj
-        #print(NS('draw:id', tree_styles.rev_nsOD))
+        #print(NS('draw:id'))
         
-        STYLE_NAME_ATTRIB_NAME = NS('style:name', tree_styles.rev_nsOD)
-        DRAW_ID_ATTRIB_NAME = NS('draw:id', tree_styles.rev_nsOD)
-        #DRAW_GRADIENT_TAG = NS('draw:gradient', tree_styles.rev_nsOD)
-        #DRAW_START_COLOR_ATTR = NS('draw:start-color', tree_styles.rev_nsOD)
-        #DRAW_END_COLOR_ATTR = NS('draw:end-color', tree_styles.rev_nsOD)
-        #DRAW_ANGLE_ATTR = NS('draw:angle', tree_styles.rev_nsOD)
-        #DRAW_STYLE_ATTR = NS('draw:style', tree_styles.rev_nsOD)
+        STYLE_NAME_ATTRIB_NAME = NS('style:name')
+        DRAW_ID_ATTRIB_NAME = NS('draw:id')
+        #DRAW_GRADIENT_TAG = NS('draw:gradient')
+        #DRAW_START_COLOR_ATTR = NS('draw:start-color')
+        #DRAW_END_COLOR_ATTR = NS('draw:end-color')
+        #DRAW_ANGLE_ATTR = NS('draw:angle')
+        #DRAW_STYLE_ATTR = NS('draw:style')
 
-        #DRAW_FILL_IMAGE_TAG = NS('draw:fill-image', tree_styles.rev_nsOD)
-        #XLINK_HREF_ATTR =  NS('xlink:href', tree_styles.rev_nsOD)
+        #DRAW_FILL_IMAGE_TAG = NS('draw:fill-image')
+        #XLINK_HREF_ATTR =  NS('xlink:href')
 
         # Find the highest value of self.max_style_name_int
         self.style_name_elem_from_nameD = {} # index=style-name (ex. "a123"), value=elem
@@ -231,7 +231,7 @@ class ODPFile( object ):
         print('Number of presentation-page-layout styles = %i'%len(pres_page_layout_styleL))
         self.page_layout_elem_from_nameD = {} # index=layout name,  value=elem
         for pres_page_layout in pres_page_layout_styleL:
-            self.page_layout_elem_from_nameD[ pres_page_layout.get( NS('style:name', tree_styles.rev_nsOD) ) ] = pres_page_layout
+            self.page_layout_elem_from_nameD[ pres_page_layout.get( NS('style:name') ) ] = pres_page_layout
 
         master_page_styleL =  tree_styles.findall('office:master-styles/style:master-page') # Element objects
         print('Number of master-page styles = %i'%len(master_page_styleL))
@@ -241,7 +241,7 @@ class ODPFile( object ):
         for master_page in master_page_styleL:
             name = master_page.get('{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name')
             #print( 'Master Page Name = %s'%name )
-            self.master_page_elem_from_nameD[ master_page.get( NS('style:name', tree_styles.rev_nsOD) ) ] = master_page
+            self.master_page_elem_from_nameD[ master_page.get( NS('style:name') ) ] = master_page
             
 
         # ============= check layout infor vs master info =======================
@@ -254,8 +254,8 @@ class ODPFile( object ):
         self.matching_layout_nameD = {} # index=draw:master-page-name, value=presentation:presentation-page-layout-name
         self.draw_page_elem_from_nameD = {} # index=draw:master-page-name, value=Element obj for draw:page
         for page in page_contentL:
-            master_name = page.get( NS('draw:master-page-name', tree_content.rev_nsOD) )
-            layout_name = page.get( NS('presentation:presentation-page-layout-name', tree_content.rev_nsOD) )
+            master_name = page.get( NS('draw:master-page-name') )
+            layout_name = page.get( NS('presentation:presentation-page-layout-name') )
             print('used master="%60s",  layout="%s"'%(master_name, layout_name)  )
             self.matching_layout_nameD[master_name] = layout_name
             self.draw_page_elem_from_nameD[master_name] = page
