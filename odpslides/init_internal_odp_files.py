@@ -29,9 +29,9 @@ def get_meta_xml_str():
 def get_empty_content_elem():
     return TemplateXML_File( content_str )
     
-def get_final_presentation_elem():
-
-    return ET.Element( force_to_tag('presentation:settings') )
+#def get_final_presentation_elem():
+#
+#    return ET.Element( force_to_tag('presentation:settings') )
 
 def get_empty_styles_elem():
     return TemplateXML_File( styles_str )

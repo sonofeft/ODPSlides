@@ -183,8 +183,8 @@ class TemplateXML_File(object):
                 if sys.version_info < (3,):
                     sInp = sInp.decode('utf-8')
                 xml_dataL.append(sInp )
-                dummy_file = dummy()
-                #dummy_file.write = xml_dataL.append
+        dummy_file = dummy()
+        #dummy_file.write = xml_dataL.append
 
         # There are differences between the python2 and python3 serialize routines
         if sys.version_info < (3,):

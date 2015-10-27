@@ -43,11 +43,19 @@ class Presentation(object):
         self.include_styles_xml = include_styles_xml # Excel needs styles.xml style:master-page elements
         self.for_excel = for_excel
         
-        self.background_image = background_image
-        self.background_color = getValidHexStr( background_color, "#ffffff" ) # default to white
-        
         # keep a list of images for inclusion in ODP file
-        self.imageL = [] # will end up as 1-based image names (image1, image2, etc.)
+        self.image_nameD = {}     # index=file system name,    value=internal image name
+        self.sys_image_nameD = {} # index=internal image name, value=file system name
+        self.image_nameL = [] # ordered list of internal image names 
+        self.max_image_int = 0
+        
+        self.background_image = background_image
+        if self.background_image:
+            self.internal_background_image = self.get_next_image_name( background_image )
+        else:
+            self.internal_background_image = ''
+        
+        self.background_color = getValidHexStr( background_color, "#ffffff" ) # default to white
         
         
         self.grad_start_color = grad_start_color
@@ -69,6 +77,8 @@ class Presentation(object):
         self.new_content_pageL = [] # draw:page elements to be added to presentation
         self.new_master_styleL = [] # For each new_content_pageL item, there are many master-page style elements
         self.new_master_page_styleL = [] # For each new_content_pageL item, there is a style:master-page item
+        
+        self.new_styles_office_stylesL = [] # usually draw:gradient or draw:fill-image statements
 
         self.new_content_styleD = {} # index="a123", value=style elem
         self.new_master_styleD = {} # index="a123", value=style elem
@@ -76,6 +86,7 @@ class Presentation(object):
         # style names and id values start at 0 (i.e. "a0", "a1", ... and "id0", "id1", ...)
         self.max_style_name_int = -1 # used for nameing styles (ex. draw:style-name="a123")
         self.max_draw_id_int = -1 # some internal use ???
+        
 
 
     def get_next_a_style(self):
@@ -87,6 +98,23 @@ class Presentation(object):
         """Returns a string like "id123"  """
         self.max_draw_id_int += 1
         return 'id%i'%self.max_draw_id_int
+        
+    def get_next_image_name(self, file_sys_name):
+        """Returns a string like "image1", "image2", ...  """
+        
+        if file_sys_name in self.image_nameD:
+            return self.image_nameD[ file_sys_name ]
+        
+        head, tail = os.path.splitext( file_sys_name ) # tail is usually ".png"
+        
+        self.max_image_int += 1
+        int_name = 'image%i%s'%(self.max_image_int, tail)
+        
+        self.image_nameD[ file_sys_name ] = int_name
+        self.sys_image_nameD[ int_name ] = file_sys_name
+        self.image_nameL.append( int_name )
+        
+        return int_name
             
 
     def launch_application(self):
@@ -109,6 +137,16 @@ class Presentation(object):
         else:
             opener ="open" if sys.platform == "darwin" else "xdg-open"
             subprocess.call([opener, self.filename])
+
+    def add_office_styles(self, style_elem):
+        """
+        Put draw:gradient and draw:image-fill into styles.xml 
+        """
+        
+        office_styles = style_elem.find( 'office:styles' )
+        for elem in self.new_styles_office_stylesL:
+            style_elem.acclimate_new_elem( elem )
+            office_styles.append( elem )
 
     def add_page_layouts(self, style_elem):
         """
@@ -176,10 +214,9 @@ class Presentation(object):
         full_png_path = os.path.join( here, 'templates', 'thumbnail.png' )
         zipfileobj.write( full_png_path, 'Thumbnails/thumbnail.png')
 
-        if self.imageL:
-            for i, img_name in enumerate( self.imageL ):
-                head, tail = os.path.splitext( img_name ) # tail is usually ".png"
-                zipfileobj.write( img_name, 'media/image%i%s'%(i+1, tail))
+        if self.image_nameL:
+            for img_name in self.image_nameL:
+                zipfileobj.write( self.sys_image_nameD[ img_name ], 'media/%s'%img_name)
 
         # Gets new empty content with each save
         content_elem = init_internal_odp_files.get_empty_content_elem()
@@ -193,9 +230,9 @@ class Presentation(object):
             content_elem.acclimate_new_elem( page.draw_page )
             body_pres_elem.append( page.draw_page )
             
-        last_body_elem = init_internal_odp_files.get_final_presentation_elem()
-        content_elem.acclimate_new_elem( last_body_elem )
-        body_pres_elem.append( last_body_elem )
+        #last_body_elem = init_internal_odp_files.get_final_presentation_elem()
+        #content_elem.acclimate_new_elem( last_body_elem )
+        #body_pres_elem.append( last_body_elem )
         
         # <<<<<<<<<<<<<<<< Add new content objects here ===================
         zipfile_insert( zipfileobj, 'content.xml', content_elem)
@@ -206,6 +243,8 @@ class Presentation(object):
         if self.include_styles_xml:
             self.add_page_layouts( style_elem )
             self.add_style_master_page( style_elem )
+            
+        self.add_office_styles( style_elem )
         
         # <<<<<<<<<<<<<<<< Add new content objects here ===================
         # Need to fix local namespace in subelement
@@ -247,7 +286,10 @@ if __name__ == '__main__':
     C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='dm',
                         subtitle_font_color='coral')
     
-    C.save( filename='my_ppt.odp', launch=0 )
+    #C.new_content_pageL[-1].set_to_gradient(grad_start_color="#99ff99", grad_end_color="#ffffff", 
+    #                                         grad_angle=0, grad_draw_style='linear' )
+    
+    C.save( filename='my_ppt.odp', launch=1 )
     
  
  
