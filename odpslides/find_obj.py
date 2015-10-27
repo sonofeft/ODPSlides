@@ -3,8 +3,7 @@ from __future__ import unicode_literals
 from __future__ import absolute_import
 from __future__ import print_function
 
-from namespace import XMLNS_STR, force_to_short, force_to_tag, ODF_NAMESPACES
-
+from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag, ODF_NAMESPACES
 
 def NS( path_or_tag ): 
     """

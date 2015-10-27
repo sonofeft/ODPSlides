@@ -172,6 +172,10 @@ class TemplateXML_File(object):
             self.add_child( child, parent )
 
     def tostring(self):
+            
+        xml_dataL = []
+        if self.xml_header:
+            xml_dataL = [self.xml_header + '\n']
 
         class dummy:
             pass
@@ -179,13 +183,8 @@ class TemplateXML_File(object):
                 if sys.version_info < (3,):
                     sInp = sInp.decode('utf-8')
                 xml_dataL.append(sInp )
-            
-        xml_dataL = []
-        if self.xml_header:
-            xml_dataL = [self.xml_header + '\n']
-
-        dummy_file = dummy()
-        #dummy_file.write = xml_dataL.append
+                dummy_file = dummy()
+                #dummy_file.write = xml_dataL.append
 
         # There are differences between the python2 and python3 serialize routines
         if sys.version_info < (3,):
@@ -196,6 +195,38 @@ class TemplateXML_File(object):
 
         sOut = u"".join(xml_dataL)
         return sOut.encode('utf-8')
+
+    def elem_tostring(self, elem, include_ns=False, use_linebreaks=True):
+            
+        xml_dataL = []
+        
+        class dummy:
+            
+            def write(self, sInp ):
+                
+                if sys.version_info < (3,):
+                    sInp = sInp.decode('utf-8')
+                if sInp.strip().startswith(u'xmlns:') and not include_ns:
+                    return
+                if sInp.strip().endswith(u'>') and use_linebreaks:
+                    sInp = sInp.replace('>','>\n')
+                    
+                xml_dataL.append(sInp )
+                dummy_file = dummy()
+                #dummy_file.write = xml_dataL.append
+
+        dummy_file = dummy()
+
+        # There are differences between the python2 and python3 serialize routines
+        if sys.version_info < (3,):
+            ET._serialize_xml(dummy_file.write, elem, "utf-8", self.qnameOD, self.nsOD)
+        else:
+            short_empty_elements = True # use short format for empty elements
+            ET._serialize_xml(dummy_file.write, elem, self.qnameOD, self.nsOD, short_empty_elements)
+
+        sOut = u"".join(xml_dataL)
+        sOut = sOut.encode('utf-8')
+        return sOut
 
     def write(self, out_file_name):
         #fOut = open(out_file_name, "w")
