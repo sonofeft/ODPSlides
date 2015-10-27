@@ -242,7 +242,7 @@ if __name__ == '__main__':
         grad_start_color="#99ff99", grad_end_color="#ffffff", grad_angle=0, grad_draw_style='linear',
         show_date=True, date_font_color='coral',
         footer="testing 123", footer_font_color='lime',
-        show_page_number=True, page_number_font_color='dm', include_styles_xml=False, for_excel=True)
+        show_page_number=True, page_number_font_color='dm', include_styles_xml=False, for_excel=False)
     
     C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='dm',
                         subtitle_font_color='coral')
