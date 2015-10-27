@@ -4,8 +4,14 @@ from __future__ import absolute_import
 from __future__ import print_function
 
 import time
+import sys
 
+if sys.version_info < (3,):
+    import odpslides.ElementTree_27OD as ET
+else:
+    import odpslides.ElementTree_34OD as ET
 from odpslides.template_xml_file import TemplateXML_File
+from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 
 def meta_time():
     "Return time string in meta data format"
@@ -22,6 +28,10 @@ def get_meta_xml_str():
 
 def get_empty_content_elem():
     return TemplateXML_File( content_str )
+    
+def get_final_presentation_elem():
+
+    return ET.Element( force_to_tag('presentation:settings') )
 
 def get_empty_styles_elem():
     return TemplateXML_File( styles_str )
@@ -59,7 +69,8 @@ meta_str = """<office:document-meta xmlns:office="urn:oasis:names:tc:opendocumen
 
 settings_str = """<office:document-settings xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"/>"""
 
-styles_str = """<office:document-styles xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0">
+styles_str = """<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<office:document-styles xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0">
 <office:styles>
 </office:styles>
 <office:automatic-styles>
@@ -69,16 +80,18 @@ styles_str = """<office:document-styles xmlns:dom="http://www.w3.org/2001/xml-ev
     <style:page-layout style:name="pageLayout3">
     <style:page-layout-properties fo:page-width="7.5in" fo:page-height="10in" style:print-orientation="portrait" style:register-truth-ref-style-name=""/>
     </style:page-layout>
+    
 </office:automatic-styles>
 <office:master-styles>
     <draw:layer-set>
     <draw:layer draw:name="Master1-bg" draw:protected="true"/>
     </draw:layer-set>
+    
 </office:master-styles>
 </office:document-styles>"""
 
-
-content_str="""<office:document-content xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0">
+content_str="""<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<office:document-content xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0">
 <office:automatic-styles>
 </office:automatic-styles>
 <office:body>

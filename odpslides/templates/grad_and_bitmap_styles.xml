@@ -15,10 +15,10 @@
 
 <office:styles>
 ...
-<draw:gradient draw:name="a35" draw:style="linear" draw:angle="0" draw:start-color="#99ff99" draw:end-color="#ffffff" draw:start-intensity="100%" draw:end-intensity="100%"/>
+<draw:gradient draw:name="a3400" draw:style="linear" draw:angle="0" draw:start-color="#99ff99" draw:end-color="#ffffff" draw:start-intensity="100%" draw:end-intensity="100%"/>
 
 <style:style style:family="drawing-page" style:name="a1140">
-<style:drawing-page-properties draw:fill="gradient" draw:fill-gradient-name="a35" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false"/>
+<style:drawing-page-properties draw:fill="gradient" draw:fill-gradient-name="a3400" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false"/>
 </style:style>
 
 

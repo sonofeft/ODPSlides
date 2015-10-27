@@ -15,6 +15,7 @@ Contents:
    :maxdepth: 2
 
    quickstart
+   excel_oo_differences
    functions
    copyright
    authors
