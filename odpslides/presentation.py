@@ -32,7 +32,7 @@ class Presentation(object):
         grad_start_color="", grad_end_color="", grad_angle=0, grad_draw_style='linear',
         show_date=False, date_font_color='gray',
         footer="", footer_font_color='gray',
-        show_page_number=False, page_number_font_color="gray", include_styles_xml=False, for_excel=False):
+        show_page_number=False, page_number_font_color="gray", include_styles_xml=False, for_excel=True):
             
         """
         :keyword bool include_styles_xml: If True, include style info in styles.xml (Required by Excel, not by OO)
@@ -165,7 +165,7 @@ class Presentation(object):
             office_styles.append( lay_elem )
 
     def add_style_master_page(self, style_elem ):
-        office_auto_styles = style_elem.find( 'office:automatic-styles' )
+        office_auto_styles = style_elem.find( 'office:master-styles' )
         #print('office_auto_styles =',office_auto_styles)
         
         # For each new_content_pageL item, there are many master-page style elements
@@ -230,9 +230,9 @@ class Presentation(object):
             content_elem.acclimate_new_elem( page.draw_page )
             body_pres_elem.append( page.draw_page )
             
-        #last_body_elem = init_internal_odp_files.get_final_presentation_elem()
-        #content_elem.acclimate_new_elem( last_body_elem )
-        #body_pres_elem.append( last_body_elem )
+        last_body_elem = init_internal_odp_files.get_final_presentation_elem()
+        content_elem.acclimate_new_elem( last_body_elem )
+        body_pres_elem.append( last_body_elem )
         
         # <<<<<<<<<<<<<<<< Add new content objects here ===================
         zipfile_insert( zipfileobj, 'content.xml', content_elem)
@@ -276,15 +276,15 @@ class Presentation(object):
 if __name__ == '__main__':
     
     C = Presentation(title='My Title', author='My Name',
-        background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
+        #background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
         background_color='#CCCCFF',
-        grad_start_color="#99ff99", grad_end_color="#ffffff", grad_angle=0, grad_draw_style='linear',
+        #grad_start_color="#99ff99", grad_end_color="#ffffff", grad_angle=0, grad_draw_style='linear',
         show_date=True, date_font_color='coral',
         footer="testing 123", footer_font_color='lime',
-        show_page_number=True, page_number_font_color='dm', include_styles_xml=False, for_excel=False)
+        show_page_number=True, page_number_font_color='dm', include_styles_xml=True, for_excel=True)
     
-    C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='dm',
-                        subtitle_font_color='coral')
+    C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='red',
+                        subtitle_font_color='red')
     
     #C.new_content_pageL[-1].set_to_gradient(grad_start_color="#99ff99", grad_end_color="#ffffff", 
     #                                         grad_angle=0, grad_draw_style='linear' )

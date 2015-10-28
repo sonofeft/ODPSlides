@@ -11,7 +11,13 @@
 <style:drawing-page-properties draw:fill="bitmap" draw:fill-image-name="a393" style:repeat="stretch" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false"/>
 </style:style>
 
---------------------
+
+in <office:automatic-styles> of styles.xml (if there is a master slide)
+
+<style:style style:family="drawing-page" style:name="a1">
+<style:drawing-page-properties draw:fill="bitmap" draw:fill-image-name="a0" style:repeat="stretch" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="false" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false"/>
+</style:style>
+---------------------------------------------------------------------------------------------
 
 <office:styles>
 ...
@@ -21,12 +27,23 @@
 <style:drawing-page-properties draw:fill="gradient" draw:fill-gradient-name="a3400" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false"/>
 </style:style>
 
+in <office:automatic-styles>  of styles.xml (if there is a master slide)
+
+<style:style style:family="drawing-page" style:name="a1">
+<style:drawing-page-properties draw:fill="gradient" draw:fill-gradient-name="a0" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="false" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false"/>
+</style:style>
 
 
--------------------
+---------------------------------------------------------------------------------------------
    in plain content.xml
    
 
 <style:style style:family="drawing-page" style:name="a380">
 <style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false"/>
 </style:style>   
+
+in <office:automatic-styles>  of styles.xml  (if there is a master slide)
+
+<style:style style:family="drawing-page" style:name="a0">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="false" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false"/>
+</style:style>

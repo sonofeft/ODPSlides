@@ -199,7 +199,7 @@ def getValidHexStr( name_or_hex, c_default):
 
     if c in COLOR_NAME_DICT:
         #print('(in dict)', end='')
-        return COLOR_NAME_DICT[ c ]
+        return COLOR_NAME_DICT[ c ].lower()
 
     c = c.upper()
     if not c.startswith('#'):
@@ -211,15 +211,15 @@ def getValidHexStr( name_or_hex, c_default):
 
     if c in BIG_COLOR_HEXSTR_LIST:
         #print('(in big list)', end='')
-        return c
+        return c.lower()
 
     if hexstr_pattern.match( c ):
         #print('(re match)', end='')
-        return c
+        return c.lower()
 
     # Nothing looks right so return the default
     #print('(Default Color)')
-    return c_default
+    return c_default.lower()
 
 VERY_SHORT_NAME_DICT = {'r':'red', 'g':'green', 'b':'blue', 'c':'cyan',
                         'm':'magenta', 'k':'black', 'y':'yellow', 'p':'purple',

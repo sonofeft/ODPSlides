@@ -26,8 +26,10 @@ DRAW_PAGE_TAG = force_to_tag( 'draw:page' )
 FONT_COLOR_ATTR = force_to_tag( 'fo:color' )
 PRESENTATION_CLASS_ATTR = force_to_tag( 'presentation:class' )
 PRESENTATION_TRANSITION_TYPE_ATTR = force_to_tag( 'presentation:transition-type' )
+PRESENTATION_TRANSITION_SPEED_ATTR = force_to_tag( 'presentation:transition-speed' )
 STYLE_STYLE_TAG = force_to_tag( 'style:style' )
 PRESENTATION_BG_VISIBLE_ATTR = force_to_tag( 'presentation:background-visible' )
+PRESENTATION_BG_OBJ_VISIBLE_ATTR = force_to_tag('presentation:background-objects-visible' )
 
 STYLE_DRAWING_PAGE_PROPS_TAG = force_to_tag( 'style:drawing-page-properties' )
 
@@ -104,6 +106,9 @@ class Page(object):
         
         if self.background_image:
             self.set_background_image( self.background_image )
+            
+        del self.draw_page.attrib[ force_to_tag( 'presentation:presentation-page-layout-name' ) ]
+        del self.draw_page.attrib[ force_to_tag( 'draw:master-page-name' ) ]
 
     def normalize_content_styles(self):
         
@@ -130,7 +135,10 @@ class Page(object):
                                 if sub_style_elem.tag == STYLE_DRAWING_PAGE_PROPS_TAG:
                                     if self.presObj.for_excel:
                                         sub_style_elem.set( PRESENTATION_TRANSITION_TYPE_ATTR , "manual")
+                                        sub_style_elem.set( PRESENTATION_TRANSITION_SPEED_ATTR, "slow")
                                         sub_style_elem.set( PRESENTATION_BG_VISIBLE_ATTR, 'false' )
+                                        if sub_style_elem.get( PRESENTATION_BG_OBJ_VISIBLE_ATTR, ''):
+                                            del sub_style_elem.attrib[ PRESENTATION_BG_OBJ_VISIBLE_ATTR ]
                                     else:
                                         sub_style_elem.set( PRESENTATION_BG_VISIBLE_ATTR, 'true' )
                     
@@ -236,15 +244,17 @@ class Page(object):
                     style_elem = styleD[aNNN]
                     style_elem.getchildren()[0].set(DRAW_FILL_COLOR_ATTR  , hex_col_str)
             
-    def set_to_gradient(self, grad_start_color="#99ff99", grad_end_color="#ffffff", grad_angle=0, grad_draw_style='linear' ):
-        # Get current style element
+    def set_to_gradient(self, grad_start_color="#9999ff", grad_end_color="#ffffff", grad_angle=0, grad_draw_style='linear' ):
+        # get the main draw:page style element (in content.xml)
         style_elem = self.presObj.new_content_styleD[ self.draw_page_style_name ]
         i_style_elem = self.presObj.new_content_styleL.index( style_elem )
         
         draw_grad_style_name = self.presObj.get_next_a_style()
         
+        # build a new style element to replace plain/original style element (in content.xml)
         new_style_elem = TemplateXML_File( GRAD_ELEM_STR%(XMLNS_STR, self.draw_page_style_name, draw_grad_style_name  ) )
         
+        # build a new draw:gradient element to put into office:styles of styles.xml
         new_draw_grad_elem = TemplateXML_File( DRAW_GRAD_STR%(XMLNS_STR, draw_grad_style_name, grad_draw_style,
                             grad_start_color, grad_end_color) )
                             
@@ -263,13 +273,16 @@ class Page(object):
         self.background_image = background_image
         self.internal_background_image = self.presObj.get_next_image_name(background_image)
         
+        # get the main draw:page style element (in content.xml)
         style_elem = self.presObj.new_content_styleD[ self.draw_page_style_name ]
         i_style_elem = self.presObj.new_content_styleL.index( style_elem )
         
         draw_img_style_name = self.presObj.get_next_a_style()
-                
+        
+        # build a new style element to replace plain/original style element (in content.xml)
         new_style_elem = TemplateXML_File( IMG_ELEM_STR%(XMLNS_STR, self.draw_page_style_name, draw_img_style_name )  )
         
+        # build a new draw:fill-image element to put into office:styles of styles.xml
         new_draw_img_elem = TemplateXML_File( DRAW_IMG_STR%(XMLNS_STR, draw_img_style_name, self.internal_background_image ) )
                             
         self.presObj.new_content_styleD[ self.draw_page_style_name ] = new_style_elem.root
@@ -277,6 +290,7 @@ class Page(object):
         
         self.presObj.new_styles_office_stylesL.append( new_draw_img_elem.root )
 
+#  style element to replace plain/original style element (in content.xml)
 IMG_ELEM_STR = """<style:style %s style:family="drawing-page" style:name="%s">
 <style:drawing-page-properties draw:fill="bitmap" draw:fill-image-name="%s" style:repeat="stretch" 
 presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" 
@@ -284,9 +298,11 @@ presentation:background-visible="true" presentation:display-header="false" prese
 presentation:display-page-number="false" presentation:display-date-time="false"/>
 </style:style>"""
 
+#  draw:fill-image element to put into office:styles of styles.xml
 DRAW_IMG_STR = """<draw:fill-image %s draw:name="%s" xlink:href="media/%s" 
 xlink:show="embed" xlink:actuate="onLoad"/>"""
 
+#  style element to replace plain/original style element (in content.xml)
 GRAD_ELEM_STR = """<style:style %s style:family="drawing-page" style:name="%s">
 <style:drawing-page-properties draw:fill="gradient" draw:fill-gradient-name="%s" presentation:visibility="visible" 
 draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" 
@@ -294,5 +310,6 @@ presentation:display-header="false" presentation:display-footer="false" presenta
 presentation:display-date-time="false"/>
 </style:style>"""
 
+#  draw:gradient element to put into office:styles of styles.xml
 DRAW_GRAD_STR = """<draw:gradient %s draw:name="%s" draw:style="%s" draw:angle="0" draw:start-color="%s" 
 draw:end-color="%s" draw:start-intensity="100%%" draw:end-intensity="100%%"/>"""

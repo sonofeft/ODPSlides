@@ -29,9 +29,9 @@ def get_meta_xml_str():
 def get_empty_content_elem():
     return TemplateXML_File( content_str )
     
-#def get_final_presentation_elem():
-#
-#    return ET.Element( force_to_tag('presentation:settings') )
+def get_final_presentation_elem():
+
+    return ET.Element( force_to_tag('presentation:settings') )
 
 def get_empty_styles_elem():
     return TemplateXML_File( styles_str )
@@ -72,6 +72,11 @@ settings_str = """<office:document-settings xmlns:config="urn:oasis:names:tc:ope
 styles_str = """<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <office:document-styles xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0">
 <office:styles>
+
+    <style:default-style style:family="graphic">
+    <style:graphic-properties draw:fill="solid" draw:fill-color="#4f81bd" draw:opacity="100%" draw:stroke="solid" svg:stroke-width="0.02778in" svg:stroke-color="#385d8a" svg:stroke-opacity="100%"/>
+    </style:default-style>
+
 </office:styles>
 <office:automatic-styles>
     <style:page-layout style:name="pageLayout1">
