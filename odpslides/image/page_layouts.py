@@ -31,11 +31,11 @@ def style_8_presentation_page_layout_Title_Slide():
     """Build Element style:presentation-page-layout for Title Slide """
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL1" style:display-name="Title Slide">
-<presentation:placeholder presentation:object="title" svg:x="0.46154in" svg:y="1.5in" svg:width="9in" svg:height="2in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="subtitle" svg:x="1.5in" svg:y="3.64359in" svg:width="7in" svg:height="1.91667in" />
+<presentation:placeholder presentation:object="title" svg:x="0.75in" svg:y="2.32986in" svg:width="8.5in" svg:height="1.60764in" />
+<presentation:placeholder presentation:object="subtitle" svg:x="1.5in" svg:y="4.25in" svg:width="7in" svg:height="1.91667in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -47,10 +47,10 @@ def style_8_presentation_page_layout_Title_and_Content():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL2" style:display-name="Title and Content">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="5.15in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -61,11 +61,11 @@ def style_8_presentation_page_layout_Section_Header():
     """Build Element style:presentation-page-layout for Section Header """
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL3" style:display-name="Section Header">
-<presentation:placeholder presentation:object="title" svg:x="1.75in" svg:y="0.66667in" svg:width="7.75in" svg:height="2in" />
-<presentation:placeholder presentation:object="outline" svg:x="1.75in" svg:y="2.74255in" svg:width="7.75in" svg:height="1.65104in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="title" svg:x="0.78993in" svg:y="4.81944in" svg:width="8.5in" svg:height="1.48958in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.78993in" svg:y="3.17882in" svg:width="8.5in" svg:height="1.64062in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -79,9 +79,9 @@ def style_8_presentation_page_layout_Two_Content():
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
 <presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
 <presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -92,14 +92,14 @@ def style_8_presentation_page_layout_Comparison():
     """Build Element style:presentation-page-layout for Comparison """
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL5" style:display-name="Comparison">
-<presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.29861in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.67882in" svg:width="4.4184in" svg:height="0.82118in" />
-<presentation:placeholder presentation:object="outline" svg:x="5.07986in" svg:y="1.67882in" svg:width="4.42014in" svg:height="0.82118in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="2.58333in" svg:width="4.4184in" svg:height="4.11632in" />
-<presentation:placeholder presentation:object="object" svg:x="5.07986in" svg:y="2.58333in" svg:width="4.42014in" svg:height="4.11632in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.67882in" svg:width="4.4184in" svg:height="0.69965in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="2.37847in" svg:width="4.4184in" svg:height="4.32118in" />
+<presentation:placeholder presentation:object="outline" svg:x="5.07986in" svg:y="1.67882in" svg:width="4.42014in" svg:height="0.69965in" />
+<presentation:placeholder presentation:object="object" svg:x="5.07986in" svg:y="2.37847in" svg:width="4.42014in" svg:height="4.32118in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -111,9 +111,9 @@ def style_8_presentation_page_layout_Title_Only():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL6" style:display-name="Title Only">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -124,9 +124,9 @@ def style_8_presentation_page_layout_Blank():
     """Build Element style:presentation-page-layout for Blank """
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL7" style:display-name="Blank">
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -138,11 +138,11 @@ def style_8_presentation_page_layout_Content_with_Caption():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL8" style:display-name="Content with Caption">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.29861in" svg:width="3.28993in" svg:height="1.27083in" />
-<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.66667in" svg:width="3.28993in" svg:height="5.03299in" />
 <presentation:placeholder presentation:object="object" svg:x="3.90972in" svg:y="0.29861in" svg:width="5.59028in" svg:height="6.40104in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.56944in" svg:width="3.28993in" svg:height="5.13021in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -153,12 +153,12 @@ def style_8_presentation_page_layout_Picture_with_Caption():
     """Build Element style:presentation-page-layout for Picture with Caption """
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL9" style:display-name="Picture with Caption">
-<presentation:placeholder presentation:object="title" svg:x="2in" svg:y="0.66667in" svg:width="6in" svg:height="0.57118in" />
-<presentation:placeholder presentation:object="graphic" svg:x="2in" svg:y="2.00347in" svg:width="6in" svg:height="4.33333in" />
-<presentation:placeholder presentation:object="outline" svg:x="2in" svg:y="1.27601in" svg:width="6in" svg:height="0.58in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="title" svg:x="1.96007in" svg:y="5.25in" svg:width="6in" svg:height="0.61979in" />
+<presentation:placeholder presentation:object="graphic" svg:x="1.96007in" svg:y="0.67014in" svg:width="6in" svg:height="4.5in" />
+<presentation:placeholder presentation:object="outline" svg:x="1.96007in" svg:y="5.86979in" svg:width="6in" svg:height="0.88021in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -170,10 +170,10 @@ def style_8_presentation_page_layout_Title_and_Vertical_Text():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL10" style:display-name="Title and Vertical Text">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="5.15in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -186,9 +186,9 @@ def style_8_presentation_page_layout_Vertical_Title_and_Text():
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL11" style:display-name="Vertical Title and Text">
 <presentation:placeholder presentation:object="title" svg:x="7.25in" svg:y="0.30035in" svg:width="2.25in" svg:height="6.39931in" />
 <presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="0.30035in" svg:width="6.58333in" svg:height="6.39931in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -200,10 +200,10 @@ def style_8_presentation_page_layout_Title_and_Text():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL12" style:display-name="Title and Text">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="5.15in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -211,15 +211,15 @@ def style_8_presentation_page_layout_Title_and_Text():
 
 def style_8_presentation_page_layout_Title_and_2_Column_Text():
     
-    """Build Element style:presentation-page-layout for Title and 2-Column Text """
+    """Build Element style:presentation-page-layout for Title and 2 Column Text """
     
-    elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL13" style:display-name="Title and 2-Column Text">
+    elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL13" style:display-name="Title and 2 Column Text">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="5.14931in" />
-<presentation:placeholder presentation:object="outline" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="5.14931in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="outline" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -231,11 +231,11 @@ def style_8_presentation_page_layout_Title_and_Text_over_Content():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL14" style:display-name="Title and Text over Content">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="4.40799in" svg:width="9in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="2.39063in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="4.30729in" svg:width="9in" svg:height="2.39236in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -247,11 +247,11 @@ def style_8_presentation_page_layout_Title__Text__and_Content():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL15" style:display-name="Title, Text, and Content">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="5.14931in" />
-<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="5.14931in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -263,11 +263,11 @@ def style_8_presentation_page_layout_Title__Content_and_Text():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL16" style:display-name="Title, Content and Text">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="5.14931in" />
-<presentation:placeholder presentation:object="outline" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="5.14931in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="outline" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -279,12 +279,12 @@ def style_8_presentation_page_layout_Title__Text__and_2_Content():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL17" style:display-name="Title, Text, and 2 Content">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="5.14931in" />
-<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="4.40799in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.39063in" />
+<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="4.30729in" svg:width="4.41667in" svg:height="2.39236in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -296,12 +296,12 @@ def style_8_presentation_page_layout_Title__Content__and_2_Content():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL18" style:display-name="Title, Content, and 2 Content">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="5.14931in" />
-<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="4.40799in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.39063in" />
+<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="4.30729in" svg:width="4.41667in" svg:height="2.39236in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -313,11 +313,11 @@ def style_8_presentation_page_layout_Title_and_Content_over_Text():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL19" style:display-name="Title and Content over Text">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="4.40799in" svg:width="9in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="2.39063in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="4.30729in" svg:width="9in" svg:height="2.39236in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -329,13 +329,13 @@ def style_8_presentation_page_layout_Title_and_4_Content():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL20" style:display-name="Title and 4 Content">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="4.40799in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="4.40799in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.39063in" />
+<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.39063in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="4.30729in" svg:width="4.41667in" svg:height="2.39236in" />
+<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="4.30729in" svg:width="4.41667in" svg:height="2.39236in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -347,12 +347,12 @@ def style_8_presentation_page_layout_Title__2_Content_and_Content():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL21" style:display-name="Title, 2 Content and Content">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="4.40799in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="5.14931in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.39063in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="4.30729in" svg:width="4.41667in" svg:height="2.39236in" />
+<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -364,12 +364,12 @@ def style_8_presentation_page_layout_Title__2_Content_and_Text():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL22" style:display-name="Title, 2 Content and Text">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="4.40799in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="outline" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="5.14931in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.39063in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="4.30729in" svg:width="4.41667in" svg:height="2.39236in" />
+<presentation:placeholder presentation:object="outline" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -381,12 +381,12 @@ def style_8_presentation_page_layout_Title_and_2_Content_over_Text():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL23" style:display-name="Title and 2 Content over Text">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="4.40799in" svg:width="9in" svg:height="2.49132in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="object" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.39063in" />
+<presentation:placeholder presentation:object="object" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="2.39063in" />
+<presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="4.30729in" svg:width="9in" svg:height="2.39236in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -398,10 +398,10 @@ def style_8_presentation_page_layout_Title_and_Table():
     
     elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL24" style:display-name="Title and Table">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
-<presentation:placeholder presentation:object="table" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="5.15in" />
-<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="7.01736in" svg:width="2.33333in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="7.01736in" svg:width="3.16667in" svg:height="0.39931in" />
-<presentation:placeholder presentation:object="page-number" svg:x="8.66667in" svg:y="7.01736in" svg:width="0.83333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="table" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="4.94965in" />
+<presentation:placeholder presentation:object="date-time" svg:x="0.5in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="footer" svg:x="3.41667in" svg:y="6.95139in" svg:width="3.16667in" svg:height="0.39931in" />
+<presentation:placeholder presentation:object="page-number" svg:x="7.16667in" svg:y="6.95139in" svg:width="2.33333in" svg:height="0.39931in" />
 </style:presentation-page-layout>
 """ )
     
@@ -412,7 +412,7 @@ def style_8_default_style_graphic():
     """Build Element style:default-style for graphic """
     
     elem = build_element( """<style:default-style style:family="graphic">
-<style:graphic-properties draw:fill="solid" draw:fill-color="#ceb966" draw:opacity="100%" draw:stroke="solid" svg:stroke-width="0.02778in" svg:stroke-color="#978749" svg:stroke-opacity="100%" />
+<style:graphic-properties draw:fill="solid" draw:fill-color="#4f81bd" draw:opacity="100%" draw:stroke="solid" svg:stroke-width="0.02778in" svg:stroke-color="#385d8a" svg:stroke-opacity="100%" />
 </style:default-style>
 """ )
     
@@ -422,7 +422,7 @@ def draw_8_fill_image():
     
     """Build Element draw:fill-image """
     
-    elem = build_element( """<draw:fill-image draw:name="a1050" xlink:href="media/image24.png" xlink:show="embed" xlink:actuate="onLoad" />
+    elem = build_element( """<draw:fill-image draw:name="a1120" xlink:href="media/image24.png" xlink:show="embed" xlink:actuate="onLoad" />
 """ )
     
     return elem
@@ -438,8 +438,8 @@ func_quick_lookupD["Picture with Caption"] = style_8_presentation_page_layout_Pi
 func_quick_lookupD["Section Header"] = style_8_presentation_page_layout_Section_Header
 func_quick_lookupD["Title Only"] = style_8_presentation_page_layout_Title_Only
 func_quick_lookupD["Title Slide"] = style_8_presentation_page_layout_Title_Slide
+func_quick_lookupD["Title and 2 Column Text"] = style_8_presentation_page_layout_Title_and_2_Column_Text
 func_quick_lookupD["Title and 2 Content over Text"] = style_8_presentation_page_layout_Title_and_2_Content_over_Text
-func_quick_lookupD["Title and 2-Column Text"] = style_8_presentation_page_layout_Title_and_2_Column_Text
 func_quick_lookupD["Title and 4 Content"] = style_8_presentation_page_layout_Title_and_4_Content
 func_quick_lookupD["Title and Content"] = style_8_presentation_page_layout_Title_and_Content
 func_quick_lookupD["Title and Content over Text"] = style_8_presentation_page_layout_Title_and_Content_over_Text
@@ -468,8 +468,8 @@ layout_name_lookupD["Picture with Caption"] = "Master1-PPL9"
 layout_name_lookupD["Section Header"] = "Master1-PPL3"
 layout_name_lookupD["Title Only"] = "Master1-PPL6"
 layout_name_lookupD["Title Slide"] = "Master1-PPL1"
+layout_name_lookupD["Title and 2 Column Text"] = "Master1-PPL13"
 layout_name_lookupD["Title and 2 Content over Text"] = "Master1-PPL23"
-layout_name_lookupD["Title and 2-Column Text"] = "Master1-PPL13"
 layout_name_lookupD["Title and 4 Content"] = "Master1-PPL20"
 layout_name_lookupD["Title and Content"] = "Master1-PPL2"
 layout_name_lookupD["Title and Content over Text"] = "Master1-PPL19"
@@ -494,7 +494,7 @@ display_name_lookupD["Master1-PPL1"] = "Title Slide"
 display_name_lookupD["Master1-PPL10"] = "Title and Vertical Text"
 display_name_lookupD["Master1-PPL11"] = "Vertical Title and Text"
 display_name_lookupD["Master1-PPL12"] = "Title and Text"
-display_name_lookupD["Master1-PPL13"] = "Title and 2-Column Text"
+display_name_lookupD["Master1-PPL13"] = "Title and 2 Column Text"
 display_name_lookupD["Master1-PPL14"] = "Title and Text over Content"
 display_name_lookupD["Master1-PPL15"] = "Title, Text, and Content"
 display_name_lookupD["Master1-PPL16"] = "Title, Content and Text"
