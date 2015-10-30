@@ -16,6 +16,18 @@ import solidbg.page_layouts
 import solidbg.styles_auto_styles
 import solidbg.styles_master_pages
 
+import image.content_auto_styles
+import image.content_body_presentation
+import image.page_layouts
+import image.styles_auto_styles
+import image.styles_master_pages
+
+import grad.content_auto_styles
+import grad.content_body_presentation
+import grad.page_layouts
+import grad.styles_auto_styles
+import grad.styles_master_pages
+
 DRAW_FRAME_TAG = force_to_tag( 'draw:frame' )
 TEXT_SPAN_TAG =  force_to_tag( 'text:span' )
 TEXT_STYLE_NAME_ATTR = force_to_tag( 'text:style-name' )
@@ -53,12 +65,28 @@ class Page(object):
         
         print('in class Page: inpD=%s'%inpD)
         
-        self.lay_name = solidbg.page_layouts.layout_name_lookupD[ self.disp_name ] # like: "Master1-PPL1"
+        if presObj.page_type == 'grad':
+            self.page_layouts = grad.page_layouts
+            self.content_body_presentation = grad.content_body_presentation
+            self.content_body_presentation = grad.content_body_presentation
+            self.content_auto_styles = grad.content_auto_styles
+        elif presObj.page_type == 'image':
+            self.page_layouts = image.page_layouts
+            self.content_body_presentation = image.content_body_presentation
+            self.content_body_presentation = image.content_body_presentation
+            self.content_auto_styles = image.content_auto_styles
+        else:
+            self.page_layouts = solidbg.page_layouts
+            self.content_body_presentation = solidbg.content_body_presentation
+            self.content_body_presentation = solidbg.content_body_presentation
+            self.content_auto_styles = solidbg.content_auto_styles
+        
+        self.lay_name = self.page_layouts.layout_name_lookupD[ self.disp_name ] # like: "Master1-PPL1"
         
         # master_name like: Master1-Layout1-title-Title-Slide
-        self.master_name = solidbg.content_body_presentation.master_page_name_lookupD[ self.lay_name ]
+        self.master_name = self.content_body_presentation.master_page_name_lookupD[ self.lay_name ]
         
-        self.draw_page = solidbg.content_body_presentation.func_quick_lookupD[ self.lay_name ]() # Element object
+        self.draw_page = self.content_body_presentation.func_quick_lookupD[ self.lay_name ]() # Element object
         self.normalize_content_styles()
                         
         self.draw_frameL = self.draw_page.findall( DRAW_FRAME_TAG )
@@ -109,7 +137,7 @@ class Page(object):
                     a_new = self.presObj.get_next_a_style()
                     
                     elem.set( force_to_tag(aname), a_new )
-                    style_elem = solidbg.content_auto_styles.content_style_name_lookupD[ aval ]()
+                    style_elem = self.content_auto_styles.content_style_name_lookupD[ aval ]()
                     style_elem.set( force_to_tag('style:name'), a_new )
                     self.presObj.new_content_styleL.append( style_elem )
                     self.presObj.new_content_styleD[ a_new ] = style_elem

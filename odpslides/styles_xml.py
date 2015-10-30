@@ -37,4 +37,21 @@ class StylesXML(object):
             hex_col_str = getValidHexStr(  self.presObj.background_color , "#ffffff") # default to white
             self.styles_tmplt.set_all_attr_of_tag( 'style:drawing-page-properties', 'draw:fill-color', hex_col_str)
         
-        
+        elif self.presObj.page_type == 'grad':
+            hex_col_str = getValidHexStr(  self.presObj.grad_start_color , "#ffffff") # default to white
+            self.styles_tmplt.set_all_attr_of_tag( 'draw:gradient', 'draw:start-color', hex_col_str)
+            print('Setting start gradient color to', hex_col_str)
+
+            hex_col_str = getValidHexStr(  self.presObj.grad_end_color , "#ffffff") # default to white
+            self.styles_tmplt.set_all_attr_of_tag( 'draw:gradient', 'draw:end-color', hex_col_str)
+            print('Setting end gradient color to', hex_col_str)
+            
+            self.styles_tmplt.set_all_attr_of_tag( 'draw:gradient', 'draw:style', self.presObj.grad_draw_style)
+            self.styles_tmplt.set_all_attr_of_tag( 'draw:gradient', 'draw:angle', self.presObj.grad_angle)
+            
+        elif self.presObj.page_type == 'image':
+            
+            img_name = 'media/%s'%self.presObj.image_nameL[0]
+            self.styles_tmplt.set_all_attr_of_tag( 'draw:fill-image', 'xlink:href', img_name)
+            
+            

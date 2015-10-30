@@ -32,7 +32,7 @@ class Presentation(object):
 
     def __init__(self, title='My Title', author='My Name', 
         background_image="", background_color="white",
-        grad_start_color="", grad_end_color="", grad_angle=0, grad_draw_style='linear',
+        grad_start_color="", grad_end_color="", grad_angle_deg=0, grad_draw_style='linear',
         show_date=False, date_font_color='gray',
         footer="", footer_font_color='gray',
         show_page_number=False, page_number_font_color="gray"):
@@ -61,7 +61,7 @@ class Presentation(object):
         
         self.grad_start_color = grad_start_color
         self.grad_end_color = grad_end_color
-        self.grad_angle = grad_angle
+        self.grad_angle = '%s'%(int(grad_angle_deg)*10, ) # odp understands tenths of deg input
         self.grad_draw_style = grad_draw_style
         
         if self.internal_background_image:
@@ -213,8 +213,7 @@ class Presentation(object):
         
         # just duplicate reference file's styles.xml
         self.styles_xml_obj.make_clean_copy()
-        if self.page_type == 'solidbg':
-            self.styles_xml_obj.set_background()
+        self.styles_xml_obj.set_background()
 
         zipfile_insert( zipfileobj, 'styles.xml', self.styles_xml_obj.styles_tmplt.tostring() )
 
@@ -258,6 +257,7 @@ class Presentation(object):
     def add_title_chart( self, title='My Title', subtitle='My Subtitle', title_font_color='',
                             subtitle_font_color='',background_color=""):
         
+        # <<<<==== Temporarily leave background color... does nothing for now, may delete later
         if background_color:
             background_color = getValidHexStr( background_color, "#ffffff" ) # default to white
         else:
@@ -273,9 +273,9 @@ class Presentation(object):
 if __name__ == '__main__':
     
     C = Presentation(title='My Title', author='My Name',
-        #background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
+        background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
         background_color='coral',
-        #grad_start_color="#99ff99", grad_end_color="#ffffff", grad_angle=0, grad_draw_style='linear',
+        grad_start_color='ff0000', grad_end_color="#ffffff", grad_angle_deg=45, grad_draw_style='linear',
         show_date=True, date_font_color='lime',
         footer="testing 123", footer_font_color='lime',
         show_page_number=True, page_number_font_color='dm')
@@ -287,7 +287,7 @@ if __name__ == '__main__':
                         subtitle_font_color='green')
     
     #C.new_content_pageL[-1].set_to_gradient(grad_start_color="#99ff99", grad_end_color="#ffffff", 
-    #                                         grad_angle=0, grad_draw_style='linear' )
+    #                                         grad_angle_deg=0, grad_draw_style='linear' )
     
     C.save( filename='my_ppt.odp', launch=1 )
     
