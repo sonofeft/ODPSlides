@@ -16,7 +16,7 @@ from odpslides.find_obj import find_elem_w_attrib, NS_attrib, NS
 here = os.path.abspath(os.path.dirname(__file__))
 
 
-def load_template_xml_from_odp(ods_fname, fname, subdir='' ):
+def read_source_from_odp(ods_fname, fname, subdir='' ):
 
     full_ods_path = os.path.join( here, 'templates', ods_fname )
 
@@ -26,9 +26,11 @@ def load_template_xml_from_odp(ods_fname, fname, subdir='' ):
         inner_fname =  fname
 
     odsfile = zipfile.ZipFile( full_ods_path )
-    src = odsfile.read( inner_fname ).decode('utf-8')
+    return odsfile.read( inner_fname ).decode('utf-8')
         
 
+def load_template_xml_from_odp(ods_fname, fname, subdir='' ):
+    src = read_source_from_odp(ods_fname, fname, subdir=subdir )
     return TemplateXML_File( src )
 
 
@@ -188,26 +190,24 @@ class ODPFile( object ):
         rootL = [tree_styles.root, tree_content.root]
         for root in rootL:
             for elem in root.iter():
-                aval = elem.get(STYLE_NAME_ATTRIB_NAME, None)
-                if aval is not None:
-                    if aval.startswith('a'):
-                        try:
-                            aint = int( aval[1:] )
-                            if aint > self.max_style_name_int:
-                                self.max_style_name_int = aint
-                            self.style_name_elem_from_nameD[aval] = elem
-                        except:
-                            print('FAILED to get integer of style: "%s"'%aval)
+                aval = elem.get(STYLE_NAME_ATTRIB_NAME, '')
+                if aval.startswith('a'):
+                    try:
+                        aint = int( aval[1:] )
+                        if aint > self.max_style_name_int:
+                            self.max_style_name_int = aint
+                        self.style_name_elem_from_nameD[aval] = elem
+                    except:
+                        print('FAILED to get integer of style: "%s"'%aval)
                             
-                id_val = elem.get(DRAW_ID_ATTRIB_NAME, None)
-                if id_val is not None:
-                    if id_val.startswith('id'):
-                        try:
-                            idint = int( aval[2:] )
-                            if idint > self.max_draw_id_int:
-                                self.max_draw_id_int = idint
-                        except:
-                            pass
+                id_val = elem.get(DRAW_ID_ATTRIB_NAME, '')
+                if id_val.startswith('id'):
+                    try:
+                        idint = int( id_val[2:] )
+                        if idint > self.max_draw_id_int:
+                            self.max_draw_id_int = idint
+                    except:
+                        pass
 
 
         print('Highest value of style   from styles.xml is "a%i"'%self.max_style_name_int)

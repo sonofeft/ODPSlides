@@ -10,11 +10,11 @@ from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 from odpslides.color_utils import getValidHexStr
 from odpslides.template_xml_file import TemplateXML_File
 
-import plain.content_auto_styles
-import plain.content_body_presentation
-import plain.page_layouts
-import plain.styles_auto_styles
-import plain.styles_master_pages
+import solidbg.content_auto_styles
+import solidbg.content_body_presentation
+import solidbg.page_layouts
+import solidbg.styles_auto_styles
+import solidbg.styles_master_pages
 
 DRAW_FRAME_TAG = force_to_tag( 'draw:frame' )
 TEXT_SPAN_TAG =  force_to_tag( 'text:span' )
@@ -48,18 +48,17 @@ class Page(object):
         self.background_image = self.presObj.background_image
         self.internal_background_image = self.presObj.internal_background_image
         
-        # Start out as "plain", can be changed later
-        self.page_type = 'plain' # "plain", "grad", "image"
+        # Start out as "solidbg", can be changed later
         self.disp_name = disp_name  # "Title Slide"
         
         print('in class Page: inpD=%s'%inpD)
         
-        self.lay_name = plain.page_layouts.layout_name_lookupD[ self.disp_name ] # like: "Master1-PPL1"
+        self.lay_name = solidbg.page_layouts.layout_name_lookupD[ self.disp_name ] # like: "Master1-PPL1"
         
         # master_name like: Master1-Layout1-title-Title-Slide
-        self.master_name = plain.content_body_presentation.master_page_name_lookupD[ self.lay_name ]
+        self.master_name = solidbg.content_body_presentation.master_page_name_lookupD[ self.lay_name ]
         
-        self.draw_page = plain.content_body_presentation.func_quick_lookupD[ self.lay_name ]() # Element object
+        self.draw_page = solidbg.content_body_presentation.func_quick_lookupD[ self.lay_name ]() # Element object
         self.normalize_content_styles()
                         
         self.draw_frameL = self.draw_page.findall( DRAW_FRAME_TAG )
@@ -73,18 +72,10 @@ class Page(object):
 
         # Do similar logic for master-page if it is needed
         self.master_frameD = {} # index=frame_class (e.g. "title"), value = draw:frame element list
-        if self.presObj.include_styles_xml:
-            self.build_master_page_and_styles()
-            self.master_frameL = self.presObj.new_master_page_styleL[-1].findall( DRAW_FRAME_TAG )
-            for master_frame in self.master_frameL:
-                frame_class = master_frame.get( PRESENTATION_CLASS_ATTR, '' )
-                #print('frame_class:', frame_class)
-                if frame_class:
-                    self.master_frameD[frame_class] = self.master_frameD.get(frame_class, [])
-                    self.master_frameD[frame_class].append( master_frame )
-        else:
-            self.master_frameL = []
-            self.master_page_elem = None
+        
+        # CHECK THESE FOR USE ????????????????????????????
+        self.master_frameL = [] # ???????????????????????
+        self.master_page_elem = None # ??????????????????
 
 
         #print( self.draw_frameD )
@@ -101,14 +92,12 @@ class Page(object):
         if 'subtitle_font_color' in inpD:
             self.set_drawframe_font_color( frame_class='subtitle', font_color=inpD['subtitle_font_color'] )
         
-        if 'background_color' in inpD:
-            self.set_background_color( background_color=inpD['background_color'] )
         
-        if self.background_image:
-            self.set_background_image( self.background_image )
-            
-        del self.draw_page.attrib[ force_to_tag( 'presentation:presentation-page-layout-name' ) ]
-        del self.draw_page.attrib[ force_to_tag( 'draw:master-page-name' ) ]
+    def set_page_number(self, ipage):
+        
+        self.draw_page.set( force_to_tag('draw:name'), 'Slide%i'%ipage )
+        
+        self.draw_page.set( force_to_tag( 'draw:id' ), 'Slide-%i'%ipage )
 
     def normalize_content_styles(self):
         
@@ -120,7 +109,7 @@ class Page(object):
                     a_new = self.presObj.get_next_a_style()
                     
                     elem.set( force_to_tag(aname), a_new )
-                    style_elem = plain.content_auto_styles.content_style_name_lookupD[ aval ]()
+                    style_elem = solidbg.content_auto_styles.content_style_name_lookupD[ aval ]()
                     style_elem.set( force_to_tag('style:name'), a_new )
                     self.presObj.new_content_styleL.append( style_elem )
                     self.presObj.new_content_styleD[ a_new ] = style_elem
@@ -133,52 +122,14 @@ class Page(object):
                         if sub_style_childL:
                             for sub_style_elem in sub_style_childL:
                                 if sub_style_elem.tag == STYLE_DRAWING_PAGE_PROPS_TAG:
-                                    if self.presObj.for_excel:
-                                        sub_style_elem.set( PRESENTATION_TRANSITION_TYPE_ATTR , "manual")
-                                        sub_style_elem.set( PRESENTATION_TRANSITION_SPEED_ATTR, "slow")
-                                        sub_style_elem.set( PRESENTATION_BG_VISIBLE_ATTR, 'false' )
-                                        if sub_style_elem.get( PRESENTATION_BG_OBJ_VISIBLE_ATTR, ''):
-                                            del sub_style_elem.attrib[ PRESENTATION_BG_OBJ_VISIBLE_ATTR ]
-                                    else:
                                         sub_style_elem.set( PRESENTATION_BG_VISIBLE_ATTR, 'true' )
                     
                     
             if elem.get(DRAW_ID_ATTR, ''):
-                if elem.tag == DRAW_PAGE_TAG:
-                    #del elem.attrib[DRAW_ID_ATTR]
-                    elem.set(DRAW_ID_ATTR, 'Slide-256')
-                else:
+                if elem.tag != DRAW_PAGE_TAG:
                     id_new = self.presObj.get_next_draw_id()
                     elem.set(DRAW_ID_ATTR, id_new)
-    
-    def build_master_page_and_styles(self):
-        # presObj.new_master_styleL, For each new_content_pageL item, there are many master-page style elements
-        # presObj.new_master_page_styleL, For each new_content_pageL item, there is a style:master-page item
-        self.master_page_elem = plain.styles_master_pages.func_quick_lookupD[self.lay_name]()
-        self.presObj.new_master_page_styleL.append( self.master_page_elem )
-        
-        for elem in self.master_page_elem.iter():
-            for aname, aval in elem.items():
-                if aname.endswith( '}style-name' ):
-                    a_new = self.presObj.get_next_a_style()
-                    
-                    elem.set( force_to_tag(aname), a_new )
-                    style_elem = plain.styles_auto_styles.styles_style_name_lookupD[ aval ]()
-                    
-                    style_elem.set( force_to_tag('style:name'), a_new )
-                    self.presObj.new_master_styleL.append( style_elem )
-                    self.presObj.new_master_styleD[a_new] = style_elem
-
-
-    def get_drawframe_list_from_drawpage(self, frame_class='title'):
-        """Look for all draw:frame elements of presentation:class == frame_class"""
-        draw_frameL = []
-        for elem in self.draw_page.iter():
-            if elem.tag == DRAW_FRAME_TAG:
-                if elem.get( PRESENTATION_CLASS_ATTR, '' ) == frame_class:
-                    draw_frameL.append( elem  ) # return elem as a draw_frame
-        return draw_frameL
-        
+            
     
     def set_textspan_text(self, frame_class='title', text='My Text', num_frame=0, 
                              num_textspan=0, clear_all=True ):
@@ -229,68 +180,7 @@ class Page(object):
                                     if sub_span_elem.get(FONT_COLOR_ATTR, ''):
                                         sub_span_elem.set( FONT_COLOR_ATTR, hex_col_str )
 
-    def set_background_color(self, background_color='white' ):
-        
-        hex_col_str = getValidHexStr( background_color, "#ffffff") # default to white
-        print( 'hex_col_str in set_background_color =',hex_col_str )
-
-        for page_elem,styleD in [(self.draw_page, self.presObj.new_content_styleD), 
-                               (self.master_page_elem, self.presObj.new_master_styleD)]:
-            if page_elem is not None:
-                aNNN = page_elem.get( DRAW_STYLE_NAME_ATTR, '' )
-                if aNNN not in styleD:
-                    print( 'Bad style index = %s, in set_background_color'%aNNN)
-                else:
-                    style_elem = styleD[aNNN]
-                    style_elem.getchildren()[0].set(DRAW_FILL_COLOR_ATTR  , hex_col_str)
-            
-    def set_to_gradient(self, grad_start_color="#9999ff", grad_end_color="#ffffff", grad_angle=0, grad_draw_style='linear' ):
-        # get the main draw:page style element (in content.xml)
-        style_elem = self.presObj.new_content_styleD[ self.draw_page_style_name ]
-        i_style_elem = self.presObj.new_content_styleL.index( style_elem )
-        
-        draw_grad_style_name = self.presObj.get_next_a_style()
-        
-        # build a new style element to replace plain/original style element (in content.xml)
-        new_style_elem = TemplateXML_File( GRAD_ELEM_STR%(XMLNS_STR, self.draw_page_style_name, draw_grad_style_name  ) )
-        
-        # build a new draw:gradient element to put into office:styles of styles.xml
-        new_draw_grad_elem = TemplateXML_File( DRAW_GRAD_STR%(XMLNS_STR, draw_grad_style_name, grad_draw_style,
-                            grad_start_color, grad_end_color) )
-                            
-        self.presObj.new_content_styleD[ self.draw_page_style_name ] = new_style_elem.root
-        self.presObj.new_content_styleL[ i_style_elem ] = new_style_elem.root
-        
-        self.presObj.new_styles_office_stylesL.append( new_draw_grad_elem.root )
-
-            
-    def set_background_image(self, background_image='' ):
-        # Get current style element
-        
-        if not background_image:
-            return
-        
-        self.background_image = background_image
-        self.internal_background_image = self.presObj.get_next_image_name(background_image)
-        
-        # get the main draw:page style element (in content.xml)
-        style_elem = self.presObj.new_content_styleD[ self.draw_page_style_name ]
-        i_style_elem = self.presObj.new_content_styleL.index( style_elem )
-        
-        draw_img_style_name = self.presObj.get_next_a_style()
-        
-        # build a new style element to replace plain/original style element (in content.xml)
-        new_style_elem = TemplateXML_File( IMG_ELEM_STR%(XMLNS_STR, self.draw_page_style_name, draw_img_style_name )  )
-        
-        # build a new draw:fill-image element to put into office:styles of styles.xml
-        new_draw_img_elem = TemplateXML_File( DRAW_IMG_STR%(XMLNS_STR, draw_img_style_name, self.internal_background_image ) )
-                            
-        self.presObj.new_content_styleD[ self.draw_page_style_name ] = new_style_elem.root
-        self.presObj.new_content_styleL[ i_style_elem ] = new_style_elem.root
-        
-        self.presObj.new_styles_office_stylesL.append( new_draw_img_elem.root )
-
-#  style element to replace plain/original style element (in content.xml)
+#  style element to replace solidbg/original style element (in content.xml)
 IMG_ELEM_STR = """<style:style %s style:family="drawing-page" style:name="%s">
 <style:drawing-page-properties draw:fill="bitmap" draw:fill-image-name="%s" style:repeat="stretch" 
 presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" 
@@ -302,7 +192,7 @@ presentation:display-page-number="false" presentation:display-date-time="false"/
 DRAW_IMG_STR = """<draw:fill-image %s draw:name="%s" xlink:href="media/%s" 
 xlink:show="embed" xlink:actuate="onLoad"/>"""
 
-#  style element to replace plain/original style element (in content.xml)
+#  style element to replace solidbg/original style element (in content.xml)
 GRAD_ELEM_STR = """<style:style %s style:family="drawing-page" style:name="%s">
 <style:drawing-page-properties draw:fill="gradient" draw:fill-gradient-name="%s" presentation:visibility="visible" 
 draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" 

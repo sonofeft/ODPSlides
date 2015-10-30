@@ -211,9 +211,9 @@ def style_8_presentation_page_layout_Title_and_Text():
 
 def style_8_presentation_page_layout_Title_and_2_Column_Text():
     
-    """Build Element style:presentation-page-layout for Title and 2-Column Text """
+    """Build Element style:presentation-page-layout for Title and 2 Column Text """
     
-    elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL13" style:display-name="Title and 2-Column Text">
+    elem = build_element( """<style:presentation-page-layout style:name="Master1-PPL13" style:display-name="Title and 2 Column Text">
 <presentation:placeholder presentation:object="title" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" />
 <presentation:placeholder presentation:object="outline" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
 <presentation:placeholder presentation:object="outline" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" />
@@ -418,19 +418,9 @@ def style_8_default_style_graphic():
     
     return elem
 
-def draw_8_gradient():
-    
-    """Build Element draw:gradient """
-    
-    elem = build_element( """<draw:gradient draw:name="a825" draw:style="linear" draw:angle="0" draw:start-color="#5e9eff" draw:end-color="#85c2ff" draw:start-intensity="100%" draw:end-intensity="100%" />
-""" )
-    
-    return elem
-
 
 
 # Set values in func_quick_lookupD
-func_quick_lookupD[""] = draw_8_gradient
 func_quick_lookupD["Blank"] = style_8_presentation_page_layout_Blank
 func_quick_lookupD["Comparison"] = style_8_presentation_page_layout_Comparison
 func_quick_lookupD["Content with Caption"] = style_8_presentation_page_layout_Content_with_Caption
@@ -438,8 +428,8 @@ func_quick_lookupD["Picture with Caption"] = style_8_presentation_page_layout_Pi
 func_quick_lookupD["Section Header"] = style_8_presentation_page_layout_Section_Header
 func_quick_lookupD["Title Only"] = style_8_presentation_page_layout_Title_Only
 func_quick_lookupD["Title Slide"] = style_8_presentation_page_layout_Title_Slide
+func_quick_lookupD["Title and 2 Column Text"] = style_8_presentation_page_layout_Title_and_2_Column_Text
 func_quick_lookupD["Title and 2 Content over Text"] = style_8_presentation_page_layout_Title_and_2_Content_over_Text
-func_quick_lookupD["Title and 2-Column Text"] = style_8_presentation_page_layout_Title_and_2_Column_Text
 func_quick_lookupD["Title and 4 Content"] = style_8_presentation_page_layout_Title_and_4_Content
 func_quick_lookupD["Title and Content"] = style_8_presentation_page_layout_Title_and_Content
 func_quick_lookupD["Title and Content over Text"] = style_8_presentation_page_layout_Title_and_Content_over_Text
@@ -468,8 +458,8 @@ layout_name_lookupD["Picture with Caption"] = "Master1-PPL9"
 layout_name_lookupD["Section Header"] = "Master1-PPL3"
 layout_name_lookupD["Title Only"] = "Master1-PPL6"
 layout_name_lookupD["Title Slide"] = "Master1-PPL1"
+layout_name_lookupD["Title and 2 Column Text"] = "Master1-PPL13"
 layout_name_lookupD["Title and 2 Content over Text"] = "Master1-PPL23"
-layout_name_lookupD["Title and 2-Column Text"] = "Master1-PPL13"
 layout_name_lookupD["Title and 4 Content"] = "Master1-PPL20"
 layout_name_lookupD["Title and Content"] = "Master1-PPL2"
 layout_name_lookupD["Title and Content over Text"] = "Master1-PPL19"
@@ -494,7 +484,7 @@ display_name_lookupD["Master1-PPL1"] = "Title Slide"
 display_name_lookupD["Master1-PPL10"] = "Title and Vertical Text"
 display_name_lookupD["Master1-PPL11"] = "Vertical Title and Text"
 display_name_lookupD["Master1-PPL12"] = "Title and Text"
-display_name_lookupD["Master1-PPL13"] = "Title and 2-Column Text"
+display_name_lookupD["Master1-PPL13"] = "Title and 2 Column Text"
 display_name_lookupD["Master1-PPL14"] = "Title and Text over Content"
 display_name_lookupD["Master1-PPL15"] = "Title, Text, and Content"
 display_name_lookupD["Master1-PPL16"] = "Title, Content and Text"

@@ -20,6 +20,7 @@ except ImportError:
 
 import re
 from copy import deepcopy
+from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 
 header_re = re.compile( '\<\?.*\?\>', flags=re.MULTILINE | re.UNICODE )
 
@@ -132,6 +133,13 @@ class TemplateXML_File(object):
                 
         for key,item in self.original_posD.items():
             self.get_elem_from_orig_posD[item] = key # get elem from original_posD
+            
+            
+        # set up dictionaries to hold style:name info (if init_all_annn_style8name)
+        self.annn_style8nameD = {} # index=style:name ("a123"), value=elem
+        self.style_refD = {} # index=xxxxx:style-name (e.g. "a123"), value=elem
+        self.id_draw8idD = {} # index=draw:id (e.g. "id123"), value=elem
+        
 
     def get_short_path(self, elem):
 
@@ -324,6 +332,82 @@ class TemplateXML_File(object):
                 self.qnameOD[qname] = '%s:%s'%(self.nsOD[uri], name)
 
         return my_new_elem
+
+    def init_all_annn_style8name(self):
+        
+        STYLE_NAME_ATTR = force_to_tag( 'style:name' )
+        DRAW_ID_ATTR = force_to_tag( 'draw:id' )
+        
+        # reset in case called twice
+        self.annn_style8nameD = {} # index=style:name ("a123"), value=elem
+        self.style_refD = {} # index=xxxxx:style-name (e.g. "a123"), value=elem
+        self.id_draw8idD = {} # index=draw:id (e.g. "id123"), value=elem
+
+        for elem in self.root.iter():
+            att_val = elem.get(STYLE_NAME_ATTR, '')
+            if att_val.startswith('a'):
+                if att_val in self.annn_style8nameD:
+                    print('...ERROR... More than one definition for:', att_val)
+                    self.annn_style8nameD[ att_val ] = [ self.annn_style8nameD[ att_val ] ]
+                    self.annn_style8nameD[ att_val ].append( elem )
+                else:
+                    self.annn_style8nameD[ att_val ] = elem
+
+            for aname, aval in elem.items():
+                if aname.endswith( '}style-name' ):
+                    if aval in self.style_refD:
+                        self.style_refD[ aval ] = [ self.style_refD[ aval ] ]
+                        self.style_refD[ aval ].append( elem )
+                    else:
+                        self.style_refD[ aval ] = elem
+                        
+            att_val = elem.get(DRAW_ID_ATTR, '')
+            if att_val.startswith('id'):
+                if att_val in self.id_draw8idD:
+                    print('...ERROR... More than one definition for:', att_val)
+                    self.id_draw8idD[ att_val ] = [ self.id_draw8idD[ att_val ] ]
+                    self.id_draw8idD[ att_val ].append( elem )
+                else:
+                    self.id_draw8idD[ att_val ] = elem
+                
+
+        self.max_annn_def = -1
+        self.min_annn_def = 9999999999
+        for annn in self.annn_style8nameD.keys():
+            self.max_annn_def = max( self.max_annn_def, int(annn[1:]) )
+            self.min_annn_def = min( self.min_annn_def, int(annn[1:]) )
+        print('min_annn_def self.annn_style8nameD = ', self.min_annn_def)
+        print('max_annn_def self.annn_style8nameD = ', self.max_annn_def)
+
+
+        self.max_annn_used = -1
+        self.min_annn_used = 9999999999
+        for annn in self.style_refD.keys():
+            self.max_annn_used = max( self.max_annn_used, int(annn[1:]) )
+            self.min_annn_used = min( self.min_annn_used, int(annn[1:]) )
+        print('min_annn_used self.annn_style8nameD = ', self.min_annn_used)
+        print('max_annn_used self.annn_style8nameD = ', self.max_annn_used)
+
+
+        self.max_idnnn_def = -1
+        self.min_idnnn_def = 9999999999
+        for idnnn in self.id_draw8idD.keys():
+            self.max_idnnn_def = max( self.max_idnnn_def, int(idnnn[2:]) )
+            self.min_idnnn_def = min( self.min_idnnn_def, int(idnnn[2:]) )
+        print('min_idnnn_def self.id_draw8idD = ', self.min_idnnn_def)
+        print('max_idnnn_def self.id_draw8idD = ', self.max_idnnn_def)
+
+
+    def set_all_attr_of_tag(self, tag, attr_name, attr_val):
+        
+        # force tag and attr_name to long version 
+        tag = force_to_tag( tag )
+        attr_name = force_to_tag( attr_name )
+        
+        for elem in self.root.iter():
+            if elem.tag == tag:
+                elem.set( attr_name, attr_val )
+            
 
 if __name__ == "__main__":
 

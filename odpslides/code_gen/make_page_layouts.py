@@ -12,14 +12,23 @@ else:
     import odpslides.ElementTree_34OD as ET
 from odpslides.find_obj import find_elem_w_attrib, NS_attrib, NS
 
-from namespace import XMLNS_STR, force_to_short, force_to_tag
-from namespace import python_param_from_tag, python_def_from_tag
+from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
+from odpslides.namespace import python_param_from_tag, python_def_from_tag
 
 func_quick_lookupD = {} # index=display name, value=function name
 layout_name_lookupD = {} # index=display-name "Title Only", value=layout name "Master1-PPL6"
 display_name_lookupD = {} # index=layout name "Master1-PPL6", display-name "Title Only"
 
-def make_function_from_root( root, suffix='' ):
+def fix_utf8( s ):
+    cL = []
+    #s = s.encode('utf-8')
+    for c in s:
+        if ord(c) >= 128:
+            cL.append( '\\x%X'%ord(c) )
+        else:
+            cL.append( c )
+    return ''.join(cL)
+def make_function_from_root( root, tmplt_obj, suffix='' ):
     """build python source to make the Elements from scratch"""
     
     suffix = suffix.replace(',','_')
@@ -51,22 +60,9 @@ def make_function_from_root( root, suffix='' ):
     sL.append( '''    """%s """'''%doc_str )
     sL.append( '    ' )
     
-    sL.append( '    elem = ET.Element( "%s" )'%root.tag )
-    for key in keyL:
-        sL.append( '    elem.set("%s", "%s")'%(key, root.get(key) ) )
-    if root.text:
-        sL.append('    elem.text = "%s"'%root.text)
-    sL.append( '    ' )
-    
-    for child in root.getchildren():
-        sL.append('    child = ET.Element( "%s" )'%child.tag)
-        for ckey in sorted( child.keys() ):
-            sL.append( '    child.set("%s", "%s")'%(ckey, child.get(ckey) ) )
-        if child.text:
-            sL.append('    child.text = "%s"'%child.text)
-        sL.append( '    elem.append( child )' )
-        sL.append( '    ' )
-    
+    sOut = tmplt_obj.elem_tostring(root, include_ns=False, use_linebreaks=True )
+    sOut = fix_utf8( sOut )
+    sL.append( '''    elem = build_element( """%s""" )'''%sOut )
     
     sL.append( '    ' )
     sL.append( '    return elem\n\n' )
@@ -79,7 +75,7 @@ if __name__ == "__main__":
     
     here = os.path.abspath(os.path.dirname(__file__))
     
-    for suffix in ['image', 'grad', 'plain']:
+    for suffix in ['image', 'grad', 'plain', 'solidbg']:
     #for suffix in ['plain']:
         func_quick_lookupD.clear() # need to empty dict
         layout_name_lookupD.clear()
@@ -103,10 +99,13 @@ from __future__ import print_function
 import sys, os
 from collections import OrderedDict
 
-if sys.version_info < (3,):
-    import odpslides.ElementTree_27OD as ET
-else:
-    import odpslides.ElementTree_34OD as ET
+from odpslides.template_xml_file import TemplateXML_File
+from odpslides.namespace import XMLNS_STR
+
+def build_element( s ):
+    """Add namespace to string and use TemplateXML_File to make Element"""
+    s = s.replace(' ',' %s '%XMLNS_STR, 1) # First space ONLY
+    return TemplateXML_File( s ).root
                 
 ''' )
         fOut.write('\n\n# Use func_quick_lookupD for access to function calls')
@@ -119,26 +118,26 @@ else:
         # do style:presentation-page-layout
         page_layoutL = odp.office_styles_elem.findall( force_to_tag('style:presentation-page-layout') )
         for layout in page_layoutL:
-            fOut.write( make_function_from_root( layout, 
+            fOut.write( make_function_from_root( layout,  odp.styles_xml_obj,
                     suffix=layout.get( force_to_tag('style:display-name') ) ) )
         
         # do style:default-style
         page_layoutL = odp.office_styles_elem.findall( force_to_tag('style:default-style') )
         for layout in page_layoutL:
-            fOut.write( make_function_from_root( layout, 
+            fOut.write( make_function_from_root( layout, odp.styles_xml_obj,
                     suffix=layout.get( force_to_tag('style:family') ) ) )
 
         
         # do draw:gradient
         page_styleL = odp.office_styles_elem.findall( force_to_tag('draw:gradient') )
         for style in page_styleL:
-            fOut.write( make_function_from_root( style, suffix='' ) )
+            fOut.write( make_function_from_root( style, odp.styles_xml_obj, suffix='' ) )
             break # only do one
         
         # do draw:fill-image
         page_styleL = odp.office_styles_elem.findall( force_to_tag('draw:fill-image') )
         for style in page_styleL:
-            fOut.write( make_function_from_root( style, suffix='' ) )
+            fOut.write( make_function_from_root( style, odp.styles_xml_obj, suffix='' ) )
             break # only do one
 
 

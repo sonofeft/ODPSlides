@@ -9,11 +9,14 @@ from __future__ import print_function
 import sys, os
 from collections import OrderedDict
 
-if sys.version_info < (3,):
-    import odpslides.ElementTree_27OD as ET
-else:
-    import odpslides.ElementTree_34OD as ET
-                
+from odpslides.template_xml_file import TemplateXML_File
+from odpslides.namespace import XMLNS_STR
+
+def build_element( s ):
+    """Add namespace to string and use TemplateXML_File to make Element"""
+    s = s.replace(' ',' %s '%XMLNS_STR, 1) # First space ONLY
+    return TemplateXML_File( s ).root
+                                
 
 
 # Use func_quick_lookupD for access to function calls
@@ -35,115 +38,43 @@ def draw_8_page_Master1_PPL1():
     
     """Build Element draw:page for Master1-PPL1 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-256")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout1-title-Title-Slide")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide1")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1115")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL1")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id146")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1119")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.60764in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "8.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.75in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "2.32986in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1118")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1116")
-    child_4.text = "ppLayoutTitle"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1117")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id147")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Subtitle 2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "subtitle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1126")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.91667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "7in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "1.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "4.25in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1121")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1120")
-    child_4.text = "Text(2)"
-    child_3.append( child_4 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1125")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1125")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1124")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1122")
-    child_8.text = "For ppLayoutTitle"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1123")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide1" draw:style-name="a1115" draw:master-page-name="Master1-Layout1-title-Title-Slide" presentation:presentation-page-layout-name="Master1-PPL1" draw:id="Slide-256">
+<draw:frame draw:id="id146" presentation:style-name="a1119" draw:name="Title 1" svg:x="0.75in" svg:y="2.32986in" svg:width="8.5in" svg:height="1.60764in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1118" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1116" text:class-names="">
+ppLayoutTitle</text:span>
+<text:span text:style-name="a1117" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id147" presentation:style-name="a1126" draw:name="Subtitle 2" svg:x="1.5in" svg:y="4.25in" svg:width="7in" svg:height="1.91667in" presentation:class="subtitle" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1121" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1120" text:class-names="">
+Text(2)</text:span>
+</text:p>
+<text:list text:style-name="a1125">
+<text:list-item>
+<text:list text:style-name="a1125">
+<text:list-item>
+<text:p text:style-name="a1124" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1122" text:class-names="">
+For ppLayoutTitle</text:span>
+<text:span text:style-name="a1123" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -151,122 +82,47 @@ def draw_8_page_Master1_PPL12():
     
     """Build Element draw:page for Master1-PPL12 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-257")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout12-tx-Title-and-Text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide2")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1127")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL12")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id148")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1131")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1130")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1128")
-    child_4.text = "ppLayoutText"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1129")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id149")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Text Placeholder 2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "outline")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1139")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "4.94965in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1134")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1133")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1132")
-    child_6.text = "Text(2)"
-    child_5.append( child_6 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1138")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1138")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1137")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1135")
-    child_8.text = "For ppLayoutText"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1136")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide2" draw:style-name="a1127" draw:master-page-name="Master1-Layout12-tx-Title-and-Text" presentation:presentation-page-layout-name="Master1-PPL12" draw:id="Slide-257">
+<draw:frame draw:id="id148" presentation:style-name="a1131" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1130" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1128" text:class-names="">
+ppLayoutText</text:span>
+<text:span text:style-name="a1129" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id149" presentation:style-name="a1139" draw:name="Text Placeholder 2" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="4.94965in" presentation:class="outline" presentation:placeholder="false">
+<draw:text-box>
+<text:list text:style-name="a1134">
+<text:list-item>
+<text:p text:style-name="a1133" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1132" text:class-names="">
+Text(2)</text:span>
+</text:p>
+</text:list-item>
+</text:list>
+<text:list text:style-name="a1138">
+<text:list-item>
+<text:list text:style-name="a1138">
+<text:list-item>
+<text:p text:style-name="a1137" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1135" text:class-names="">
+For ppLayoutText</text:span>
+<text:span text:style-name="a1136" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -274,193 +130,74 @@ def draw_8_page_Master1_PPL13():
     
     """Build Element draw:page for Master1-PPL13 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-258")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout13-twoColTx-Title-and-2-Column-Text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide3")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1140")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL13")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id150")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1144")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1143")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1141")
-    child_4.text = "ppLayoutTwoColumnText"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1142")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id151")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Text Placeholder 2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "outline")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1152")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "4.94965in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.41667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1147")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1146")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1145")
-    child_6.text = "Text(2)"
-    child_5.append( child_6 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1151")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1151")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1150")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1148")
-    child_8.text = "For ppLayoutTwoColumnText"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1149")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id152")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Text Placeholder 3")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "outline")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1160")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "4.94965in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.41667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.08333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1155")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1154")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1153")
-    child_6.text = "Text(3)"
-    child_5.append( child_6 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1159")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1159")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1158")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1156")
-    child_8.text = "For ppLayoutTwoColumnText"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1157")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide3" draw:style-name="a1140" draw:master-page-name="Master1-Layout13-twoColTx-Title-and-2-Column-Text" presentation:presentation-page-layout-name="Master1-PPL13" draw:id="Slide-258">
+<draw:frame draw:id="id150" presentation:style-name="a1144" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1143" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1141" text:class-names="">
+ppLayoutTwoColumnText</text:span>
+<text:span text:style-name="a1142" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id151" presentation:style-name="a1152" draw:name="Text Placeholder 2" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" presentation:class="outline" presentation:placeholder="false">
+<draw:text-box>
+<text:list text:style-name="a1147">
+<text:list-item>
+<text:p text:style-name="a1146" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1145" text:class-names="">
+Text(2)</text:span>
+</text:p>
+</text:list-item>
+</text:list>
+<text:list text:style-name="a1151">
+<text:list-item>
+<text:list text:style-name="a1151">
+<text:list-item>
+<text:p text:style-name="a1150" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1148" text:class-names="">
+For ppLayoutTwoColumnText</text:span>
+<text:span text:style-name="a1149" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id152" presentation:style-name="a1160" draw:name="Text Placeholder 3" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" presentation:class="outline" presentation:placeholder="false">
+<draw:text-box>
+<text:list text:style-name="a1155">
+<text:list-item>
+<text:p text:style-name="a1154" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1153" text:class-names="">
+Text(3)</text:span>
+</text:p>
+</text:list-item>
+</text:list>
+<text:list text:style-name="a1159">
+<text:list-item>
+<text:list text:style-name="a1159">
+<text:list-item>
+<text:p text:style-name="a1158" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1156" text:class-names="">
+For ppLayoutTwoColumnText</text:span>
+<text:span text:style-name="a1157" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -468,78 +205,25 @@ def draw_8_page_Master1_PPL2():
     
     """Build Element draw:page for Master1-PPL2 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-259")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout2-obj-Title-and-Content")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide4")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1161")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL2")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id153")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1165")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1164")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1162")
-    child_4.text = "ppLayoutObject"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1163")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id154")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 3")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1166")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "3.125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.16667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "2.91667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "2.66233in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image1.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide4" draw:style-name="a1161" draw:master-page-name="Master1-Layout2-obj-Title-and-Content" presentation:presentation-page-layout-name="Master1-PPL2" draw:id="Slide-259">
+<draw:frame draw:id="id153" presentation:style-name="a1165" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1164" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1162" text:class-names="">
+ppLayoutObject</text:span>
+<text:span text:style-name="a1163" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id154" presentation:style-name="a1166" draw:name="Content Placeholder 3" svg:x="2.91667in" svg:y="2.66233in" svg:width="4.16667in" svg:height="3.125in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image1.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -547,149 +231,52 @@ def draw_8_page_Master1_PPL14():
     
     """Build Element draw:page for Master1-PPL14 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-260")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout14-txOverObj-Title-and-Text-over-Content")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide5")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1167")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL14")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id155")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1171")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1170")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1168")
-    child_4.text = "ppLayoutTextOverObject"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1169")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id156")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Text Placeholder 2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "outline")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1179")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39063in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1174")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1173")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1172")
-    child_6.text = "Text(2)"
-    child_5.append( child_6 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1178")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1178")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1177")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1175")
-    child_8.text = "For ppLayoutTextOverObject"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1176")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id157")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 4")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1180")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39236in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.18981in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "3.40509in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "4.30729in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image2.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide5" draw:style-name="a1167" draw:master-page-name="Master1-Layout14-txOverObj-Title-and-Text-over-Content" presentation:presentation-page-layout-name="Master1-PPL14" draw:id="Slide-260">
+<draw:frame draw:id="id155" presentation:style-name="a1171" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1170" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1168" text:class-names="">
+ppLayoutTextOverObject</text:span>
+<text:span text:style-name="a1169" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id156" presentation:style-name="a1179" draw:name="Text Placeholder 2" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="2.39063in" presentation:class="outline" presentation:placeholder="false">
+<draw:text-box>
+<text:list text:style-name="a1174">
+<text:list-item>
+<text:p text:style-name="a1173" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1172" text:class-names="">
+Text(2)</text:span>
+</text:p>
+</text:list-item>
+</text:list>
+<text:list text:style-name="a1178">
+<text:list-item>
+<text:list text:style-name="a1178">
+<text:list-item>
+<text:p text:style-name="a1177" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1175" text:class-names="">
+For ppLayoutTextOverObject</text:span>
+<text:span text:style-name="a1176" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id157" presentation:style-name="a1180" draw:name="Content Placeholder 4" svg:x="3.40509in" svg:y="4.30729in" svg:width="3.18981in" svg:height="2.39236in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image2.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -697,149 +284,52 @@ def draw_8_page_Master1_PPL15():
     
     """Build Element draw:page for Master1-PPL15 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-261")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout15-txAndObj-Title,-Text,-and-Content")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide6")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1181")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL15")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id158")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1185")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1184")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1182")
-    child_4.text = "ppLayoutTextAndObject"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1183")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id159")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Text Placeholder 2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "outline")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1193")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "4.94965in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.41667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1188")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1187")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1186")
-    child_6.text = "Text(2)"
-    child_5.append( child_6 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1192")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1192")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1191")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1189")
-    child_8.text = "For ppLayoutTextAndObject"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1190")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id160")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 4")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1194")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "3.125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.16667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.20833in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "2.66233in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image3.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide6" draw:style-name="a1181" draw:master-page-name="Master1-Layout15-txAndObj-Title,-Text,-and-Content" presentation:presentation-page-layout-name="Master1-PPL15" draw:id="Slide-261">
+<draw:frame draw:id="id158" presentation:style-name="a1185" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1184" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1182" text:class-names="">
+ppLayoutTextAndObject</text:span>
+<text:span text:style-name="a1183" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id159" presentation:style-name="a1193" draw:name="Text Placeholder 2" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" presentation:class="outline" presentation:placeholder="false">
+<draw:text-box>
+<text:list text:style-name="a1188">
+<text:list-item>
+<text:p text:style-name="a1187" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1186" text:class-names="">
+Text(2)</text:span>
+</text:p>
+</text:list-item>
+</text:list>
+<text:list text:style-name="a1192">
+<text:list-item>
+<text:list text:style-name="a1192">
+<text:list-item>
+<text:p text:style-name="a1191" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1189" text:class-names="">
+For ppLayoutTextAndObject</text:span>
+<text:span text:style-name="a1190" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id160" presentation:style-name="a1194" draw:name="Content Placeholder 4" svg:x="5.20833in" svg:y="2.66233in" svg:width="4.16667in" svg:height="3.125in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image3.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -847,105 +337,30 @@ def draw_8_page_Master1_PPL4():
     
     """Build Element draw:page for Master1-PPL4 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-262")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout4-twoObj-Two-Content")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide7")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1195")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL4")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id161")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1199")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1198")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1196")
-    child_4.text = "ppLayoutTwoObjects"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1197")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id162")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 4")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1200")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "3.125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.16667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.625in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "2.66233in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image4.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id163")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 5")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1201")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "3.125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.16667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.20833in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "2.66233in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image5.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide7" draw:style-name="a1195" draw:master-page-name="Master1-Layout4-twoObj-Two-Content" presentation:presentation-page-layout-name="Master1-PPL4" draw:id="Slide-262">
+<draw:frame draw:id="id161" presentation:style-name="a1199" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1198" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1196" text:class-names="">
+ppLayoutTwoObjects</text:span>
+<text:span text:style-name="a1197" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id162" presentation:style-name="a1200" draw:name="Content Placeholder 4" svg:x="0.625in" svg:y="2.66233in" svg:width="4.16667in" svg:height="3.125in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image4.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id163" presentation:style-name="a1201" draw:name="Content Placeholder 5" svg:x="5.20833in" svg:y="2.66233in" svg:width="4.16667in" svg:height="3.125in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image5.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -953,149 +368,52 @@ def draw_8_page_Master1_PPL16():
     
     """Build Element draw:page for Master1-PPL16 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-263")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout16-objAndTx-Title,-Content-and-Text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide8")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1202")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL16")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id164")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1206")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1205")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1203")
-    child_4.text = "ppLayoutObjectAndText"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1204")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id165")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 4")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1207")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "3.125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.16667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.625in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "2.66233in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image6.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id166")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Text Placeholder 3")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "outline")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1215")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "4.94965in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.41667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.08333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1210")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1209")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1208")
-    child_6.text = "Text(3)"
-    child_5.append( child_6 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1214")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1214")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1213")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1211")
-    child_8.text = "For ppLayoutObjectAndText"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1212")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide8" draw:style-name="a1202" draw:master-page-name="Master1-Layout16-objAndTx-Title,-Content-and-Text" presentation:presentation-page-layout-name="Master1-PPL16" draw:id="Slide-263">
+<draw:frame draw:id="id164" presentation:style-name="a1206" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1205" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1203" text:class-names="">
+ppLayoutObjectAndText</text:span>
+<text:span text:style-name="a1204" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id165" presentation:style-name="a1207" draw:name="Content Placeholder 4" svg:x="0.625in" svg:y="2.66233in" svg:width="4.16667in" svg:height="3.125in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image6.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id166" presentation:style-name="a1215" draw:name="Text Placeholder 3" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" presentation:class="outline" presentation:placeholder="false">
+<draw:text-box>
+<text:list text:style-name="a1210">
+<text:list-item>
+<text:p text:style-name="a1209" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1208" text:class-names="">
+Text(3)</text:span>
+</text:p>
+</text:list-item>
+</text:list>
+<text:list text:style-name="a1214">
+<text:list-item>
+<text:list text:style-name="a1214">
+<text:list-item>
+<text:p text:style-name="a1213" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1211" text:class-names="">
+For ppLayoutObjectAndText</text:span>
+<text:span text:style-name="a1212" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -1103,176 +421,57 @@ def draw_8_page_Master1_PPL17():
     
     """Build Element draw:page for Master1-PPL17 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-264")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout17-txAndTwoObj-Title,-Text,-and-2-Content")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide9")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1216")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL17")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id167")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1220")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1219")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1217")
-    child_4.text = "ppLayoutTextAndTwoObjects"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1218")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id168")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Text Placeholder 2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "outline")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1228")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "4.94965in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.41667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1223")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1222")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1221")
-    child_6.text = "Text(2)"
-    child_5.append( child_6 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1227")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1227")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1226")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1224")
-    child_8.text = "For ppLayoutTextAndTwoObjects"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1225")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id169")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 5")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1229")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39063in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.1875in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.69792in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image7.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id170")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 6")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1230")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39236in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.18981in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.69676in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "4.30729in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image8.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide9" draw:style-name="a1216" draw:master-page-name="Master1-Layout17-txAndTwoObj-Title,-Text,-and-2-Content" presentation:presentation-page-layout-name="Master1-PPL17" draw:id="Slide-264">
+<draw:frame draw:id="id167" presentation:style-name="a1220" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1219" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1217" text:class-names="">
+ppLayoutTextAndTwoObjects</text:span>
+<text:span text:style-name="a1218" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id168" presentation:style-name="a1228" draw:name="Text Placeholder 2" svg:x="0.5in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" presentation:class="outline" presentation:placeholder="false">
+<draw:text-box>
+<text:list text:style-name="a1223">
+<text:list-item>
+<text:p text:style-name="a1222" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1221" text:class-names="">
+Text(2)</text:span>
+</text:p>
+</text:list-item>
+</text:list>
+<text:list text:style-name="a1227">
+<text:list-item>
+<text:list text:style-name="a1227">
+<text:list-item>
+<text:p text:style-name="a1226" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1224" text:class-names="">
+For ppLayoutTextAndTwoObjects</text:span>
+<text:span text:style-name="a1225" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id169" presentation:style-name="a1229" draw:name="Content Placeholder 5" svg:x="5.69792in" svg:y="1.75in" svg:width="3.1875in" svg:height="2.39063in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image7.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id170" presentation:style-name="a1230" draw:name="Content Placeholder 6" svg:x="5.69676in" svg:y="4.30729in" svg:width="3.18981in" svg:height="2.39236in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image8.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -1280,132 +479,35 @@ def draw_8_page_Master1_PPL18():
     
     """Build Element draw:page for Master1-PPL18 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-265")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout18-objAndTwoObj-Title,-Content,-and-2-Content")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide10")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1231")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL18")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id171")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1235")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1234")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1232")
-    child_4.text = "ppLayoutObjectAndTwoObjects"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1233")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id172")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 5")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1236")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "3.125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.16667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.625in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "2.66233in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image9.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id173")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 6")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1237")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39063in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.1875in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.69792in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image10.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id174")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 7")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1238")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39236in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.18981in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.69676in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "4.30729in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image11.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide10" draw:style-name="a1231" draw:master-page-name="Master1-Layout18-objAndTwoObj-Title,-Content,-and-2-Content" presentation:presentation-page-layout-name="Master1-PPL18" draw:id="Slide-265">
+<draw:frame draw:id="id171" presentation:style-name="a1235" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1234" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1232" text:class-names="">
+ppLayoutObjectAndTwoObjects</text:span>
+<text:span text:style-name="a1233" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id172" presentation:style-name="a1236" draw:name="Content Placeholder 5" svg:x="0.625in" svg:y="2.66233in" svg:width="4.16667in" svg:height="3.125in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image9.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id173" presentation:style-name="a1237" draw:name="Content Placeholder 6" svg:x="5.69792in" svg:y="1.75in" svg:width="3.1875in" svg:height="2.39063in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image10.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id174" presentation:style-name="a1238" draw:name="Content Placeholder 7" svg:x="5.69676in" svg:y="4.30729in" svg:width="3.18981in" svg:height="2.39236in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image11.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -1413,149 +515,52 @@ def draw_8_page_Master1_PPL19():
     
     """Build Element draw:page for Master1-PPL19 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-266")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout19-objOverTx-Title-and-Content-over-Text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide11")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1239")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL19")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id175")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1243")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1242")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1240")
-    child_4.text = "ppLayoutObjectOverText"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1241")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id176")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 4")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1244")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39063in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.1875in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "3.40625in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image12.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id177")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Text Placeholder 3")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "outline")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1252")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39236in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "4.30729in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1247")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1246")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1245")
-    child_6.text = "Text(3)"
-    child_5.append( child_6 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1251")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1251")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1250")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1248")
-    child_8.text = "For ppLayoutObjectOverText"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1249")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide11" draw:style-name="a1239" draw:master-page-name="Master1-Layout19-objOverTx-Title-and-Content-over-Text" presentation:presentation-page-layout-name="Master1-PPL19" draw:id="Slide-266">
+<draw:frame draw:id="id175" presentation:style-name="a1243" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1242" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1240" text:class-names="">
+ppLayoutObjectOverText</text:span>
+<text:span text:style-name="a1241" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id176" presentation:style-name="a1244" draw:name="Content Placeholder 4" svg:x="3.40625in" svg:y="1.75in" svg:width="3.1875in" svg:height="2.39063in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image12.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id177" presentation:style-name="a1252" draw:name="Text Placeholder 3" svg:x="0.5in" svg:y="4.30729in" svg:width="9in" svg:height="2.39236in" presentation:class="outline" presentation:placeholder="false">
+<draw:text-box>
+<text:list text:style-name="a1247">
+<text:list-item>
+<text:p text:style-name="a1246" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1245" text:class-names="">
+Text(3)</text:span>
+</text:p>
+</text:list-item>
+</text:list>
+<text:list text:style-name="a1251">
+<text:list-item>
+<text:list text:style-name="a1251">
+<text:list-item>
+<text:p text:style-name="a1250" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1248" text:class-names="">
+For ppLayoutObjectOverText</text:span>
+<text:span text:style-name="a1249" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -1563,159 +568,40 @@ def draw_8_page_Master1_PPL20():
     
     """Build Element draw:page for Master1-PPL20 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-267")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout20-fourObj-Title-and-4-Content")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide12")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1253")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL20")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id178")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1257")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1256")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1254")
-    child_4.text = "ppLayoutFourObjects"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1255")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id179")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 6")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1258")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39063in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.1875in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "1.11458in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image13.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id180")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 7")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1259")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39063in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.1875in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.69792in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image14.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id181")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 8")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1260")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39236in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.18981in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "1.11343in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "4.30729in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image15.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id182")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 9")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1261")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39236in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.18981in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.69676in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "4.30729in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image16.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide12" draw:style-name="a1253" draw:master-page-name="Master1-Layout20-fourObj-Title-and-4-Content" presentation:presentation-page-layout-name="Master1-PPL20" draw:id="Slide-267">
+<draw:frame draw:id="id178" presentation:style-name="a1257" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1256" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1254" text:class-names="">
+ppLayoutFourObjects</text:span>
+<text:span text:style-name="a1255" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id179" presentation:style-name="a1258" draw:name="Content Placeholder 6" svg:x="1.11458in" svg:y="1.75in" svg:width="3.1875in" svg:height="2.39063in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image13.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id180" presentation:style-name="a1259" draw:name="Content Placeholder 7" svg:x="5.69792in" svg:y="1.75in" svg:width="3.1875in" svg:height="2.39063in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image14.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id181" presentation:style-name="a1260" draw:name="Content Placeholder 8" svg:x="1.11343in" svg:y="4.30729in" svg:width="3.18981in" svg:height="2.39236in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image15.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id182" presentation:style-name="a1261" draw:name="Content Placeholder 9" svg:x="5.69676in" svg:y="4.30729in" svg:width="3.18981in" svg:height="2.39236in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image16.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -1723,132 +609,35 @@ def draw_8_page_Master1_PPL21():
     
     """Build Element draw:page for Master1-PPL21 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-268")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout21-twoObjAndObj-Title,-2-Content-and-Content")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide13")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1262")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL21")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id183")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1266")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1265")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1263")
-    child_4.text = "ppLayoutTwoObjectsAndObject"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1264")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id184")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 5")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1267")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39063in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.1875in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "1.11458in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image17.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id185")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 6")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1268")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39236in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.18981in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "1.11343in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "4.30729in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image18.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id186")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 7")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1269")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "3.125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.16667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.20833in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "2.66233in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image19.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide13" draw:style-name="a1262" draw:master-page-name="Master1-Layout21-twoObjAndObj-Title,-2-Content-and-Content" presentation:presentation-page-layout-name="Master1-PPL21" draw:id="Slide-268">
+<draw:frame draw:id="id183" presentation:style-name="a1266" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1265" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1263" text:class-names="">
+ppLayoutTwoObjectsAndObject</text:span>
+<text:span text:style-name="a1264" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id184" presentation:style-name="a1267" draw:name="Content Placeholder 5" svg:x="1.11458in" svg:y="1.75in" svg:width="3.1875in" svg:height="2.39063in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image17.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id185" presentation:style-name="a1268" draw:name="Content Placeholder 6" svg:x="1.11343in" svg:y="4.30729in" svg:width="3.18981in" svg:height="2.39236in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image18.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id186" presentation:style-name="a1269" draw:name="Content Placeholder 7" svg:x="5.20833in" svg:y="2.66233in" svg:width="4.16667in" svg:height="3.125in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image19.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -1856,176 +645,57 @@ def draw_8_page_Master1_PPL22():
     
     """Build Element draw:page for Master1-PPL22 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-269")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout22-twoObjAndTx-Title,-2-Content-and-Text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide14")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1270")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL22")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id187")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1274")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1273")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1271")
-    child_4.text = "ppLayoutTwoObjectsAndText"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1272")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id188")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 5")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1275")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39063in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.1875in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "1.11458in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image20.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id189")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 6")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1276")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39236in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.18981in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "1.11343in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "4.30729in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image21.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id190")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Text Placeholder 4")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "outline")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1284")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "4.94965in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "4.41667in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.08333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1279")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1278")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1277")
-    child_6.text = "Text(4)"
-    child_5.append( child_6 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1283")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1283")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1282")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1280")
-    child_8.text = "For ppLayoutTwoObjectsAndText"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1281")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide14" draw:style-name="a1270" draw:master-page-name="Master1-Layout22-twoObjAndTx-Title,-2-Content-and-Text" presentation:presentation-page-layout-name="Master1-PPL22" draw:id="Slide-269">
+<draw:frame draw:id="id187" presentation:style-name="a1274" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1273" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1271" text:class-names="">
+ppLayoutTwoObjectsAndText</text:span>
+<text:span text:style-name="a1272" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id188" presentation:style-name="a1275" draw:name="Content Placeholder 5" svg:x="1.11458in" svg:y="1.75in" svg:width="3.1875in" svg:height="2.39063in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image20.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id189" presentation:style-name="a1276" draw:name="Content Placeholder 6" svg:x="1.11343in" svg:y="4.30729in" svg:width="3.18981in" svg:height="2.39236in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image21.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id190" presentation:style-name="a1284" draw:name="Text Placeholder 4" svg:x="5.08333in" svg:y="1.75in" svg:width="4.41667in" svg:height="4.94965in" presentation:class="outline" presentation:placeholder="false">
+<draw:text-box>
+<text:list text:style-name="a1279">
+<text:list-item>
+<text:p text:style-name="a1278" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1277" text:class-names="">
+Text(4)</text:span>
+</text:p>
+</text:list-item>
+</text:list>
+<text:list text:style-name="a1283">
+<text:list-item>
+<text:list text:style-name="a1283">
+<text:list-item>
+<text:p text:style-name="a1282" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1280" text:class-names="">
+For ppLayoutTwoObjectsAndText</text:span>
+<text:span text:style-name="a1281" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -2033,176 +703,57 @@ def draw_8_page_Master1_PPL23():
     
     """Build Element draw:page for Master1-PPL23 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-270")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout23-twoObjOverTx-Title-and-2-Content-over-Text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide15")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1285")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL23")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id191")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1289")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1288")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1286")
-    child_4.text = "ppLayoutTwoObjectsOverText"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1287")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id192")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 5")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1290")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39063in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.1875in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "1.11458in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image22.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id193")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Content Placeholder 6")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "graphic")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1291")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-height", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}rel-width", "scale")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39063in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "3.1875in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "5.69792in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}image" )
-    child_2.set("{http://www.w3.org/1999/xlink}actuate", "onLoad")
-    child_2.set("{http://www.w3.org/1999/xlink}href", "media/image23.png")
-    child_2.set("{http://www.w3.org/1999/xlink}show", "embed")
-    child_2.set("{http://www.w3.org/1999/xlink}type", "simple")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id194")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Text Placeholder 4")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "outline")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1299")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "2.39236in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "4.30729in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1294")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1293")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_6.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1292")
-    child_6.text = "Text(4)"
-    child_5.append( child_6 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1298")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_3.append( child_4 )
-    
-    child_5 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list" )
-    child_5.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1298")
-    child_4.append( child_5 )
-    
-    child_6 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-item" )
-    child_5.append( child_6 )
-    
-    child_7 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_7.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1297")
-    child_6.append( child_7 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1295")
-    child_8.text = "For ppLayoutTwoObjectsOverText"
-    child_7.append( child_8 )
-    
-    child_8 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_8.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1296")
-    child_7.append( child_8 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide15" draw:style-name="a1285" draw:master-page-name="Master1-Layout23-twoObjOverTx-Title-and-2-Content-over-Text" presentation:presentation-page-layout-name="Master1-PPL23" draw:id="Slide-270">
+<draw:frame draw:id="id191" presentation:style-name="a1289" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1288" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1286" text:class-names="">
+ppLayoutTwoObjectsOverText</text:span>
+<text:span text:style-name="a1287" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id192" presentation:style-name="a1290" draw:name="Content Placeholder 5" svg:x="1.11458in" svg:y="1.75in" svg:width="3.1875in" svg:height="2.39063in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image22.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id193" presentation:style-name="a1291" draw:name="Content Placeholder 6" svg:x="5.69792in" svg:y="1.75in" svg:width="3.1875in" svg:height="2.39063in" style:rel-width="scale" style:rel-height="scale" presentation:class="graphic" presentation:placeholder="false">
+<draw:image xlink:href="media/image23.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" />
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id194" presentation:style-name="a1299" draw:name="Text Placeholder 4" svg:x="0.5in" svg:y="4.30729in" svg:width="9in" svg:height="2.39236in" presentation:class="outline" presentation:placeholder="false">
+<draw:text-box>
+<text:list text:style-name="a1294">
+<text:list-item>
+<text:p text:style-name="a1293" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1292" text:class-names="">
+Text(4)</text:span>
+</text:p>
+</text:list-item>
+</text:list>
+<text:list text:style-name="a1298">
+<text:list-item>
+<text:list text:style-name="a1298">
+<text:list-item>
+<text:p text:style-name="a1297" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1295" text:class-names="">
+For ppLayoutTwoObjectsOverText</text:span>
+<text:span text:style-name="a1296" text:class-names="" />
+</text:p>
+</text:list-item>
+</text:list>
+</text:list-item>
+</text:list>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -2210,69 +761,24 @@ def draw_8_page_Master1_PPL24():
     
     """Build Element draw:page for Master1-PPL24 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}page" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "Slide-271")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}master-page-name", "Master1-Layout24-tbl-Title-and-Table")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Slide16")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}style-name", "a1300")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}presentation-page-layout-name", "Master1-PPL24")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id195")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Title 1")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "title")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1304")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "1.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "0.30035in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}text-box" )
-    child.append( child_2 )
-    
-    child_3 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}p" )
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}cond-style-name", "")
-    child_3.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1303")
-    child_2.append( child_3 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1301")
-    child_4.text = "ppLayoutTable"
-    child_3.append( child_4 )
-    
-    child_4 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}span" )
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}class-names", "")
-    child_4.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}style-name", "a1302")
-    child_3.append( child_4 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}frame" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}id", "id196")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}name", "Table Placeholder 2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}class", "table")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}placeholder", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}style-name", "a1305")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}height", "4.94965in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}width", "9in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}x", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}y", "1.75in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}title" )
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0}desc" )
-    child.append( child_2 )
-    
+    elem = build_element( """<draw:page draw:name="Slide16" draw:style-name="a1300" draw:master-page-name="Master1-Layout24-tbl-Title-and-Table" presentation:presentation-page-layout-name="Master1-PPL24" draw:id="Slide-271">
+<draw:frame draw:id="id195" presentation:style-name="a1304" draw:name="Title 1" svg:x="0.5in" svg:y="0.30035in" svg:width="9in" svg:height="1.25in" presentation:class="title" presentation:placeholder="false">
+<draw:text-box>
+<text:p text:style-name="a1303" text:class-names="" text:cond-style-name="">
+<text:span text:style-name="a1301" text:class-names="">
+ppLayoutTable</text:span>
+<text:span text:style-name="a1302" text:class-names="" />
+</text:p>
+</draw:text-box>
+<svg:title />
+<svg:desc />
+</draw:frame>
+<draw:frame draw:id="id196" presentation:style-name="a1305" draw:name="Table Placeholder 2" svg:x="0.5in" svg:y="1.75in" svg:width="9in" svg:height="4.94965in" presentation:class="table" presentation:placeholder="true">
+<svg:title />
+<svg:desc />
+</draw:frame>
+</draw:page>
+""" )
     
     return elem
 
@@ -2280,8 +786,8 @@ def presentation_8_settings_presentation_8_settings():
     
     """Build Element presentation:settings for presentation:settings """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}settings" )
-    
+    elem = build_element( """<presentation:settings />
+""" )
     
     return elem
 

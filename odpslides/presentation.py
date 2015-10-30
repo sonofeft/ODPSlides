@@ -14,8 +14,11 @@ from odpslides.zip_file import zipfile_insert
 import odpslides.init_internal_odp_files as init_internal_odp_files
 from odpslides.page import Page
 from odpslides.color_utils import getValidHexStr
+from odpslides.odp_file import ODPFile, read_source_from_odp
+from odpslides.styles_xml import StylesXML
+from odpslides.content_xml import ContentXML
 
-import plain.page_layouts
+import solidbg.page_layouts
 
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -32,16 +35,14 @@ class Presentation(object):
         grad_start_color="", grad_end_color="", grad_angle=0, grad_draw_style='linear',
         show_date=False, date_font_color='gray',
         footer="", footer_font_color='gray',
-        show_page_number=False, page_number_font_color="gray", include_styles_xml=False, for_excel=True):
+        show_page_number=False, page_number_font_color="gray"):
             
         """
-        :keyword bool include_styles_xml: If True, include style info in styles.xml (Required by Excel, not by OO)
+        Make Presentation object
         """        
 
 
         self.filename = None
-        self.include_styles_xml = include_styles_xml # Excel needs styles.xml style:master-page elements
-        self.for_excel = for_excel
         
         # keep a list of images for inclusion in ODP file
         self.image_nameD = {}     # index=file system name,    value=internal image name
@@ -62,6 +63,27 @@ class Presentation(object):
         self.grad_end_color = grad_end_color
         self.grad_angle = grad_angle
         self.grad_draw_style = grad_draw_style
+        
+        if self.internal_background_image:
+            self.ref_odp_filename = 'ppt_all_layouts_image.odp'
+            self.page_type = 'image' # "solidbg", "grad", "image"
+        elif self.grad_start_color and self.grad_end_color:
+            self.ref_odp_filename = 'ppt_all_layouts_grad.odp'
+            self.page_type = 'grad' # "solidbg", "grad", "image"
+        else:
+            self.ref_odp_filename = 'ppt_all_layouts_solidbg.odp'
+            self.page_type = 'solidbg' # "solidbg", "grad", "image"
+                
+        # open reference odp file
+        self.full_odp_ref_path = os.path.join( here, 'templates', self.ref_odp_filename )
+        self.odp_ref = ODPFile( self.full_odp_ref_path )
+        
+        self.styles_xml_obj = StylesXML( self, self.odp_ref )
+        self.content_xml_obj = ContentXML(self, self.odp_ref )
+        
+        
+        # figure out max style:name (e.g. "a123")
+        self.odp_ref.styles_xml_obj.init_all_annn_style8name()
                 
         self.show_date = show_date
         self.date_font_color = date_font_color
@@ -84,8 +106,10 @@ class Presentation(object):
         self.new_master_styleD = {} # index="a123", value=style elem
 
         # style names and id values start at 0 (i.e. "a0", "a1", ... and "id0", "id1", ...)
-        self.max_style_name_int = -1 # used for nameing styles (ex. draw:style-name="a123")
-        self.max_draw_id_int = -1 # some internal use ???
+        #self.max_style_name_int = -1 # used for nameing styles (ex. draw:style-name="a123")
+        #self.max_draw_id_int = -1 # some internal use ???
+        self.max_style_name_int = self.odp_ref.styles_xml_obj.max_annn_def
+        self.max_draw_id_int = self.odp_ref.styles_xml_obj.max_idnnn_def
         
 
 
@@ -147,36 +171,6 @@ class Presentation(object):
         for elem in self.new_styles_office_stylesL:
             style_elem.acclimate_new_elem( elem )
             office_styles.append( elem )
-
-    def add_page_layouts(self, style_elem):
-        """
-        Put used layouts into styles.xml 
-        """
-        office_styles = style_elem.find( 'office:styles' )
-        #print('office_styles =',office_styles)
-        
-        layout_set = set() # Only put one copy of layout into styles.xml
-        for page in self.new_content_pageL:
-            layout_set.add( page.disp_name )
-            
-        for disp_name in layout_set:
-            lay_elem = plain.page_layouts.func_quick_lookupD[ disp_name ]()
-            style_elem.acclimate_new_elem( lay_elem )
-            office_styles.append( lay_elem )
-
-    def add_style_master_page(self, style_elem ):
-        office_auto_styles = style_elem.find( 'office:master-styles' )
-        #print('office_auto_styles =',office_auto_styles)
-        
-        # For each new_content_pageL item, there are many master-page style elements
-        for master_elem in self.new_master_styleL:
-            office_auto_styles.append( master_elem )
-            style_elem.acclimate_new_elem( master_elem )
-        
-        # For each new_content_pageL item, there is a style:master-page item
-        for master_page_elem in self.new_master_page_styleL:
-            office_auto_styles.append( master_page_elem )
-            style_elem.acclimate_new_elem( master_page_elem )
     
 
     def save(self, filename='my_presentation.odp', launch=False):
@@ -189,7 +183,6 @@ class Presentation(object):
         :keyword filename: Name of ods file to save (default=='my_presentation.odp')
         :type  filename: str or unicode
         :keyword bool launch: If True, will launch PowerPoint, LibreOffice or OpenOffice (default==False)
-        :keyword bool include_styles_xml: If True, include style info in styles.xml (Required by Excel, not by OO)
         
         :return: None
         :rtype: None
@@ -217,9 +210,17 @@ class Presentation(object):
         if self.image_nameL:
             for img_name in self.image_nameL:
                 zipfileobj.write( self.sys_image_nameD[ img_name ], 'media/%s'%img_name)
+        
+        # just duplicate reference file's styles.xml
+        self.styles_xml_obj.make_clean_copy()
+        if self.page_type == 'solidbg':
+            self.styles_xml_obj.set_background()
+
+        zipfile_insert( zipfileobj, 'styles.xml', self.styles_xml_obj.styles_tmplt.tostring() )
 
         # Gets new empty content with each save
-        content_elem = init_internal_odp_files.get_empty_content_elem()
+        content_elem = self.content_xml_obj.content_tmplt
+        #content_elem = init_internal_odp_files.get_empty_content_elem()
         auto_style_elem = content_elem.find('office:automatic-styles')
         body_pres_elem = content_elem.find('office:body/office:presentation')
         
@@ -234,29 +235,25 @@ class Presentation(object):
         content_elem.acclimate_new_elem( last_body_elem )
         body_pres_elem.append( last_body_elem )
         
+        self.content_xml_obj.set_background()
+        
         # <<<<<<<<<<<<<<<< Add new content objects here ===================
         zipfile_insert( zipfileobj, 'content.xml', content_elem)
         
         zipfile_insert( zipfileobj, 'settings.xml', init_internal_odp_files.get_settings_xml_str() )
 
-        style_elem = init_internal_odp_files.get_empty_styles_elem()
-        if self.include_styles_xml:
-            self.add_page_layouts( style_elem )
-            self.add_style_master_page( style_elem )
-            
-        self.add_office_styles( style_elem )
-        
-        # <<<<<<<<<<<<<<<< Add new content objects here ===================
-        # Need to fix local namespace in subelement
-        style_xml_src = style_elem.tostring().decode('utf-8')
-        style_xml_src = style_xml_src.replace('<number:date-style ','<number:date-style xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" ')
-        zipfile_insert( zipfileobj, 'styles.xml', style_xml_src.encode('utf-8'))
         
         zipfileobj.close()
 
         if launch:
             self.launch_application()
  
+
+    def add_a_new_page(self, new_page ):
+        
+        self.new_content_pageL.append( new_page )
+        new_page.set_page_number( len(self.new_content_pageL) )
+        
 
     def add_title_chart( self, title='My Title', subtitle='My Subtitle', title_font_color='',
                             subtitle_font_color='',background_color=""):
@@ -271,20 +268,23 @@ class Presentation(object):
                     
         new_page = Page( self, disp_name="Title Slide", **inpD)
         
-        self.new_content_pageL.append( new_page )
+        self.add_a_new_page( new_page )
  
 if __name__ == '__main__':
     
     C = Presentation(title='My Title', author='My Name',
         #background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
-        background_color='#CCCCFF',
+        background_color='coral',
         #grad_start_color="#99ff99", grad_end_color="#ffffff", grad_angle=0, grad_draw_style='linear',
-        show_date=True, date_font_color='coral',
+        show_date=True, date_font_color='lime',
         footer="testing 123", footer_font_color='lime',
-        show_page_number=True, page_number_font_color='dm', include_styles_xml=True, for_excel=True)
+        show_page_number=True, page_number_font_color='dm')
     
     C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='red',
                         subtitle_font_color='red')
+    
+    C.add_title_chart( title='My Second Title', subtitle='My Second Subtitle', title_font_color='blue',
+                        subtitle_font_color='green')
     
     #C.new_content_pageL[-1].set_to_gradient(grad_start_color="#99ff99", grad_end_color="#ffffff", 
     #                                         grad_angle=0, grad_draw_style='linear' )

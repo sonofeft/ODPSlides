@@ -9,10 +9,13 @@ from __future__ import print_function
 import sys, os
 from collections import OrderedDict
 
-if sys.version_info < (3,):
-    import odpslides.ElementTree_27OD as ET
-else:
-    import odpslides.ElementTree_34OD as ET
+from odpslides.template_xml_file import TemplateXML_File
+from odpslides.namespace import XMLNS_STR
+
+def build_element( s ):
+    """Add namespace to string and use TemplateXML_File to make Element"""
+    s = s.replace(' ',' %s '%XMLNS_STR, 1) # First space ONLY
+    return TemplateXML_File( s ).root
                 
 
 
@@ -30,40 +33,10 @@ def style_8_style_text_a1217():
     
     """Build Element style:style for text_a1217 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1217")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1217">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -71,24 +44,10 @@ def style_8_style_drawing_page_a1285():
     
     """Build Element style:style for drawing-page_a1285 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1285")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1285">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -96,40 +55,10 @@ def style_8_style_text_a1218():
     
     """Build Element style:style for text_a1218 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1218")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1218">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -137,40 +66,10 @@ def style_8_style_text_a1286():
     
     """Build Element style:style for text_a1286 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1286")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1286">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -178,40 +77,10 @@ def style_8_style_text_a1287():
     
     """Build Element style:style for text_a1287 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1287")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1287">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -219,54 +88,13 @@ def style_8_style_paragraph_a1219():
     
     """Build Element style:style for paragraph_a1219 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1219")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1219">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -274,54 +102,13 @@ def style_8_style_paragraph_a1288():
     
     """Build Element style:style for paragraph_a1288 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1288")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1288">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -329,29 +116,11 @@ def style_8_style_presentation_a1289():
     
     """Build Element style:style for presentation_a1289 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1289")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1289">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -359,54 +128,13 @@ def style_8_style_paragraph_a1170():
     
     """Build Element style:style for paragraph_a1170 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1170")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1170">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -414,29 +142,11 @@ def style_8_style_presentation_a1171():
     
     """Build Element style:style for presentation_a1171 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1171")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1171">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -444,40 +154,10 @@ def style_8_style_text_a1172():
     
     """Build Element style:style for text_a1172 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1172")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1172">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.44444in" style:font-size-asian="0.44444in" style:font-size-complex="0.44444in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -485,54 +165,13 @@ def style_8_style_paragraph_a1173():
     
     """Build Element style:style for paragraph_a1173 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1173")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.375in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.11111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.375in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1173">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.375in" fo:margin-right="0in" fo:text-indent="-0.375in" fo:margin-top="0.11111in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -540,40 +179,10 @@ def style_8_style_text_a1175():
     
     """Build Element style:style for text_a1175 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1175")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1175">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -581,40 +190,10 @@ def style_8_style_text_a1176():
     
     """Build Element style:style for text_a1176 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1176")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1176">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -622,54 +201,13 @@ def style_8_style_paragraph_a1177():
     
     """Build Element style:style for paragraph_a1177 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1177")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.8125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.3125in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1177">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.8125in" fo:margin-right="0in" fo:text-indent="-0.3125in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -677,29 +215,11 @@ def style_8_style_presentation_a1220():
     
     """Build Element style:style for presentation_a1220 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1220")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1220">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -707,29 +227,11 @@ def style_8_style_presentation_a1179():
     
     """Build Element style:style for presentation_a1179 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1179")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1179">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -737,40 +239,10 @@ def style_8_style_text_a1221():
     
     """Build Element style:style for text_a1221 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1221")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1221">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.44444in" style:font-size-asian="0.44444in" style:font-size-complex="0.44444in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -778,15 +250,10 @@ def style_8_style_presentation_a1290():
     
     """Build Element style:style for presentation_a1290 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1290")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1290">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -794,54 +261,13 @@ def style_8_style_paragraph_a1222():
     
     """Build Element style:style for paragraph_a1222 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1222")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.375in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.11111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.375in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1222">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.375in" fo:margin-right="0in" fo:text-indent="-0.375in" fo:margin-top="0.11111in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -849,15 +275,10 @@ def style_8_style_presentation_a1291():
     
     """Build Element style:style for presentation_a1291 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1291")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1291">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -865,40 +286,10 @@ def style_8_style_text_a1292():
     
     """Build Element style:style for text_a1292 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1292")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1292">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.44444in" style:font-size-asian="0.44444in" style:font-size-complex="0.44444in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -906,40 +297,10 @@ def style_8_style_text_a1224():
     
     """Build Element style:style for text_a1224 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1224")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1224">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -947,40 +308,10 @@ def style_8_style_text_a1225():
     
     """Build Element style:style for text_a1225 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1225")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1225">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -988,54 +319,13 @@ def style_8_style_paragraph_a1293():
     
     """Build Element style:style for paragraph_a1293 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1293")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.375in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.11111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.375in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1293">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.375in" fo:margin-right="0in" fo:text-indent="-0.375in" fo:margin-top="0.11111in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -1043,54 +333,13 @@ def style_8_style_paragraph_a1226():
     
     """Build Element style:style for paragraph_a1226 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1226")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.8125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.3125in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1226">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.8125in" fo:margin-right="0in" fo:text-indent="-0.3125in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -1098,40 +347,10 @@ def style_8_style_text_a1295():
     
     """Build Element style:style for text_a1295 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1295")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1295">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -1139,29 +358,11 @@ def style_8_style_presentation_a1228():
     
     """Build Element style:style for presentation_a1228 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1228")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1228">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -1169,40 +370,10 @@ def style_8_style_text_a1296():
     
     """Build Element style:style for text_a1296 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1296")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1296">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -1210,15 +381,10 @@ def style_8_style_presentation_a1229():
     
     """Build Element style:style for presentation_a1229 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1229")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1229">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -1226,54 +392,13 @@ def style_8_style_paragraph_a1297():
     
     """Build Element style:style for paragraph_a1297 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1297")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.8125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.3125in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1297">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.8125in" fo:margin-right="0in" fo:text-indent="-0.3125in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -1281,29 +406,11 @@ def style_8_style_presentation_a1299():
     
     """Build Element style:style for presentation_a1299 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1299")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1299">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -1311,15 +418,10 @@ def style_8_style_presentation_a1180():
     
     """Build Element style:style for presentation_a1180 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1180")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1180">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -1327,24 +429,10 @@ def style_8_style_drawing_page_a1181():
     
     """Build Element style:style for drawing-page_a1181 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1181")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1181">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -1352,40 +440,10 @@ def style_8_style_text_a1182():
     
     """Build Element style:style for text_a1182 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1182")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1182">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -1393,40 +451,10 @@ def style_8_style_text_a1183():
     
     """Build Element style:style for text_a1183 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1183")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1183">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -1434,24 +462,10 @@ def style_8_style_drawing_page_a1115():
     
     """Build Element style:style for drawing-page_a1115 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1115")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1115">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -1459,54 +473,13 @@ def style_8_style_paragraph_a1184():
     
     """Build Element style:style for paragraph_a1184 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1184")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1184">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -1514,40 +487,10 @@ def style_8_style_text_a1116():
     
     """Build Element style:style for text_a1116 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1116")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1116">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -1555,29 +498,11 @@ def style_8_style_presentation_a1185():
     
     """Build Element style:style for presentation_a1185 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1185")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1185">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -1585,40 +510,10 @@ def style_8_style_text_a1117():
     
     """Build Element style:style for text_a1117 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1117")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1117">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -1626,40 +521,10 @@ def style_8_style_text_a1186():
     
     """Build Element style:style for text_a1186 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1186")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1186">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.44444in" style:font-size-asian="0.44444in" style:font-size-complex="0.44444in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -1667,54 +532,13 @@ def style_8_style_paragraph_a1118():
     
     """Build Element style:style for paragraph_a1118 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1118")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1118">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -1722,54 +546,13 @@ def style_8_style_paragraph_a1187():
     
     """Build Element style:style for paragraph_a1187 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1187")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.375in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.11111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.375in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1187">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.375in" fo:margin-right="0in" fo:text-indent="-0.375in" fo:margin-top="0.11111in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -1777,29 +560,11 @@ def style_8_style_presentation_a1119():
     
     """Build Element style:style for presentation_a1119 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1119")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1119">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -1807,15 +572,10 @@ def style_8_style_presentation_a1230():
     
     """Build Element style:style for presentation_a1230 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1230")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1230">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -1823,40 +583,10 @@ def style_8_style_text_a1189():
     
     """Build Element style:style for text_a1189 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1189")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1189">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -1864,24 +594,10 @@ def style_8_style_drawing_page_a1231():
     
     """Build Element style:style for drawing-page_a1231 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1231")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1231">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -1889,40 +605,10 @@ def style_8_style_text_a1232():
     
     """Build Element style:style for text_a1232 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1232")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1232">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -1930,40 +616,10 @@ def style_8_style_text_a1233():
     
     """Build Element style:style for text_a1233 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1233")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1233">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -1971,54 +627,13 @@ def style_8_style_paragraph_a1234():
     
     """Build Element style:style for paragraph_a1234 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1234")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1234">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -2026,29 +641,11 @@ def style_8_style_presentation_a1235():
     
     """Build Element style:style for presentation_a1235 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1235")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1235">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -2056,15 +653,10 @@ def style_8_style_presentation_a1236():
     
     """Build Element style:style for presentation_a1236 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1236")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1236">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -2072,15 +664,10 @@ def style_8_style_presentation_a1237():
     
     """Build Element style:style for presentation_a1237 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1237")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1237">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -2088,15 +675,10 @@ def style_8_style_presentation_a1238():
     
     """Build Element style:style for presentation_a1238 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1238")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1238">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -2104,24 +686,10 @@ def style_8_style_drawing_page_a1239():
     
     """Build Element style:style for drawing-page_a1239 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1239")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1239">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -2129,40 +697,10 @@ def style_8_style_text_a1120():
     
     """Build Element style:style for text_a1120 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1120")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#898989")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1120">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#898989" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.44444in" style:font-size-asian="0.44444in" style:font-size-complex="0.44444in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -2170,54 +708,13 @@ def style_8_style_paragraph_a1121():
     
     """Build Element style:style for paragraph_a1121 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1121")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.11111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1121">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0.11111in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -2225,40 +722,10 @@ def style_8_style_text_a1122():
     
     """Build Element style:style for text_a1122 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1122")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#898989")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1122">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#898989" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -2266,40 +733,10 @@ def style_8_style_text_a1190():
     
     """Build Element style:style for text_a1190 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1190")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1190">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -2307,40 +744,10 @@ def style_8_style_text_a1123():
     
     """Build Element style:style for text_a1123 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1123")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#898989")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1123">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#898989" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -2348,54 +755,13 @@ def style_8_style_paragraph_a1191():
     
     """Build Element style:style for paragraph_a1191 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1191")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.8125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.3125in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1191">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.8125in" fo:margin-right="0in" fo:text-indent="-0.3125in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -2403,54 +769,13 @@ def style_8_style_paragraph_a1124():
     
     """Build Element style:style for paragraph_a1124 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1124")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.5in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1124">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0.5in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -2458,29 +783,11 @@ def style_8_style_presentation_a1193():
     
     """Build Element style:style for presentation_a1193 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1193")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1193">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -2488,29 +795,11 @@ def style_8_style_presentation_a1126():
     
     """Build Element style:style for presentation_a1126 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1126")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1126">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -2518,15 +807,10 @@ def style_8_style_presentation_a1194():
     
     """Build Element style:style for presentation_a1194 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1194")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1194">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -2534,24 +818,10 @@ def style_8_style_drawing_page_a1127():
     
     """Build Element style:style for drawing-page_a1127 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1127")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1127">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -2559,24 +829,10 @@ def style_8_style_drawing_page_a1195():
     
     """Build Element style:style for drawing-page_a1195 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1195")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1195">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -2584,40 +840,10 @@ def style_8_style_text_a1128():
     
     """Build Element style:style for text_a1128 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1128")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1128">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -2625,40 +851,10 @@ def style_8_style_text_a1196():
     
     """Build Element style:style for text_a1196 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1196")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1196">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -2666,40 +862,10 @@ def style_8_style_text_a1129():
     
     """Build Element style:style for text_a1129 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1129")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1129">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -2707,40 +873,10 @@ def style_8_style_text_a1197():
     
     """Build Element style:style for text_a1197 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1197")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1197">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -2748,40 +884,10 @@ def style_8_style_text_a1240():
     
     """Build Element style:style for text_a1240 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1240")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1240">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -2789,54 +895,13 @@ def style_8_style_paragraph_a1198():
     
     """Build Element style:style for paragraph_a1198 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1198")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1198">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -2844,40 +909,10 @@ def style_8_style_text_a1241():
     
     """Build Element style:style for text_a1241 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1241")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1241">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -2885,29 +920,11 @@ def style_8_style_presentation_a1199():
     
     """Build Element style:style for presentation_a1199 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1199")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1199">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -2915,54 +932,13 @@ def style_8_style_paragraph_a1242():
     
     """Build Element style:style for paragraph_a1242 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1242")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1242">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -2970,29 +946,11 @@ def style_8_style_presentation_a1243():
     
     """Build Element style:style for presentation_a1243 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1243")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1243">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -3000,15 +958,10 @@ def style_8_style_presentation_a1244():
     
     """Build Element style:style for presentation_a1244 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1244")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1244">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -3016,40 +969,10 @@ def style_8_style_text_a1245():
     
     """Build Element style:style for text_a1245 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1245")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1245">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.44444in" style:font-size-asian="0.44444in" style:font-size-complex="0.44444in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -3057,54 +980,13 @@ def style_8_style_paragraph_a1246():
     
     """Build Element style:style for paragraph_a1246 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1246")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.375in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.11111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.375in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1246">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.375in" fo:margin-right="0in" fo:text-indent="-0.375in" fo:margin-top="0.11111in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -3112,40 +994,10 @@ def style_8_style_text_a1248():
     
     """Build Element style:style for text_a1248 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1248")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1248">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -3153,40 +1005,10 @@ def style_8_style_text_a1249():
     
     """Build Element style:style for text_a1249 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1249")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1249">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -3194,54 +1016,13 @@ def style_8_style_paragraph_a1130():
     
     """Build Element style:style for paragraph_a1130 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1130")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1130">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -3249,29 +1030,11 @@ def style_8_style_presentation_a1131():
     
     """Build Element style:style for presentation_a1131 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1131")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1131">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -3279,40 +1042,10 @@ def style_8_style_text_a1132():
     
     """Build Element style:style for text_a1132 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1132")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1132">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.44444in" style:font-size-asian="0.44444in" style:font-size-complex="0.44444in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -3320,54 +1053,13 @@ def style_8_style_paragraph_a1133():
     
     """Build Element style:style for paragraph_a1133 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1133")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.375in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.11111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.375in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1133">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.375in" fo:margin-right="0in" fo:text-indent="-0.375in" fo:margin-top="0.11111in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -3375,40 +1067,10 @@ def style_8_style_text_a1135():
     
     """Build Element style:style for text_a1135 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1135")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1135">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -3416,40 +1078,10 @@ def style_8_style_text_a1136():
     
     """Build Element style:style for text_a1136 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1136")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1136">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -3457,54 +1089,13 @@ def style_8_style_paragraph_a1137():
     
     """Build Element style:style for paragraph_a1137 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1137")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.8125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.3125in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1137">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.8125in" fo:margin-right="0in" fo:text-indent="-0.3125in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -3512,29 +1103,11 @@ def style_8_style_presentation_a1139():
     
     """Build Element style:style for presentation_a1139 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1139")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1139">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -3542,54 +1115,13 @@ def style_8_style_paragraph_a1250():
     
     """Build Element style:style for paragraph_a1250 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1250")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.8125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.3125in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1250">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.8125in" fo:margin-right="0in" fo:text-indent="-0.3125in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -3597,29 +1129,11 @@ def style_8_style_presentation_a1252():
     
     """Build Element style:style for presentation_a1252 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1252")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1252">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -3627,24 +1141,10 @@ def style_8_style_drawing_page_a1253():
     
     """Build Element style:style for drawing-page_a1253 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1253")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1253">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -3652,40 +1152,10 @@ def style_8_style_text_a1254():
     
     """Build Element style:style for text_a1254 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1254")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1254">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -3693,40 +1163,10 @@ def style_8_style_text_a1255():
     
     """Build Element style:style for text_a1255 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1255")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1255">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -3734,54 +1174,13 @@ def style_8_style_paragraph_a1256():
     
     """Build Element style:style for paragraph_a1256 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1256")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1256">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -3789,29 +1188,11 @@ def style_8_style_presentation_a1257():
     
     """Build Element style:style for presentation_a1257 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1257")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1257">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -3819,15 +1200,10 @@ def style_8_style_presentation_a1258():
     
     """Build Element style:style for presentation_a1258 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1258")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1258">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -3835,24 +1211,10 @@ def style_8_style_drawing_page_a1300():
     
     """Build Element style:style for drawing-page_a1300 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1300")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1300">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -3860,15 +1222,10 @@ def style_8_style_presentation_a1259():
     
     """Build Element style:style for presentation_a1259 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1259")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1259">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -3876,40 +1233,10 @@ def style_8_style_text_a1301():
     
     """Build Element style:style for text_a1301 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1301")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1301">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -3917,40 +1244,10 @@ def style_8_style_text_a1302():
     
     """Build Element style:style for text_a1302 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1302")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1302">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -3958,54 +1255,13 @@ def style_8_style_paragraph_a1303():
     
     """Build Element style:style for paragraph_a1303 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1303")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1303">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -4013,29 +1269,11 @@ def style_8_style_presentation_a1304():
     
     """Build Element style:style for presentation_a1304 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1304")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1304">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -4043,15 +1281,10 @@ def style_8_style_presentation_a1305():
     
     """Build Element style:style for presentation_a1305 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1305")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1305">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -4059,24 +1292,10 @@ def style_8_style_drawing_page_a1140():
     
     """Build Element style:style for drawing-page_a1140 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1140")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1140">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -4084,40 +1303,10 @@ def style_8_style_text_a1141():
     
     """Build Element style:style for text_a1141 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1141")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1141">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -4125,40 +1314,10 @@ def style_8_style_text_a1142():
     
     """Build Element style:style for text_a1142 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1142")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1142">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -4166,54 +1325,13 @@ def style_8_style_paragraph_a1143():
     
     """Build Element style:style for paragraph_a1143 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1143")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1143">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -4221,29 +1339,11 @@ def style_8_style_presentation_a1144():
     
     """Build Element style:style for presentation_a1144 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1144")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1144">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -4251,40 +1351,10 @@ def style_8_style_text_a1145():
     
     """Build Element style:style for text_a1145 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1145")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1145">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -4292,54 +1362,13 @@ def style_8_style_paragraph_a1146():
     
     """Build Element style:style for paragraph_a1146 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1146")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.375in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.375in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1146">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.375in" fo:margin-right="0in" fo:text-indent="-0.375in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -4347,40 +1376,10 @@ def style_8_style_text_a1148():
     
     """Build Element style:style for text_a1148 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1148")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1148">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.33333in" style:font-size-asian="0.33333in" style:font-size-complex="0.33333in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -4388,40 +1387,10 @@ def style_8_style_text_a1149():
     
     """Build Element style:style for text_a1149 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1149")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1149">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.33333in" style:font-size-asian="0.33333in" style:font-size-complex="0.33333in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -4429,15 +1398,10 @@ def style_8_style_presentation_a1260():
     
     """Build Element style:style for presentation_a1260 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1260")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1260">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -4445,15 +1409,10 @@ def style_8_style_presentation_a1261():
     
     """Build Element style:style for presentation_a1261 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1261")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1261">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -4461,24 +1420,10 @@ def style_8_style_drawing_page_a1262():
     
     """Build Element style:style for drawing-page_a1262 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1262")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1262">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -4486,40 +1431,10 @@ def style_8_style_text_a1263():
     
     """Build Element style:style for text_a1263 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1263")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1263">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -4527,40 +1442,10 @@ def style_8_style_text_a1264():
     
     """Build Element style:style for text_a1264 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1264")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1264">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -4568,54 +1453,13 @@ def style_8_style_paragraph_a1265():
     
     """Build Element style:style for paragraph_a1265 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1265")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1265">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -4623,29 +1467,11 @@ def style_8_style_presentation_a1266():
     
     """Build Element style:style for presentation_a1266 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1266")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1266">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -4653,15 +1479,10 @@ def style_8_style_presentation_a1267():
     
     """Build Element style:style for presentation_a1267 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1267")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1267">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -4669,15 +1490,10 @@ def style_8_style_presentation_a1268():
     
     """Build Element style:style for presentation_a1268 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1268")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1268">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -4685,15 +1501,10 @@ def style_8_style_presentation_a1269():
     
     """Build Element style:style for presentation_a1269 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1269")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1269">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -4701,54 +1512,13 @@ def style_8_style_paragraph_a1150():
     
     """Build Element style:style for paragraph_a1150 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1150")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.8125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.08333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.3125in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1150">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.8125in" fo:margin-right="0in" fo:text-indent="-0.3125in" fo:margin-top="0.08333in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -4756,29 +1526,11 @@ def style_8_style_presentation_a1152():
     
     """Build Element style:style for presentation_a1152 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1152")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1152">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -4786,40 +1538,10 @@ def style_8_style_text_a1153():
     
     """Build Element style:style for text_a1153 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1153")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1153">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -4827,54 +1549,13 @@ def style_8_style_paragraph_a1154():
     
     """Build Element style:style for paragraph_a1154 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1154")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.375in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.375in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1154">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.375in" fo:margin-right="0in" fo:text-indent="-0.375in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -4882,40 +1563,10 @@ def style_8_style_text_a1156():
     
     """Build Element style:style for text_a1156 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1156")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1156">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.33333in" style:font-size-asian="0.33333in" style:font-size-complex="0.33333in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -4923,40 +1574,10 @@ def style_8_style_text_a1157():
     
     """Build Element style:style for text_a1157 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1157")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.33333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1157">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.33333in" style:font-size-asian="0.33333in" style:font-size-complex="0.33333in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -4964,15 +1585,10 @@ def style_8_style_presentation_a1200():
     
     """Build Element style:style for presentation_a1200 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1200")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1200">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -4980,54 +1596,13 @@ def style_8_style_paragraph_a1158():
     
     """Build Element style:style for paragraph_a1158 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1158")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.8125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.08333in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.3125in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1158">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.8125in" fo:margin-right="0in" fo:text-indent="-0.3125in" fo:margin-top="0.08333in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -5035,15 +1610,10 @@ def style_8_style_presentation_a1201():
     
     """Build Element style:style for presentation_a1201 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1201")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1201">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -5051,24 +1621,10 @@ def style_8_style_drawing_page_a1202():
     
     """Build Element style:style for drawing-page_a1202 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1202")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1202">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -5076,24 +1632,10 @@ def style_8_style_drawing_page_a1270():
     
     """Build Element style:style for drawing-page_a1270 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1270")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1270">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -5101,40 +1643,10 @@ def style_8_style_text_a1203():
     
     """Build Element style:style for text_a1203 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1203")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1203">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -5142,40 +1654,10 @@ def style_8_style_text_a1271():
     
     """Build Element style:style for text_a1271 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1271")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1271">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -5183,40 +1665,10 @@ def style_8_style_text_a1204():
     
     """Build Element style:style for text_a1204 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1204")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1204">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -5224,40 +1676,10 @@ def style_8_style_text_a1272():
     
     """Build Element style:style for text_a1272 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1272")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1272">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -5265,54 +1687,13 @@ def style_8_style_paragraph_a1205():
     
     """Build Element style:style for paragraph_a1205 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1205")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1205">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -5320,54 +1701,13 @@ def style_8_style_paragraph_a1273():
     
     """Build Element style:style for paragraph_a1273 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1273")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1273">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -5375,29 +1715,11 @@ def style_8_style_presentation_a1206():
     
     """Build Element style:style for presentation_a1206 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1206")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1206">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -5405,29 +1727,11 @@ def style_8_style_presentation_a1274():
     
     """Build Element style:style for presentation_a1274 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1274")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1274">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -5435,15 +1739,10 @@ def style_8_style_presentation_a1207():
     
     """Build Element style:style for presentation_a1207 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1207")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1207">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -5451,15 +1750,10 @@ def style_8_style_presentation_a1275():
     
     """Build Element style:style for presentation_a1275 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1275")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1275">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -5467,40 +1761,10 @@ def style_8_style_text_a1208():
     
     """Build Element style:style for text_a1208 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1208")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1208">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.44444in" style:font-size-asian="0.44444in" style:font-size-complex="0.44444in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -5508,15 +1772,10 @@ def style_8_style_presentation_a1276():
     
     """Build Element style:style for presentation_a1276 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1276")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1276">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -5524,54 +1783,13 @@ def style_8_style_paragraph_a1209():
     
     """Build Element style:style for paragraph_a1209 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1209")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.375in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.11111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.375in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1209">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.375in" fo:margin-right="0in" fo:text-indent="-0.375in" fo:margin-top="0.11111in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -5579,40 +1797,10 @@ def style_8_style_text_a1277():
     
     """Build Element style:style for text_a1277 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1277")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.44444in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1277">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.44444in" style:font-size-asian="0.44444in" style:font-size-complex="0.44444in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -5620,54 +1808,13 @@ def style_8_style_paragraph_a1278():
     
     """Build Element style:style for paragraph_a1278 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1278")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.375in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.11111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.375in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1278">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.375in" fo:margin-right="0in" fo:text-indent="-0.375in" fo:margin-top="0.11111in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -5675,29 +1822,11 @@ def style_8_style_presentation_a1160():
     
     """Build Element style:style for presentation_a1160 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1160")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1160">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -5705,24 +1834,10 @@ def style_8_style_drawing_page_a1161():
     
     """Build Element style:style for drawing-page_a1161 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1161")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1161">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -5730,40 +1845,10 @@ def style_8_style_text_a1162():
     
     """Build Element style:style for text_a1162 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1162")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1162">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -5771,40 +1856,10 @@ def style_8_style_text_a1163():
     
     """Build Element style:style for text_a1163 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1163")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1163">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -5812,54 +1867,13 @@ def style_8_style_paragraph_a1164():
     
     """Build Element style:style for paragraph_a1164 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1164")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "0in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1164">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="center" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -5867,29 +1881,11 @@ def style_8_style_presentation_a1165():
     
     """Build Element style:style for presentation_a1165 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1165")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "center")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "middle")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1165">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="middle" draw:textarea-horizontal-align="center" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -5897,15 +1893,10 @@ def style_8_style_presentation_a1166():
     
     """Build Element style:style for presentation_a1166 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1166")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1166">
+<style:graphic-properties draw:fill="none" draw:stroke="none" />
+</style:style>
+""" )
     
     return elem
 
@@ -5913,24 +1904,10 @@ def style_8_style_drawing_page_a1167():
     
     """Build Element style:style for drawing-page_a1167 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1167")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1167">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -5938,40 +1915,10 @@ def style_8_style_text_a1168():
     
     """Build Element style:style for text_a1168 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1168")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1168">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -5979,40 +1926,10 @@ def style_8_style_text_a1211():
     
     """Build Element style:style for text_a1211 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1211")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1211">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -6020,40 +1937,10 @@ def style_8_style_text_a1169():
     
     """Build Element style:style for text_a1169 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1169")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.61111in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1169">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.61111in" style:font-size-asian="0.61111in" style:font-size-complex="0.61111in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -6061,40 +1948,10 @@ def style_8_style_text_a1212():
     
     """Build Element style:style for text_a1212 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1212")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1212">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -6102,40 +1959,10 @@ def style_8_style_text_a1280():
     
     """Build Element style:style for text_a1280 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1280")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1280">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -6143,54 +1970,13 @@ def style_8_style_paragraph_a1213():
     
     """Build Element style:style for paragraph_a1213 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1213")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.8125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.3125in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1213">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.8125in" fo:margin-right="0in" fo:text-indent="-0.3125in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -6198,40 +1984,10 @@ def style_8_style_text_a1281():
     
     """Build Element style:style for text_a1281 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "text")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1281")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}country", "US")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Calibri")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.38889in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}language", "en")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="text" style:name="a1281">
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.38889in" style:font-size-asian="0.38889in" style:font-size-complex="0.38889in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true" />
+</style:style>
+""" )
     
     return elem
 
@@ -6239,54 +1995,13 @@ def style_8_style_paragraph_a1282():
     
     """Build Element style:style for paragraph_a1282 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "paragraph")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1282")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}punctuation-wrap", "hanging")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stop-distance", "1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}vertical-align", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}line-height", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-bottom", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-left", "0.8125in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-right", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}margin-top", "0.09722in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-indent", "-0.3125in")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}tab-stops" )
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-asian", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-size-complex", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-style-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-asian", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-weight-complex", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}letter-kerning", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-line-through-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-position", "0% 100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-color", "font-color")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-mode", "continuous")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-style", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-type", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-underline-width", "auto")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}color", "#000000")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "0.25in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-style", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-variant", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-weight", "normal")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}letter-spacing", "0in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}text-transform", "none")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="paragraph" style:name="a1282">
+<style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0.8125in" fo:margin-right="0in" fo:text-indent="-0.3125in" fo:margin-top="0.09722in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
+<style:tab-stops />
+</style:paragraph-properties>
+<style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -6294,29 +2009,11 @@ def style_8_style_presentation_a1215():
     
     """Build Element style:style for presentation_a1215 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1215")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1215">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -6324,24 +2021,10 @@ def style_8_style_drawing_page_a1216():
     
     """Build Element style:style for drawing-page_a1216 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "drawing-page")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1216")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}drawing-page-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}background-size", "border")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "solid")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill-color", "#ffffff")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}opacity", "100%")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-objects-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}background-visible", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-date-time", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-footer", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-header", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}display-page-number", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:presentation:1.0}visibility", "visible")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="drawing-page" style:name="a1216">
+<style:drawing-page-properties draw:fill="solid" draw:fill-color="#ffffff" draw:opacity="100%" presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" presentation:display-date-time="false" />
+</style:style>
+""" )
     
     return elem
 
@@ -6349,29 +2032,11 @@ def style_8_style_presentation_a1284():
     
     """Build Element style:style for presentation_a1284 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}family", "presentation")
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1284")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}graphic-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-height", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}auto-grow-width", "false")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}fill", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}stroke", "none")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-horizontal-align", "left")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:drawing:1.0}textarea-vertical-align", "top")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-bottom", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-left", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-right", "0.1in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}padding-top", "0.05in")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}wrap-option", "wrap")
-    elem.append( child )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}paragraph-properties" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-independent-line-spacing", "true")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}writing-mode", "lr-tb")
-    elem.append( child )
-    
+    elem = build_element( """<style:style style:family="presentation" style:name="a1284">
+<style:graphic-properties fo:wrap-option="wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="false" draw:auto-grow-height="false" />
+<style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb" />
+</style:style>
+""" )
     
     return elem
 
@@ -6379,162 +2044,45 @@ def text_8_list_style_a1138():
     
     """Build Element text:list-style for a1138 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1138")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.0625in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1138">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -6542,162 +2090,45 @@ def text_8_list_style_a1283():
     
     """Build Element text:list-style for a1283 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1283")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.0625in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1283">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -6705,162 +2136,45 @@ def text_8_list_style_a1247():
     
     """Build Element text:list-style for a1247 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1247")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1247">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -6868,162 +2182,45 @@ def text_8_list_style_a1178():
     
     """Build Element text:list-style for a1178 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1178")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.0625in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1178">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -7031,90 +2228,36 @@ def text_8_list_style_a1125():
     
     """Build Element text:list-style for a1125 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1125")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-number" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}num-format", "")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-number" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}num-format", "")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-number" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}num-format", "")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1in")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-number" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}num-format", "")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.5in")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-number" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}num-format", "")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2in")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-number" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}num-format", "")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.5in")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-number" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}num-format", "")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3in")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-number" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}num-format", "")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.5in")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-number" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}num-format", "")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "4in")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1125">
+<text:list-level-style-number text:level="1" style:num-format="">
+<style:list-level-properties text:space-before="0in" />
+</text:list-level-style-number>
+<text:list-level-style-number text:level="2" style:num-format="">
+<style:list-level-properties text:space-before="0.5in" />
+</text:list-level-style-number>
+<text:list-level-style-number text:level="3" style:num-format="">
+<style:list-level-properties text:space-before="1in" />
+</text:list-level-style-number>
+<text:list-level-style-number text:level="4" style:num-format="">
+<style:list-level-properties text:space-before="1.5in" />
+</text:list-level-style-number>
+<text:list-level-style-number text:level="5" style:num-format="">
+<style:list-level-properties text:space-before="2in" />
+</text:list-level-style-number>
+<text:list-level-style-number text:level="6" style:num-format="">
+<style:list-level-properties text:space-before="2.5in" />
+</text:list-level-style-number>
+<text:list-level-style-number text:level="7" style:num-format="">
+<style:list-level-properties text:space-before="3in" />
+</text:list-level-style-number>
+<text:list-level-style-number text:level="8" style:num-format="">
+<style:list-level-properties text:space-before="3.5in" />
+</text:list-level-style-number>
+<text:list-level-style-number text:level="9" style:num-format="">
+<style:list-level-properties text:space-before="4in" />
+</text:list-level-style-number>
+</text:list-style>
+""" )
     
     return elem
 
@@ -7122,162 +2265,45 @@ def text_8_list_style_a1151():
     
     """Build Element text:list-style for a1151 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1151")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.0625in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1151">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -7285,162 +2311,45 @@ def text_8_list_style_a1279():
     
     """Build Element text:list-style for a1279 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1279")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1279">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -7448,162 +2357,45 @@ def text_8_list_style_a1223():
     
     """Build Element text:list-style for a1223 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1223")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1223">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -7611,162 +2403,45 @@ def text_8_list_style_a1192():
     
     """Build Element text:list-style for a1192 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1192")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.0625in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1192">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -7774,162 +2449,45 @@ def text_8_list_style_a1155():
     
     """Build Element text:list-style for a1155 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1155")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1155">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -7937,162 +2495,45 @@ def text_8_list_style_a1227():
     
     """Build Element text:list-style for a1227 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1227")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.0625in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1227">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -8100,162 +2541,45 @@ def text_8_list_style_a1159():
     
     """Build Element text:list-style for a1159 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1159")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.0625in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1159">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -8263,162 +2587,45 @@ def text_8_list_style_a1210():
     
     """Build Element text:list-style for a1210 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1210")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1210">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -8426,162 +2633,45 @@ def text_8_list_style_a1251():
     
     """Build Element text:list-style for a1251 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1251")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.0625in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1251">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -8589,162 +2679,45 @@ def text_8_list_style_a1214():
     
     """Build Element text:list-style for a1214 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1214")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.0625in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1214">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -8752,162 +2725,45 @@ def text_8_list_style_a1147():
     
     """Build Element text:list-style for a1147 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1147")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1147">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -8915,162 +2771,45 @@ def text_8_list_style_a1188():
     
     """Build Element text:list-style for a1188 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1188")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1188">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -9078,162 +2817,45 @@ def text_8_list_style_a1294():
     
     """Build Element text:list-style for a1294 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1294")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1294">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -9241,162 +2863,45 @@ def text_8_list_style_a1134():
     
     """Build Element text:list-style for a1134 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1134")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1134">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -9404,162 +2909,45 @@ def text_8_list_style_a1298():
     
     """Build Element text:list-style for a1298 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1298")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.0625in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.5in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\x93")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.3125in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.9375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1298">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="2.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.4375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<style:list-level-properties text:space-before="3.9375in" text:min-label-width="0.3125in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
@@ -9567,162 +2955,45 @@ def text_8_list_style_a1174():
     
     """Build Element text:list-style for a1174 """
     
-    elem = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-style" )
-    elem.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}name", "a1174")
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "1")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "2")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.4375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "3")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "0.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "4")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "5")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "1.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "6")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "7")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "2.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "8")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.375in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
-    child = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:text:1.0}list-level-style-bullet" )
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}bullet-char", "\xE2\x80\xA2")
-    child.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}level", "9")
-    elem.append( child )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}list-level-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}min-label-width", "0.375in")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:text:1.0}space-before", "3.875in")
-    child.append( child_2 )
-    
-    child_2 = ET.Element( "{urn:oasis:names:tc:opendocument:xmlns:style:1.0}text-properties" )
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-family-generic", "swiss")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:style:1.0}font-pitch", "variable")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-family", "Arial")
-    child_2.set("{urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0}font-size", "100%")
-    child.append( child_2 )
-    
+    elem = build_element( """<text:list-style style:name="a1174">
+<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="2.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.375in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<style:list-level-properties text:space-before="3.875in" text:min-label-width="0.375in" />
+<style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
+</text:list-level-style-bullet>
+</text:list-style>
+""" )
     
     return elem
 
