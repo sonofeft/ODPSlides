@@ -124,8 +124,10 @@ class Page(object):
                 self.set_drawframe_font_color( frame_class='outline', font_color=inpD['text_font_color'] )
             
         if 'image_name' in inpD:
+            keep_aspect_ratio = inpD.get('keep_aspect_ratio', True)
+            
             self.set_image_href( frame_class='graphic', image_name=inpD['image_name'], 
-                                 num_image=0, keep_aspect_ratio=True)
+                                 num_image=0, keep_aspect_ratio=keep_aspect_ratio)
         
     
     
