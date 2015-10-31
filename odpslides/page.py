@@ -10,6 +10,7 @@ from copy import deepcopy
 from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 from odpslides.color_utils import getValidHexStr
 from odpslides.template_xml_file import TemplateXML_File
+from odpslides.svg_dimensions import force_svg_dim_to_float, adjust_draw_page_internal_dims
 
 import solidbg.content_auto_styles
 import solidbg.content_body_presentation
@@ -45,6 +46,7 @@ PRESENTATION_BG_VISIBLE_ATTR = force_to_tag( 'presentation:background-visible' )
 PRESENTATION_BG_OBJ_VISIBLE_ATTR = force_to_tag('presentation:background-objects-visible' )
 
 STYLE_DRAWING_PAGE_PROPS_TAG = force_to_tag( 'style:drawing-page-properties' )
+
 
 class Page(object):
     """
@@ -99,9 +101,11 @@ class Page(object):
                 self.draw_frameD[frame_class] = self.draw_frameD.get(frame_class, [])
                 self.draw_frameD[frame_class].append( draw_frame )
         
-        # CHECK THESE FOR USE ????????????????????????????
-        self.master_frameL = [] # ???????????????????????
-        self.master_page_elem = None # ??????????????????
+        # May adjust size of internal objects
+        pcent_stretch_center = inpD.get('pcent_stretch_center', 0)
+        pcent_stretch_content = inpD.get('pcent_stretch_content', 0)
+        adjust_draw_page_internal_dims( self, pcent_stretch_center=pcent_stretch_center, 
+                                        pcent_stretch_content=pcent_stretch_content )
 
 
         #print( self.draw_frameD )
@@ -256,27 +260,10 @@ class Page(object):
     def set_image_href(self, frame_class='graphic', image_name='', num_image=0, keep_aspect_ratio=True):
         """
         Set the image xlink:href property in the draw:image element
-        
-        May need to adjust sizing:
-        <draw:frame draw:name="Content Placeholder 3" draw:style-name="gr2" draw:text-style-name="P8" 
-        draw:layer="layout" svg:width="7.884cm" svg:height="9.815cm" svg:x="8.758cm" svg:y="4.618cm" 
-        presentation:class="graphic" 
-        presentation:user-transformed="true">  <============== NOTE: <<<<<<<<<<
-        
-        <draw:image xlink:href="media/image2.jpg" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad">
-        
+        (perhaps adjust size and mark as "user-transformed")
         """
         DRAW_IMAGE_TAG = force_to_tag('draw:image')
-        
-        def force_to_float( s ):
-            """Usually gets a value like:"1.23456in" (i.e. inches) """
-            try:
-                val = float( s[:-2] )
-            except:
-                val = 0.0
-                print('...ERROR... in set_image_href. Inches value = "%s"'%s)
-            return val
-        
+                
         if image_name and (frame_class in self.draw_frameD):
         
             # make sure index does not overrun
@@ -291,10 +278,10 @@ class Page(object):
                 elem.set( force_to_tag('xlink:href'), 'media/%s'%image_name )
                 
                 if keep_aspect_ratio:
-                    svg_x = force_to_float( draw_frame.get( force_to_tag('svg:x'), '' ) )
-                    svg_y = force_to_float( draw_frame.get( force_to_tag('svg:y'), '' ) )
-                    svg_w = force_to_float( draw_frame.get( force_to_tag('svg:width'), '' ) )
-                    svg_h = force_to_float( draw_frame.get( force_to_tag('svg:height'), '' ) )
+                    svg_x = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:x'), '' ) )
+                    svg_y = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:y'), '' ) )
+                    svg_w = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:width'), '' ) )
+                    svg_h = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:height'), '' ) )
                     #print('%s: x=%s, y=%s, w=%s, h=%s'%(image_name, svg_x, svg_y, svg_w, svg_h))
                     w_img,h_img = self.presObj.image_sizeD[ image_name ]
                     
@@ -342,27 +329,3 @@ class Page(object):
                             for sub_span_elem in span_elem.iter():
                                 if sub_span_elem.get(FONT_COLOR_ATTR, ''):
                                     sub_span_elem.set( FONT_COLOR_ATTR, hex_col_str )
-
-#  style element to replace solidbg/original style element (in content.xml)
-IMG_ELEM_STR = """<style:style %s style:family="drawing-page" style:name="%s">
-<style:drawing-page-properties draw:fill="bitmap" draw:fill-image-name="%s" style:repeat="stretch" 
-presentation:visibility="visible" draw:background-size="border" presentation:background-objects-visible="true" 
-presentation:background-visible="true" presentation:display-header="false" presentation:display-footer="false" 
-presentation:display-page-number="false" presentation:display-date-time="false"/>
-</style:style>"""
-
-#  draw:fill-image element to put into office:styles of styles.xml
-DRAW_IMG_STR = """<draw:fill-image %s draw:name="%s" xlink:href="media/%s" 
-xlink:show="embed" xlink:actuate="onLoad"/>"""
-
-#  style element to replace solidbg/original style element (in content.xml)
-GRAD_ELEM_STR = """<style:style %s style:family="drawing-page" style:name="%s">
-<style:drawing-page-properties draw:fill="gradient" draw:fill-gradient-name="%s" presentation:visibility="visible" 
-draw:background-size="border" presentation:background-objects-visible="true" presentation:background-visible="true" 
-presentation:display-header="false" presentation:display-footer="false" presentation:display-page-number="false" 
-presentation:display-date-time="false"/>
-</style:style>"""
-
-#  draw:gradient element to put into office:styles of styles.xml
-DRAW_GRAD_STR = """<draw:gradient %s draw:name="%s" draw:style="%s" draw:angle="0" draw:start-color="%s" 
-draw:end-color="%s" draw:start-intensity="100%%" draw:end-intensity="100%%"/>"""

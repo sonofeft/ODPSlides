@@ -303,20 +303,28 @@ class Presentation(object):
         self.add_a_new_page( new_page )
         
     def add_titled_outline_chart(self, title='My Title', outline='', title_font_color='',
-                                     text_font_color=''):
+                                     text_font_color='', 
+                                     pcent_stretch_center=0, pcent_stretch_content=0):
                                          
         
         inpD = {'title':title,  'outline':outline,
-                'title_font_color':title_font_color, 'text_font_color':text_font_color}
+                'title_font_color':title_font_color, 'text_font_color':text_font_color,
+                'pcent_stretch_center':pcent_stretch_center, 
+                'pcent_stretch_content':pcent_stretch_content}
+                    
         new_page = Page( self, disp_name="Title and Text", **inpD)
         self.add_a_new_page( new_page )
         
     def add_titled_image(self, title='My Picture', image_file='', title_font_color='', 
-                            keep_aspect_ratio=True):
+                            keep_aspect_ratio=True, 
+                            pcent_stretch_center=0, pcent_stretch_content=0):
         
         image_name = self.get_next_image_name( image_file )
         inpD = {'title':title,  'image_name':image_name, 'title_font_color':title_font_color,
-                'keep_aspect_ratio':keep_aspect_ratio}
+                'keep_aspect_ratio':keep_aspect_ratio,
+                'pcent_stretch_center':pcent_stretch_center, 
+                    'pcent_stretch_content':pcent_stretch_content}
+                        
         new_page = Page( self, disp_name="Title and Content", **inpD)
         self.add_a_new_page( new_page )
  
@@ -335,10 +343,14 @@ if __name__ == '__main__':
     
     sL = ['1st','\t2nd','\t\t3rd','            4th','Normal < 1st but > 9','    Indent 2nd']
     C.add_titled_outline_chart( title='My Second Title', outline=sL, 
-                                title_font_color='blue', text_font_color='green')
+                                title_font_color='blue', text_font_color='green',
+                                pcent_stretch_center=80, pcent_stretch_content=80)
     
-    C.add_titled_image( title='My 1st Picture', image_file='./templates/planets.jpg', title_font_color='dr', keep_aspect_ratio=False)
-    C.add_titled_image( title='My 2nd Picture', image_file='./templates/sysMass_vs_vol_Ptank.png', title_font_color='g')
+    C.add_titled_image( title='Tall Aspect Ratio', image_file='./templates/planets.jpg', 
+                        title_font_color='dr', keep_aspect_ratio=True,
+                        pcent_stretch_center=80, pcent_stretch_content=80)
+    C.add_titled_image( title='My 2nd Picture', image_file='./templates/sysMass_vs_vol_Ptank.png', 
+                        title_font_color='g')
     C.add_titled_image( title='My Third Picture', image_file='./templates/Pressure_1T_Spin.gif')
     
     C.save( filename='my_ppt.odp', launch=1 )
