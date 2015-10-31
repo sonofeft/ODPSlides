@@ -35,8 +35,8 @@ class ContentXML(object):
         self.content_tmplt = deepcopy( self.odp_ref.content_xml_obj )
         
         body_pres_elem = self.content_tmplt.find('office:body/office:presentation')
-        for child in body_pres_elem.getchildren():
-            print('Removing:',force_to_short(child.tag),'  from:', force_to_short(body_pres_elem.tag) )
+        #for child in body_pres_elem.getchildren():
+        #    print('Removing:',force_to_short(child.tag),'  from:', force_to_short(body_pres_elem.tag) )
             
         body_pres_elem.clear_children()
         

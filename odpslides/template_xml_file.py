@@ -379,8 +379,8 @@ class TemplateXML_File(object):
         for annn in self.annn_style8nameD.keys():
             self.max_annn_def = max( self.max_annn_def, int(annn[1:]) )
             self.min_annn_def = min( self.min_annn_def, int(annn[1:]) )
-        print('min_annn_def self.annn_style8nameD = ', self.min_annn_def)
-        print('max_annn_def self.annn_style8nameD = ', self.max_annn_def)
+        #print('min_annn_def self.annn_style8nameD = ', self.min_annn_def)
+        #print('max_annn_def self.annn_style8nameD = ', self.max_annn_def)
 
 
         self.max_annn_used = -1
@@ -388,8 +388,8 @@ class TemplateXML_File(object):
         for annn in self.style_refD.keys():
             self.max_annn_used = max( self.max_annn_used, int(annn[1:]) )
             self.min_annn_used = min( self.min_annn_used, int(annn[1:]) )
-        print('min_annn_used self.annn_style8nameD = ', self.min_annn_used)
-        print('max_annn_used self.annn_style8nameD = ', self.max_annn_used)
+        #print('min_annn_used self.annn_style8nameD = ', self.min_annn_used)
+        #print('max_annn_used self.annn_style8nameD = ', self.max_annn_used)
 
 
         self.max_idnnn_def = -1
@@ -397,8 +397,8 @@ class TemplateXML_File(object):
         for idnnn in self.id_draw8idD.keys():
             self.max_idnnn_def = max( self.max_idnnn_def, int(idnnn[2:]) )
             self.min_idnnn_def = min( self.min_idnnn_def, int(idnnn[2:]) )
-        print('min_idnnn_def self.id_draw8idD = ', self.min_idnnn_def)
-        print('max_idnnn_def self.id_draw8idD = ', self.max_idnnn_def)
+        #print('min_idnnn_def self.id_draw8idD = ', self.min_idnnn_def)
+        #print('max_idnnn_def self.id_draw8idD = ', self.max_idnnn_def)
 
 
     def set_all_attr_of_tag(self, tag, attr_name, attr_val):

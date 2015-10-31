@@ -64,7 +64,7 @@ class Page(object):
         # Start out as "solidbg", can be changed later
         self.disp_name = disp_name  # "Title Slide"
         
-        print('in class Page: inpD=%s'%inpD)
+        #print('in class Page: inpD=%s'%inpD)
         
         if presObj.page_type == 'grad':
             self.page_layouts = grad.page_layouts
@@ -124,8 +124,8 @@ class Page(object):
                 self.set_drawframe_font_color( frame_class='outline', font_color=inpD['text_font_color'] )
             
         if 'image_name' in inpD:
-            print('NEED IMAGE LOGIC.... for image:"%s"'%inpD['image_name'])
-            self.set_image_href( frame_class='graphic', image_name=inpD['image_name'], num_image=0)
+            self.set_image_href( frame_class='graphic', image_name=inpD['image_name'], 
+                                 num_image=0, keep_aspect_ratio=True)
         
     
     
@@ -216,7 +216,7 @@ class Page(object):
                 max_indent = len( text_listL )-1
                 
                 if (text_box is not None) and text_listL:
-                    print('max_indent of outline = %i'%max_indent)
+                    #print('max_indent of outline = %i'%max_indent)
                     text_box.clear_children()
                     
                     # text comes in w/o formatting for outline.
@@ -251,7 +251,7 @@ class Page(object):
                             subelem.text = ''
                         count_textspan += 1
     
-    def set_image_href(self, frame_class='graphic', image_name='', num_image=0):
+    def set_image_href(self, frame_class='graphic', image_name='', num_image=0, keep_aspect_ratio=True):
         """
         Set the image xlink:href property in the draw:image element
         
@@ -266,6 +266,15 @@ class Page(object):
         """
         DRAW_IMAGE_TAG = force_to_tag('draw:image')
         
+        def force_to_float( s ):
+            """Usually gets a value like:"1.23456in" (i.e. inches) """
+            try:
+                val = float( s[:-2] )
+            except:
+                val = 0.0
+                print('...ERROR... in set_image_href. Inches value = "%s"'%s)
+            return val
+        
         if image_name and (frame_class in self.draw_frameD):
         
             # make sure index does not overrun
@@ -278,6 +287,37 @@ class Page(object):
             elem = draw_frame.find( DRAW_IMAGE_TAG )
             if elem is not None:
                 elem.set( force_to_tag('xlink:href'), 'media/%s'%image_name )
+                
+                if keep_aspect_ratio:
+                    svg_x = force_to_float( draw_frame.get( force_to_tag('svg:x'), '' ) )
+                    svg_y = force_to_float( draw_frame.get( force_to_tag('svg:y'), '' ) )
+                    svg_w = force_to_float( draw_frame.get( force_to_tag('svg:width'), '' ) )
+                    svg_h = force_to_float( draw_frame.get( force_to_tag('svg:height'), '' ) )
+                    #print('%s: x=%s, y=%s, w=%s, h=%s'%(image_name, svg_x, svg_y, svg_w, svg_h))
+                    w_img,h_img = self.presObj.image_sizeD[ image_name ]
+                    
+                    # only continue if dimenstions are available
+                    if w_img and h_img:
+                        w = float(w_img)
+                        h = float(h_img)
+                        
+                        if h/w > svg_h/svg_w:
+                            # Leave svg_h and svg_y alone, change svg_w and svg_x
+                            svg_w_old = svg_w
+                            svg_w = svg_h * w/h
+                            svg_x = svg_x + (svg_w_old - svg_w) / 2.0
+                            draw_frame.set( force_to_tag('svg:width'), '%sin'%svg_w )
+                            draw_frame.set( force_to_tag('svg:x'), '%sin'%svg_x )
+                        else:
+                            # Leave svg_w and svg_x alone, change svg_h and svg_y
+                            svg_h_old = svg_h
+                            svg_h = svg_w * h/w
+                            svg_y = svg_y + (svg_h_old - svg_h) / 2.0
+                            draw_frame.set( force_to_tag('svg:height'), '%sin'%svg_h )
+                            draw_frame.set( force_to_tag('svg:y'), '%sin'%svg_y )
+                        
+                        # Need to tell app that things have changed from master
+                        draw_frame.set( force_to_tag('presentation:user-transformed'),"true" )
     
     def set_drawframe_font_color( self, frame_class='title', font_color='black' ):
         """

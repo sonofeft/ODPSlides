@@ -18,13 +18,13 @@ from odpslides.odp_file import ODPFile, read_source_from_odp
 from odpslides.styles_xml import StylesXML
 from odpslides.content_xml import ContentXML
 from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
+from odpslides.image_size import get_image_size
 
 
 here = os.path.abspath(os.path.dirname(__file__))
 
 #           right-arr  open-rt-arr  black-circ  bullet    open-circ   diamond  open-dmnd  arrow    open-arr    arr-circ   star
 #BULLET_L = [u'\u25B6', u'\u2587',  u'\u25CF',  u'\u2022',u'\u25CE',u'\u25C6',u'\u25C7', u'\u27A1',u'\u27B1',u'\u27B2',u'\u2730']
-BULLET_L = [ '-',       '-',       '-',       '-',       '-',       '-',       '-',       '-',       '-',       '-',       '-']
 
 
 class Presentation(object):
@@ -51,6 +51,7 @@ class Presentation(object):
         self.image_nameD = {}     # index=file system name,    value=internal image name
         self.sys_image_nameD = {} # index=internal image name, value=file system name
         self.image_nameL = [] # ordered list of internal image names 
+        self.image_sizeD = {} # index=internal image name, value=tuple of image size (w,h)
         self.max_image_int = 0
         
         self.background_image = background_image
@@ -144,6 +145,8 @@ class Presentation(object):
         self.image_nameD[ file_sys_name ] = int_name
         self.sys_image_nameD[ int_name ] = file_sys_name
         self.image_nameL.append( int_name )
+        
+        self.image_sizeD[ int_name ] = get_image_size( file_sys_name )
         
         return int_name
             
@@ -332,8 +335,9 @@ if __name__ == '__main__':
     C.add_titled_outline_chart( title='My Second Title', outline=sL, 
                                 title_font_color='blue', text_font_color='green')
     
-    C.add_titled_image( title='My Picture', image_file='./templates/planets.jpg', title_font_color='')
-    C.add_titled_image( title='My Picture', image_file='./templates/sysMass_vs_vol_Ptank.png', title_font_color='')
+    C.add_titled_image( title='My 1st Picture', image_file='./templates/planets.jpg', title_font_color='dr')
+    C.add_titled_image( title='My 2nd Picture', image_file='./templates/sysMass_vs_vol_Ptank.png', title_font_color='g')
+    C.add_titled_image( title='My Third Picture', image_file='./templates/Pressure_1T_Spin.gif')
     
     C.save( filename='my_ppt.odp', launch=1 )
     

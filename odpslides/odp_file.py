@@ -108,15 +108,15 @@ class ODPFile( object ):
         
         self.office_styles_elem = self.styles_xml_obj.root.find(\
                                   NS('office:styles') )
-        print('!!!!!!!!!! office_styles_elem =',self.office_styles_elem)
+        #print('!!!!!!!!!! office_styles_elem =',self.office_styles_elem)
         
         self.office_automatic_styles_elem = self.styles_xml_obj.root.find(\
                                             NS('office:automatic-styles') )
-        print('!!!!!!!!!! office_automatic_styles_elem =',self.office_automatic_styles_elem)
+        #print('!!!!!!!!!! office_automatic_styles_elem =',self.office_automatic_styles_elem)
         
         self.office_master_styles_elem = self.styles_xml_obj.root.find(\
                                          NS('office:master-styles') )
-        print('!!!!!!!!!! office_master_styles_elem =',self.office_master_styles_elem)
+        #print('!!!!!!!!!! office_master_styles_elem =',self.office_master_styles_elem)
         
         
         # ===================================================================================
@@ -126,9 +126,9 @@ class ODPFile( object ):
         # ===================================================================================
         # Get ref auto_styles sections for document
         self.content_auto_styles = self.content_xml_obj.find('office:automatic-styles')
-        print('auto_styles =', self.content_auto_styles)
+        #print('auto_styles =', self.content_auto_styles)
         self.content_body_presentation = self.content_xml_obj.find('office:body/office:presentation')
-        print('presentation =', self.content_body_presentation)
+        #print('presentation =', self.content_body_presentation)
                 
         self.meta_xml_obj = load_template_xml_from_odp( self.template_fname, 'meta.xml' )
         self.settings_xml_obj = load_template_xml_from_odp( self.template_fname, 'settings.xml' )
@@ -210,9 +210,9 @@ class ODPFile( object ):
                         pass
 
 
-        print('Highest value of style   from styles.xml is "a%i"'%self.max_style_name_int)
-        print('Highest value of draw id from styles.xml is "id%i"'%self.max_draw_id_int)
-        print()
+        #print('Highest value of style   from styles.xml is "a%i"'%self.max_style_name_int)
+        #print('Highest value of draw id from styles.xml is "id%i"'%self.max_draw_id_int)
+        #print()
         
         # Build a lookup to select proper style:presentation-page-layout when 
         # the name of the master-page is given.
@@ -220,7 +220,7 @@ class ODPFile( object ):
 
         # ==================== content info =======================
         page_contentL = tree_content.findall('office:body/office:presentation/draw:page') # Element objects
-        print('Number of page_contentL = %i'%len(page_contentL))
+        #print('Number of page_contentL = %i'%len(page_contentL))
 
 
         # =================== styles info =========================
@@ -256,7 +256,7 @@ class ODPFile( object ):
         for page in page_contentL:
             master_name = page.get( NS('draw:master-page-name') )
             layout_name = page.get( NS('presentation:presentation-page-layout-name') )
-            print('used master="%60s",  layout="%s"'%(master_name, layout_name)  )
+            #print('used master="%60s",  layout="%s"'%(master_name, layout_name)  )
             self.matching_layout_nameD[master_name] = layout_name
             self.draw_page_elem_from_nameD[master_name] = page
 
