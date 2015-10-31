@@ -204,7 +204,7 @@ class TemplateXML_File(object):
         sOut = u"".join(xml_dataL)
         return sOut.encode('utf-8')
 
-    def elem_tostring(self, elem, include_ns=False, use_linebreaks=True):
+    def elem_tostring(self, elem, include_ns=False, use_linebreaks=True, include_header=False):
             
         xml_dataL = []
         
@@ -234,6 +234,9 @@ class TemplateXML_File(object):
 
         sOut = u"".join(xml_dataL)
         sOut = sOut.encode('utf-8')
+        if include_header and self.xml_header:
+            sOut = self.xml_header + '\n' + sOut
+        
         return sOut
 
     def write(self, out_file_name):

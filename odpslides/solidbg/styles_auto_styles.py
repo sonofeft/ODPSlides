@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 
 # Python 2 and 3
 from __future__ import unicode_literals
@@ -9634,39 +9636,39 @@ def text_8_list_style_a682():
     """Build Element text:list-style for a682 """
     
     elem = build_element( """<text:list-style style:name="a682">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -9680,39 +9682,39 @@ def text_8_list_style_a725():
     """Build Element text:list-style for a725 """
     
     elem = build_element( """<text:list-style style:name="a725">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -9726,39 +9728,39 @@ def text_8_list_style_a685():
     """Build Element text:list-style for a685 """
     
     elem = build_element( """<text:list-style style:name="a685">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -9809,39 +9811,39 @@ def text_8_list_style_a728():
     """Build Element text:list-style for a728 """
     
     elem = build_element( """<text:list-style style:name="a728">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -9855,39 +9857,39 @@ def text_8_list_style_a831():
     """Build Element text:list-style for a831 """
     
     elem = build_element( """<text:list-style style:name="a831">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -9901,39 +9903,39 @@ def text_8_list_style_a688():
     """Build Element text:list-style for a688 """
     
     elem = build_element( """<text:list-style style:name="a688">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -9947,39 +9949,39 @@ def text_8_list_style_a835():
     """Build Element text:list-style for a835 """
     
     elem = build_element( """<text:list-style style:name="a835">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -9993,39 +9995,39 @@ def text_8_list_style_a838():
     """Build Element text:list-style for a838 """
     
     elem = build_element( """<text:list-style style:name="a838">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10039,39 +10041,39 @@ def text_8_list_style_a943():
     """Build Element text:list-style for a943 """
     
     elem = build_element( """<text:list-style style:name="a943">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10085,39 +10087,39 @@ def text_8_list_style_a946():
     """Build Element text:list-style for a946 """
     
     elem = build_element( """<text:list-style style:name="a946">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10131,39 +10133,39 @@ def text_8_list_style_a512():
     """Build Element text:list-style for a512 """
     
     elem = build_element( """<text:list-style style:name="a512">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10177,39 +10179,39 @@ def text_8_list_style_a472():
     """Build Element text:list-style for a472 """
     
     elem = build_element( """<text:list-style style:name="a472">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10223,39 +10225,39 @@ def text_8_list_style_a949():
     """Build Element text:list-style for a949 """
     
     elem = build_element( """<text:list-style style:name="a949">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10269,39 +10271,39 @@ def text_8_list_style_a515():
     """Build Element text:list-style for a515 """
     
     elem = build_element( """<text:list-style style:name="a515">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10315,39 +10317,39 @@ def text_8_list_style_a475():
     """Build Element text:list-style for a475 """
     
     elem = build_element( """<text:list-style style:name="a475">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10361,39 +10363,39 @@ def text_8_list_style_a620():
     """Build Element text:list-style for a620 """
     
     elem = build_element( """<text:list-style style:name="a620">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10407,39 +10409,39 @@ def text_8_list_style_a580():
     """Build Element text:list-style for a580 """
     
     elem = build_element( """<text:list-style style:name="a580">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10453,39 +10455,39 @@ def text_8_list_style_a518():
     """Build Element text:list-style for a518 """
     
     elem = build_element( """<text:list-style style:name="a518">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10499,39 +10501,39 @@ def text_8_list_style_a623():
     """Build Element text:list-style for a623 """
     
     elem = build_element( """<text:list-style style:name="a623">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10545,39 +10547,39 @@ def text_8_list_style_a479():
     """Build Element text:list-style for a479 """
     
     elem = build_element( """<text:list-style style:name="a479">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10591,39 +10593,39 @@ def text_8_list_style_a583():
     """Build Element text:list-style for a583 """
     
     elem = build_element( """<text:list-style style:name="a583">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10637,39 +10639,39 @@ def text_8_list_style_a626():
     """Build Element text:list-style for a626 """
     
     elem = build_element( """<text:list-style style:name="a626">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10683,39 +10685,39 @@ def text_8_list_style_a151():
     """Build Element text:list-style for a151 """
     
     elem = build_element( """<text:list-style style:name="a151">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10729,39 +10731,39 @@ def text_8_list_style_a587():
     """Build Element text:list-style for a587 """
     
     elem = build_element( """<text:list-style style:name="a587">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10775,39 +10777,39 @@ def text_8_list_style_a731():
     """Build Element text:list-style for a731 """
     
     elem = build_element( """<text:list-style style:name="a731">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10821,39 +10823,39 @@ def text_8_list_style_a629():
     """Build Element text:list-style for a629 """
     
     elem = build_element( """<text:list-style style:name="a629">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10867,39 +10869,39 @@ def text_8_list_style_a691():
     """Build Element text:list-style for a691 """
     
     elem = build_element( """<text:list-style style:name="a691">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10913,39 +10915,39 @@ def text_8_list_style_a154():
     """Build Element text:list-style for a154 """
     
     elem = build_element( """<text:list-style style:name="a154">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -10959,39 +10961,39 @@ def text_8_list_style_a734():
     """Build Element text:list-style for a734 """
     
     elem = build_element( """<text:list-style style:name="a734">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11005,39 +11007,39 @@ def text_8_list_style_a12():
     """Build Element text:list-style for a12 """
     
     elem = build_element( """<text:list-style style:name="a12">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11051,39 +11053,39 @@ def text_8_list_style_a157():
     """Build Element text:list-style for a157 """
     
     elem = build_element( """<text:list-style style:name="a157">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11097,39 +11099,39 @@ def text_8_list_style_a695():
     """Build Element text:list-style for a695 """
     
     elem = build_element( """<text:list-style style:name="a695">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11143,39 +11145,39 @@ def text_8_list_style_a737():
     """Build Element text:list-style for a737 """
     
     elem = build_element( """<text:list-style style:name="a737">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11189,39 +11191,39 @@ def text_8_list_style_a841():
     """Build Element text:list-style for a841 """
     
     elem = build_element( """<text:list-style style:name="a841">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11272,39 +11274,39 @@ def text_8_list_style_a698():
     """Build Element text:list-style for a698 """
     
     elem = build_element( """<text:list-style style:name="a698">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11318,39 +11320,39 @@ def text_8_list_style_a15():
     """Build Element text:list-style for a15 """
     
     elem = build_element( """<text:list-style style:name="a15">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11364,39 +11366,39 @@ def text_8_list_style_a844():
     """Build Element text:list-style for a844 """
     
     elem = build_element( """<text:list-style style:name="a844">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11410,39 +11412,39 @@ def text_8_list_style_a18():
     """Build Element text:list-style for a18 """
     
     elem = build_element( """<text:list-style style:name="a18">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11456,39 +11458,39 @@ def text_8_list_style_a371():
     """Build Element text:list-style for a371 """
     
     elem = build_element( """<text:list-style style:name="a371">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11502,39 +11504,39 @@ def text_8_list_style_a847():
     """Build Element text:list-style for a847 """
     
     elem = build_element( """<text:list-style style:name="a847">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11585,39 +11587,39 @@ def text_8_list_style_a952():
     """Build Element text:list-style for a952 """
     
     elem = build_element( """<text:list-style style:name="a952">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11631,39 +11633,39 @@ def text_8_list_style_a374():
     """Build Element text:list-style for a374 """
     
     elem = build_element( """<text:list-style style:name="a374">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11677,39 +11679,39 @@ def text_8_list_style_a417():
     """Build Element text:list-style for a417 """
     
     elem = build_element( """<text:list-style style:name="a417">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11723,39 +11725,39 @@ def text_8_list_style_a955():
     """Build Element text:list-style for a955 """
     
     elem = build_element( """<text:list-style style:name="a955">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11769,39 +11771,39 @@ def text_8_list_style_a377():
     """Build Element text:list-style for a377 """
     
     elem = build_element( """<text:list-style style:name="a377">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11815,39 +11817,39 @@ def text_8_list_style_a521():
     """Build Element text:list-style for a521 """
     
     elem = build_element( """<text:list-style style:name="a521">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11861,39 +11863,39 @@ def text_8_list_style_a482():
     """Build Element text:list-style for a482 """
     
     elem = build_element( """<text:list-style style:name="a482">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11907,39 +11909,39 @@ def text_8_list_style_a959():
     """Build Element text:list-style for a959 """
     
     elem = build_element( """<text:list-style style:name="a959">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11953,39 +11955,39 @@ def text_8_list_style_a525():
     """Build Element text:list-style for a525 """
     
     elem = build_element( """<text:list-style style:name="a525">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -11999,39 +12001,39 @@ def text_8_list_style_a485():
     """Build Element text:list-style for a485 """
     
     elem = build_element( """<text:list-style style:name="a485">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12045,39 +12047,39 @@ def text_8_list_style_a590():
     """Build Element text:list-style for a590 """
     
     elem = build_element( """<text:list-style style:name="a590">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12091,39 +12093,39 @@ def text_8_list_style_a528():
     """Build Element text:list-style for a528 """
     
     elem = build_element( """<text:list-style style:name="a528">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12137,39 +12139,39 @@ def text_8_list_style_a488():
     """Build Element text:list-style for a488 """
     
     elem = build_element( """<text:list-style style:name="a488">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12183,39 +12185,39 @@ def text_8_list_style_a633():
     """Build Element text:list-style for a633 """
     
     elem = build_element( """<text:list-style style:name="a633">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12229,39 +12231,39 @@ def text_8_list_style_a593():
     """Build Element text:list-style for a593 """
     
     elem = build_element( """<text:list-style style:name="a593">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12275,39 +12277,39 @@ def text_8_list_style_a636():
     """Build Element text:list-style for a636 """
     
     elem = build_element( """<text:list-style style:name="a636">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12321,39 +12323,39 @@ def text_8_list_style_a160():
     """Build Element text:list-style for a160 """
     
     elem = build_element( """<text:list-style style:name="a160">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12367,39 +12369,39 @@ def text_8_list_style_a596():
     """Build Element text:list-style for a596 """
     
     elem = build_element( """<text:list-style style:name="a596">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12413,39 +12415,39 @@ def text_8_list_style_a741():
     """Build Element text:list-style for a741 """
     
     elem = build_element( """<text:list-style style:name="a741">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12459,39 +12461,39 @@ def text_8_list_style_a639():
     """Build Element text:list-style for a639 """
     
     elem = build_element( """<text:list-style style:name="a639">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12505,39 +12507,39 @@ def text_8_list_style_a163():
     """Build Element text:list-style for a163 """
     
     elem = build_element( """<text:list-style style:name="a163">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12551,39 +12553,39 @@ def text_8_list_style_a599():
     """Build Element text:list-style for a599 """
     
     elem = build_element( """<text:list-style style:name="a599">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12597,39 +12599,39 @@ def text_8_list_style_a744():
     """Build Element text:list-style for a744 """
     
     elem = build_element( """<text:list-style style:name="a744">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12643,39 +12645,39 @@ def text_8_list_style_a311():
     """Build Element text:list-style for a311 """
     
     elem = build_element( """<text:list-style style:name="a311">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12726,39 +12728,39 @@ def text_8_list_style_a747():
     """Build Element text:list-style for a747 """
     
     elem = build_element( """<text:list-style style:name="a747">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12772,39 +12774,39 @@ def text_8_list_style_a314():
     """Build Element text:list-style for a314 """
     
     elem = build_element( """<text:list-style style:name="a314">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12818,39 +12820,39 @@ def text_8_list_style_a317():
     """Build Element text:list-style for a317 """
     
     elem = build_element( """<text:list-style style:name="a317">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12864,39 +12866,39 @@ def text_8_list_style_a420():
     """Build Element text:list-style for a420 """
     
     elem = build_element( """<text:list-style style:name="a420">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12910,39 +12912,39 @@ def text_8_list_style_a380():
     """Build Element text:list-style for a380 """
     
     elem = build_element( """<text:list-style style:name="a380">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -12956,39 +12958,39 @@ def text_8_list_style_a423():
     """Build Element text:list-style for a423 """
     
     elem = build_element( """<text:list-style style:name="a423">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13002,39 +13004,39 @@ def text_8_list_style_a383():
     """Build Element text:list-style for a383 """
     
     elem = build_element( """<text:list-style style:name="a383">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13048,39 +13050,39 @@ def text_8_list_style_a962():
     """Build Element text:list-style for a962 """
     
     elem = build_element( """<text:list-style style:name="a962">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13094,39 +13096,39 @@ def text_8_list_style_a426():
     """Build Element text:list-style for a426 """
     
     elem = build_element( """<text:list-style style:name="a426">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13140,39 +13142,39 @@ def text_8_list_style_a965():
     """Build Element text:list-style for a965 """
     
     elem = build_element( """<text:list-style style:name="a965">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13186,39 +13188,39 @@ def text_8_list_style_a531():
     """Build Element text:list-style for a531 """
     
     elem = build_element( """<text:list-style style:name="a531">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13232,39 +13234,39 @@ def text_8_list_style_a387():
     """Build Element text:list-style for a387 """
     
     elem = build_element( """<text:list-style style:name="a387">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13278,39 +13280,39 @@ def text_8_list_style_a491():
     """Build Element text:list-style for a491 """
     
     elem = build_element( """<text:list-style style:name="a491">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13324,39 +13326,39 @@ def text_8_list_style_a429():
     """Build Element text:list-style for a429 """
     
     elem = build_element( """<text:list-style style:name="a429">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13370,39 +13372,39 @@ def text_8_list_style_a968():
     """Build Element text:list-style for a968 """
     
     elem = build_element( """<text:list-style style:name="a968">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13416,39 +13418,39 @@ def text_8_list_style_a534():
     """Build Element text:list-style for a534 """
     
     elem = build_element( """<text:list-style style:name="a534">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13462,39 +13464,39 @@ def text_8_list_style_a101():
     """Build Element text:list-style for a101 """
     
     elem = build_element( """<text:list-style style:name="a101">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13508,39 +13510,39 @@ def text_8_list_style_a537():
     """Build Element text:list-style for a537 """
     
     elem = build_element( """<text:list-style style:name="a537">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13554,39 +13556,39 @@ def text_8_list_style_a642():
     """Build Element text:list-style for a642 """
     
     elem = build_element( """<text:list-style style:name="a642">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13600,39 +13602,39 @@ def text_8_list_style_a104():
     """Build Element text:list-style for a104 """
     
     elem = build_element( """<text:list-style style:name="a104">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13646,39 +13648,39 @@ def text_8_list_style_a645():
     """Build Element text:list-style for a645 """
     
     elem = build_element( """<text:list-style style:name="a645">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13692,39 +13694,39 @@ def text_8_list_style_a107():
     """Build Element text:list-style for a107 """
     
     elem = build_element( """<text:list-style style:name="a107">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13738,39 +13740,39 @@ def text_8_list_style_a171():
     """Build Element text:list-style for a171 """
     
     elem = build_element( """<text:list-style style:name="a171">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13784,39 +13786,39 @@ def text_8_list_style_a750():
     """Build Element text:list-style for a750 """
     
     elem = build_element( """<text:list-style style:name="a750">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13830,39 +13832,39 @@ def text_8_list_style_a649():
     """Build Element text:list-style for a649 """
     
     elem = build_element( """<text:list-style style:name="a649">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13876,39 +13878,39 @@ def text_8_list_style_a174():
     """Build Element text:list-style for a174 """
     
     elem = build_element( """<text:list-style style:name="a174">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13922,39 +13924,39 @@ def text_8_list_style_a753():
     """Build Element text:list-style for a753 """
     
     elem = build_element( """<text:list-style style:name="a753">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -13968,39 +13970,39 @@ def text_8_list_style_a320():
     """Build Element text:list-style for a320 """
     
     elem = build_element( """<text:list-style style:name="a320">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14014,39 +14016,39 @@ def text_8_list_style_a177():
     """Build Element text:list-style for a177 """
     
     elem = build_element( """<text:list-style style:name="a177">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14060,39 +14062,39 @@ def text_8_list_style_a900():
     """Build Element text:list-style for a900 """
     
     elem = build_element( """<text:list-style style:name="a900">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14106,39 +14108,39 @@ def text_8_list_style_a281():
     """Build Element text:list-style for a281 """
     
     elem = build_element( """<text:list-style style:name="a281">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14152,39 +14154,39 @@ def text_8_list_style_a757():
     """Build Element text:list-style for a757 """
     
     elem = build_element( """<text:list-style style:name="a757">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14198,39 +14200,39 @@ def text_8_list_style_a323():
     """Build Element text:list-style for a323 """
     
     elem = build_element( """<text:list-style style:name="a323">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14244,39 +14246,39 @@ def text_8_list_style_a903():
     """Build Element text:list-style for a903 """
     
     elem = build_element( """<text:list-style style:name="a903">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14290,39 +14292,39 @@ def text_8_list_style_a284():
     """Build Element text:list-style for a284 """
     
     elem = build_element( """<text:list-style style:name="a284">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14336,39 +14338,39 @@ def text_8_list_style_a865():
     """Build Element text:list-style for a865 """
     
     elem = build_element( """<text:list-style style:name="a865">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14382,39 +14384,39 @@ def text_8_list_style_a906():
     """Build Element text:list-style for a906 """
     
     elem = build_element( """<text:list-style style:name="a906">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14428,39 +14430,39 @@ def text_8_list_style_a287():
     """Build Element text:list-style for a287 """
     
     elem = build_element( """<text:list-style style:name="a287">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14474,39 +14476,39 @@ def text_8_list_style_a390():
     """Build Element text:list-style for a390 """
     
     elem = build_element( """<text:list-style style:name="a390">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14520,39 +14522,39 @@ def text_8_list_style_a433():
     """Build Element text:list-style for a433 """
     
     elem = build_element( """<text:list-style style:name="a433">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14566,39 +14568,39 @@ def text_8_list_style_a971():
     """Build Element text:list-style for a971 """
     
     elem = build_element( """<text:list-style style:name="a971">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14612,39 +14614,39 @@ def text_8_list_style_a909():
     """Build Element text:list-style for a909 """
     
     elem = build_element( """<text:list-style style:name="a909">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14658,39 +14660,39 @@ def text_8_list_style_a868():
     """Build Element text:list-style for a868 """
     
     elem = build_element( """<text:list-style style:name="a868">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14704,39 +14706,39 @@ def text_8_list_style_a393():
     """Build Element text:list-style for a393 """
     
     elem = build_element( """<text:list-style style:name="a393">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14750,39 +14752,39 @@ def text_8_list_style_a436():
     """Build Element text:list-style for a436 """
     
     elem = build_element( """<text:list-style style:name="a436">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14796,39 +14798,39 @@ def text_8_list_style_a396():
     """Build Element text:list-style for a396 """
     
     elem = build_element( """<text:list-style style:name="a396">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14842,39 +14844,39 @@ def text_8_list_style_a439():
     """Build Element text:list-style for a439 """
     
     elem = build_element( """<text:list-style style:name="a439">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14888,39 +14890,39 @@ def text_8_list_style_a399():
     """Build Element text:list-style for a399 """
     
     elem = build_element( """<text:list-style style:name="a399">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14934,39 +14936,39 @@ def text_8_list_style_a110():
     """Build Element text:list-style for a110 """
     
     elem = build_element( """<text:list-style style:name="a110">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -14980,39 +14982,39 @@ def text_8_list_style_a113():
     """Build Element text:list-style for a113 """
     
     elem = build_element( """<text:list-style style:name="a113">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15026,39 +15028,39 @@ def text_8_list_style_a652():
     """Build Element text:list-style for a652 """
     
     elem = build_element( """<text:list-style style:name="a652">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15072,39 +15074,39 @@ def text_8_list_style_a655():
     """Build Element text:list-style for a655 """
     
     elem = build_element( """<text:list-style style:name="a655">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15118,39 +15120,39 @@ def text_8_list_style_a117():
     """Build Element text:list-style for a117 """
     
     elem = build_element( """<text:list-style style:name="a117">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15164,39 +15166,39 @@ def text_8_list_style_a180():
     """Build Element text:list-style for a180 """
     
     elem = build_element( """<text:list-style style:name="a180">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15210,39 +15212,39 @@ def text_8_list_style_a760():
     """Build Element text:list-style for a760 """
     
     elem = build_element( """<text:list-style style:name="a760">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15256,39 +15258,39 @@ def text_8_list_style_a658():
     """Build Element text:list-style for a658 """
     
     elem = build_element( """<text:list-style style:name="a658">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15302,39 +15304,39 @@ def text_8_list_style_a803():
     """Build Element text:list-style for a803 """
     
     elem = build_element( """<text:list-style style:name="a803">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15348,39 +15350,39 @@ def text_8_list_style_a183():
     """Build Element text:list-style for a183 """
     
     elem = build_element( """<text:list-style style:name="a183">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15394,39 +15396,39 @@ def text_8_list_style_a763():
     """Build Element text:list-style for a763 """
     
     elem = build_element( """<text:list-style style:name="a763">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15440,39 +15442,39 @@ def text_8_list_style_a6():
     """Build Element text:list-style for a6 """
     
     elem = build_element( """<text:list-style style:name="a6">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15486,39 +15488,39 @@ def text_8_list_style_a226():
     """Build Element text:list-style for a226 """
     
     elem = build_element( """<text:list-style style:name="a226">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15532,39 +15534,39 @@ def text_8_list_style_a806():
     """Build Element text:list-style for a806 """
     
     elem = build_element( """<text:list-style style:name="a806">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15578,39 +15580,39 @@ def text_8_list_style_a766():
     """Build Element text:list-style for a766 """
     
     elem = build_element( """<text:list-style style:name="a766">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15624,39 +15626,39 @@ def text_8_list_style_a290():
     """Build Element text:list-style for a290 """
     
     elem = build_element( """<text:list-style style:name="a290">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15670,39 +15672,39 @@ def text_8_list_style_a9():
     """Build Element text:list-style for a9 """
     
     elem = build_element( """<text:list-style style:name="a9">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15716,39 +15718,39 @@ def text_8_list_style_a229():
     """Build Element text:list-style for a229 """
     
     elem = build_element( """<text:list-style style:name="a229">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15762,39 +15764,39 @@ def text_8_list_style_a809():
     """Build Element text:list-style for a809 """
     
     elem = build_element( """<text:list-style style:name="a809">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15808,39 +15810,39 @@ def text_8_list_style_a871():
     """Build Element text:list-style for a871 """
     
     elem = build_element( """<text:list-style style:name="a871">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15854,39 +15856,39 @@ def text_8_list_style_a769():
     """Build Element text:list-style for a769 """
     
     elem = build_element( """<text:list-style style:name="a769">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15900,39 +15902,39 @@ def text_8_list_style_a293():
     """Build Element text:list-style for a293 """
     
     elem = build_element( """<text:list-style style:name="a293">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15946,39 +15948,39 @@ def text_8_list_style_a874():
     """Build Element text:list-style for a874 """
     
     elem = build_element( """<text:list-style style:name="a874">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -15992,39 +15994,39 @@ def text_8_list_style_a442():
     """Build Element text:list-style for a442 """
     
     elem = build_element( """<text:list-style style:name="a442">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16038,39 +16040,39 @@ def text_8_list_style_a877():
     """Build Element text:list-style for a877 """
     
     elem = build_element( """<text:list-style style:name="a877">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16084,39 +16086,39 @@ def text_8_list_style_a445():
     """Build Element text:list-style for a445 """
     
     elem = build_element( """<text:list-style style:name="a445">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16130,39 +16132,39 @@ def text_8_list_style_a989():
     """Build Element text:list-style for a989 """
     
     elem = build_element( """<text:list-style style:name="a989">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16176,39 +16178,39 @@ def text_8_list_style_a555():
     """Build Element text:list-style for a555 """
     
     elem = build_element( """<text:list-style style:name="a555">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16222,39 +16224,39 @@ def text_8_list_style_a120():
     """Build Element text:list-style for a120 """
     
     elem = build_element( """<text:list-style style:name="a120">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16268,39 +16270,39 @@ def text_8_list_style_a701():
     """Build Element text:list-style for a701 """
     
     elem = build_element( """<text:list-style style:name="a701">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16314,39 +16316,39 @@ def text_8_list_style_a123():
     """Build Element text:list-style for a123 """
     
     elem = build_element( """<text:list-style style:name="a123">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16360,39 +16362,39 @@ def text_8_list_style_a661():
     """Build Element text:list-style for a661 """
     
     elem = build_element( """<text:list-style style:name="a661">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16406,39 +16408,39 @@ def text_8_list_style_a558():
     """Build Element text:list-style for a558 """
     
     elem = build_element( """<text:list-style style:name="a558">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16452,39 +16454,39 @@ def text_8_list_style_a704():
     """Build Element text:list-style for a704 """
     
     elem = build_element( """<text:list-style style:name="a704">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16498,39 +16500,39 @@ def text_8_list_style_a126():
     """Build Element text:list-style for a126 """
     
     elem = build_element( """<text:list-style style:name="a126">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16544,39 +16546,39 @@ def text_8_list_style_a707():
     """Build Element text:list-style for a707 """
     
     elem = build_element( """<text:list-style style:name="a707">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16590,39 +16592,39 @@ def text_8_list_style_a129():
     """Build Element text:list-style for a129 """
     
     elem = build_element( """<text:list-style style:name="a129">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16636,39 +16638,39 @@ def text_8_list_style_a232():
     """Build Element text:list-style for a232 """
     
     elem = build_element( """<text:list-style style:name="a232">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16682,39 +16684,39 @@ def text_8_list_style_a812():
     """Build Element text:list-style for a812 """
     
     elem = build_element( """<text:list-style style:name="a812">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16728,39 +16730,39 @@ def text_8_list_style_a773():
     """Build Element text:list-style for a773 """
     
     elem = build_element( """<text:list-style style:name="a773">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16774,39 +16776,39 @@ def text_8_list_style_a235():
     """Build Element text:list-style for a235 """
     
     elem = build_element( """<text:list-style style:name="a235">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16820,39 +16822,39 @@ def text_8_list_style_a815():
     """Build Element text:list-style for a815 """
     
     elem = build_element( """<text:list-style style:name="a815">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16866,39 +16868,39 @@ def text_8_list_style_a776():
     """Build Element text:list-style for a776 """
     
     elem = build_element( """<text:list-style style:name="a776">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16912,39 +16914,39 @@ def text_8_list_style_a341():
     """Build Element text:list-style for a341 """
     
     elem = build_element( """<text:list-style style:name="a341">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -16958,39 +16960,39 @@ def text_8_list_style_a238():
     """Build Element text:list-style for a238 """
     
     elem = build_element( """<text:list-style style:name="a238">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17004,39 +17006,39 @@ def text_8_list_style_a53():
     """Build Element text:list-style for a53 """
     
     elem = build_element( """<text:list-style style:name="a53">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17050,39 +17052,39 @@ def text_8_list_style_a819():
     """Build Element text:list-style for a819 """
     
     elem = build_element( """<text:list-style style:name="a819">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17096,39 +17098,39 @@ def text_8_list_style_a881():
     """Build Element text:list-style for a881 """
     
     elem = build_element( """<text:list-style style:name="a881">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17142,39 +17144,39 @@ def text_8_list_style_a779():
     """Build Element text:list-style for a779 """
     
     elem = build_element( """<text:list-style style:name="a779">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17188,39 +17190,39 @@ def text_8_list_style_a344():
     """Build Element text:list-style for a344 """
     
     elem = build_element( """<text:list-style style:name="a344">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17234,39 +17236,39 @@ def text_8_list_style_a56():
     """Build Element text:list-style for a56 """
     
     elem = build_element( """<text:list-style style:name="a56">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17280,39 +17282,39 @@ def text_8_list_style_a884():
     """Build Element text:list-style for a884 """
     
     elem = build_element( """<text:list-style style:name="a884">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17326,39 +17328,39 @@ def text_8_list_style_a347():
     """Build Element text:list-style for a347 """
     
     elem = build_element( """<text:list-style style:name="a347">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17372,39 +17374,39 @@ def text_8_list_style_a59():
     """Build Element text:list-style for a59 """
     
     elem = build_element( """<text:list-style style:name="a59">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17418,39 +17420,39 @@ def text_8_list_style_a927():
     """Build Element text:list-style for a927 """
     
     elem = build_element( """<text:list-style style:name="a927">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17464,39 +17466,39 @@ def text_8_list_style_a887():
     """Build Element text:list-style for a887 """
     
     elem = build_element( """<text:list-style style:name="a887">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17510,39 +17512,39 @@ def text_8_list_style_a561():
     """Build Element text:list-style for a561 """
     
     elem = build_element( """<text:list-style style:name="a561">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17556,39 +17558,39 @@ def text_8_list_style_a564():
     """Build Element text:list-style for a564 """
     
     elem = build_element( """<text:list-style style:name="a564">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17602,39 +17604,39 @@ def text_8_list_style_a567():
     """Build Element text:list-style for a567 """
     
     elem = build_element( """<text:list-style style:name="a567">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17685,39 +17687,39 @@ def text_8_list_style_a822():
     """Build Element text:list-style for a822 """
     
     elem = build_element( """<text:list-style style:name="a822">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17731,39 +17733,39 @@ def text_8_list_style_a679():
     """Build Element text:list-style for a679 """
     
     elem = build_element( """<text:list-style style:name="a679">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17777,39 +17779,39 @@ def text_8_list_style_a782():
     """Build Element text:list-style for a782 """
     
     elem = build_element( """<text:list-style style:name="a782">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17823,39 +17825,39 @@ def text_8_list_style_a825():
     """Build Element text:list-style for a825 """
     
     elem = build_element( """<text:list-style style:name="a825">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17869,39 +17871,39 @@ def text_8_list_style_a350():
     """Build Element text:list-style for a350 """
     
     elem = build_element( """<text:list-style style:name="a350">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17915,39 +17917,39 @@ def text_8_list_style_a785():
     """Build Element text:list-style for a785 """
     
     elem = build_element( """<text:list-style style:name="a785">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -17961,39 +17963,39 @@ def text_8_list_style_a62():
     """Build Element text:list-style for a62 """
     
     elem = build_element( """<text:list-style style:name="a62">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18007,39 +18009,39 @@ def text_8_list_style_a930():
     """Build Element text:list-style for a930 """
     
     elem = build_element( """<text:list-style style:name="a930">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18053,39 +18055,39 @@ def text_8_list_style_a828():
     """Build Element text:list-style for a828 """
     
     elem = build_element( """<text:list-style style:name="a828">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18099,39 +18101,39 @@ def text_8_list_style_a890():
     """Build Element text:list-style for a890 """
     
     elem = build_element( """<text:list-style style:name="a890">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18145,39 +18147,39 @@ def text_8_list_style_a353():
     """Build Element text:list-style for a353 """
     
     elem = build_element( """<text:list-style style:name="a353">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18191,39 +18193,39 @@ def text_8_list_style_a65():
     """Build Element text:list-style for a65 """
     
     elem = build_element( """<text:list-style style:name="a65">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18237,39 +18239,39 @@ def text_8_list_style_a933():
     """Build Element text:list-style for a933 """
     
     elem = build_element( """<text:list-style style:name="a933">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18283,39 +18285,39 @@ def text_8_list_style_a893():
     """Build Element text:list-style for a893 """
     
     elem = build_element( """<text:list-style style:name="a893">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18329,39 +18331,39 @@ def text_8_list_style_a936():
     """Build Element text:list-style for a936 """
     
     elem = build_element( """<text:list-style style:name="a936">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18375,39 +18377,39 @@ def text_8_list_style_a897():
     """Build Element text:list-style for a897 """
     
     elem = build_element( """<text:list-style style:name="a897">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18421,39 +18423,39 @@ def text_8_list_style_a463():
     """Build Element text:list-style for a463 """
     
     elem = build_element( """<text:list-style style:name="a463">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18467,39 +18469,39 @@ def text_8_list_style_a939():
     """Build Element text:list-style for a939 """
     
     elem = build_element( """<text:list-style style:name="a939">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="1" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="2" text:bullet-char="»">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="3" text:bullet-char="»">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="4" text:bullet-char="»">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="5" text:bullet-char="»">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="6" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="7" text:bullet-char="»">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="8" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xC2\xBB">
+<text:list-level-style-bullet text:level="9" text:bullet-char="»">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18513,39 +18515,39 @@ def text_8_list_style_a466():
     """Build Element text:list-style for a466 """
     
     elem = build_element( """<text:list-style style:name="a466">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18559,39 +18561,39 @@ def text_8_list_style_a509():
     """Build Element text:list-style for a509 """
     
     elem = build_element( """<text:list-style style:name="a509">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18605,39 +18607,39 @@ def text_8_list_style_a571():
     """Build Element text:list-style for a571 """
     
     elem = build_element( """<text:list-style style:name="a571">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18651,39 +18653,39 @@ def text_8_list_style_a469():
     """Build Element text:list-style for a469 """
     
     elem = build_element( """<text:list-style style:name="a469">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18697,39 +18699,39 @@ def text_8_list_style_a574():
     """Build Element text:list-style for a574 """
     
     elem = build_element( """<text:list-style style:name="a574">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="1" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.0625in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="2" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.5in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="3" text:bullet-char="–">
 <style:list-level-properties text:space-before="0.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="4" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.4375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="5" text:bullet-char="–">
 <style:list-level-properties text:space-before="1.9375in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="6" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="7" text:bullet-char="–">
 <style:list-level-properties text:space-before="2.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="8" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.1875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\x93">
+<text:list-level-style-bullet text:level="9" text:bullet-char="–">
 <style:list-level-properties text:space-before="3.6875in" text:min-label-width="0.3125in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18743,39 +18745,39 @@ def text_8_list_style_a617():
     """Build Element text:list-style for a617 """
     
     elem = build_element( """<text:list-style style:name="a617">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.4375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.375in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.875in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.125in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.625in" text:min-label-width="0.375in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
@@ -18789,39 +18791,39 @@ def text_8_list_style_a577():
     """Build Element text:list-style for a577 """
     
     elem = build_element( """<text:list-style style:name="a577">
-<text:list-level-style-bullet text:level="1" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="1" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.125in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="2" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="2" text:bullet-char="•">
 <style:list-level-properties text:space-before="0.5625in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="3" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="3" text:bullet-char="•">
 <style:list-level-properties text:space-before="1in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="4" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="4" text:bullet-char="•">
 <style:list-level-properties text:space-before="1.5in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="5" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="5" text:bullet-char="•">
 <style:list-level-properties text:space-before="2in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="6" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="6" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="7" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="7" text:bullet-char="•">
 <style:list-level-properties text:space-before="2.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="8" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="8" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.25in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>
-<text:list-level-style-bullet text:level="9" text:bullet-char="\xE2\x80\xA2">
+<text:list-level-style-bullet text:level="9" text:bullet-char="•">
 <style:list-level-properties text:space-before="3.75in" text:min-label-width="0.25in" />
 <style:text-properties fo:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable" fo:font-size="100%" />
 </text:list-level-style-bullet>

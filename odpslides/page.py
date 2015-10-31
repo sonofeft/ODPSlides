@@ -98,9 +98,6 @@ class Page(object):
             if frame_class:
                 self.draw_frameD[frame_class] = self.draw_frameD.get(frame_class, [])
                 self.draw_frameD[frame_class].append( draw_frame )
-
-        # Do similar logic for master-page if it is needed
-        self.master_frameD = {} # index=frame_class (e.g. "title"), value = draw:frame element list
         
         # CHECK THESE FOR USE ????????????????????????????
         self.master_frameL = [] # ???????????????????????
@@ -198,55 +195,56 @@ class Page(object):
     def set_textspan_text(self, frame_class='title', text='My Text', num_frame=0, 
                              num_textspan=0, clear_all=True ):
         
-        # Change both content page and styles.xml master-page (if used)
-        for frameD in [self.draw_frameD, self.master_frameD]:
         
-            if frame_class in frameD:
-                try:
-                    draw_frame = frameD[frame_class][num_frame]
-                except:
-                    draw_frame = frameD[frame_class][-1]
-                    print('...ERROR... in Page.set_textspan_text, num_frame>len(frameL)')
-                
-                # ============================================ outline =========================================
-                if frame_class == 'outline':
-                    text_box = draw_frame.find( force_to_tag('draw:text-box') )
-                    text_listL = draw_frame.findall( force_to_tag('draw:text-box/text:list') )
-                    max_indent = len( text_listL )-1
-                    
-                    if (text_box is not None) and text_listL:
-                        print('max_indent = %i'%max_indent)
-                        text_box.clear_children()
-                        
-                        # text comes in w/o formatting for outline.
-                        outlineL = self.build_outline_list( text )
-                        for n, sInp in outlineL:
-                            n = min(n, max_indent)
-                            text_list = deepcopy( text_listL[n] )
-                            
-                            text_span = None
-                            target_tag = force_to_tag('text:span')
-                            for elem in text_list.iter():
-                                if elem.tag == target_tag:
-                                    text_span = elem
-                                    break
-                            
-                            if text_span is not None:
-                                text_span.text = sInp
-                                text_box.append( text_list )
-                    
-                    
-                # ============================================ title/subtitle ====================================
-                else: # NOT an outline
-                    count_textspan = 0 # Use in case num_textspan is set
-                    for subelem in draw_frame.iter():
-                        if subelem.tag == TEXT_SPAN_TAG:
-                            if count_textspan == num_textspan:
-                                subelem.text = text
-                            elif clear_all:
-                                subelem.text = ''
-                            count_textspan += 1
+        if frame_class in self.draw_frameD:
+            try:
+                draw_frame = self.draw_frameD[frame_class][num_frame]
+            except:
+                draw_frame = self.draw_frameD[frame_class][-1]
+                print('...ERROR... in Page.set_textspan_text, num_frame>len(frameL)')
             
+            # ============================================ outline =========================================
+            if frame_class == 'outline':
+                text_box = draw_frame.find( force_to_tag('draw:text-box') )
+                text_listL = draw_frame.findall( force_to_tag('draw:text-box/text:list') )
+                max_indent = len( text_listL )-1
+                
+                if (text_box is not None) and text_listL:
+                    print('max_indent of outline = %i'%max_indent)
+                    text_box.clear_children()
+                    
+                    # text comes in w/o formatting for outline.
+                    outlineL = self.build_outline_list( text )
+                    for n, sInp in outlineL:
+                        n = min(n, max_indent)
+                        text_list = deepcopy( text_listL[n] )
+                        
+                        #annn_new = self.presObj.get_next_a_style()
+                        #text_list.set( force_to_tag('style:name'), annn_new )
+                        
+                        text_span = None
+                        target_tag = force_to_tag('text:span')
+                        for elem in text_list.iter():
+                            if elem.tag == target_tag:
+                                text_span = elem
+                                break
+                        
+                        if text_span is not None:
+                            text_span.text = sInp
+                            text_box.append( text_list )
+                
+                
+            # ============================================ title/subtitle ====================================
+            else: # NOT an outline
+                count_textspan = 0 # Use in case num_textspan is set
+                for subelem in draw_frame.iter():
+                    if subelem.tag == TEXT_SPAN_TAG:
+                        if count_textspan == num_textspan:
+                            subelem.text = text
+                        elif clear_all:
+                            subelem.text = ''
+                        count_textspan += 1
+        
             
     
     def set_drawframe_font_color( self, frame_class='title', font_color='black' ):
@@ -256,23 +254,20 @@ class Page(object):
         """
 
         hex_col_str = getValidHexStr( font_color, "#000000") # default to black
-        # Change both content page and styles.xml master-page (if used)
-        for frameD,styleD in [(self.draw_frameD, self.presObj.new_content_styleD), 
-                               (self.master_frameD, self.presObj.new_master_styleD)]:
         
-            if frame_class in frameD:
-                for draw_frame in frameD[frame_class]:
-                
-                    for subelem in draw_frame.iter():
-                        if subelem.tag == TEXT_SPAN_TAG:
-                            aNNN = subelem.get( TEXT_STYLE_NAME_ATTR, '' )
-                            if aNNN not in styleD:
-                                print( 'Bad style index = %s, in set_drawframe_font_color'%aNNN )
-                            else:
-                                span_elem = styleD[ aNNN ]
-                                for sub_span_elem in span_elem.iter():
-                                    if sub_span_elem.get(FONT_COLOR_ATTR, ''):
-                                        sub_span_elem.set( FONT_COLOR_ATTR, hex_col_str )
+        if frame_class in self.draw_frameD:
+            for draw_frame in self.draw_frameD[frame_class]:
+            
+                for subelem in draw_frame.iter():
+                    if subelem.tag == TEXT_SPAN_TAG:
+                        aNNN = subelem.get( TEXT_STYLE_NAME_ATTR, '' )
+                        if aNNN not in self.presObj.new_content_styleD:
+                            print( 'Bad style index = %s, in set_drawframe_font_color'%aNNN )
+                        else:
+                            span_elem = self.presObj.new_content_styleD[ aNNN ]
+                            for sub_span_elem in span_elem.iter():
+                                if sub_span_elem.get(FONT_COLOR_ATTR, ''):
+                                    sub_span_elem.set( FONT_COLOR_ATTR, hex_col_str )
 
 #  style element to replace solidbg/original style element (in content.xml)
 IMG_ELEM_STR = """<style:style %s style:family="drawing-page" style:name="%s">

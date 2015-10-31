@@ -106,13 +106,13 @@ class Presentation(object):
         self.new_styles_office_stylesL = [] # usually draw:gradient or draw:fill-image statements
 
         self.new_content_styleD = {} # index="a123", value=style elem
-        self.new_master_styleD = {} # index="a123", value=style elem
+        #self.new_master_styleD = {} # index="a123", value=style elem
 
         # style names and id values start at 0 (i.e. "a0", "a1", ... and "id0", "id1", ...)
         #self.max_style_name_int = -1 # used for nameing styles (ex. draw:style-name="a123")
         #self.max_draw_id_int = -1 # some internal use ???
-        self.max_style_name_int = self.odp_ref.styles_xml_obj.max_annn_def
-        self.max_draw_id_int = self.odp_ref.styles_xml_obj.max_idnnn_def
+        self.max_style_name_int = self.odp_ref.styles_xml_obj.max_annn_def + 1000
+        self.max_draw_id_int = self.odp_ref.styles_xml_obj.max_idnnn_def + 1000
         
 
 
@@ -218,31 +218,35 @@ class Presentation(object):
         self.styles_xml_obj.make_clean_copy()
         self.styles_xml_obj.set_background()
 
-        self.set_bullets( self.styles_xml_obj.styles_tmplt.root )
-        zipfile_insert( zipfileobj, 'styles.xml', self.styles_xml_obj.styles_tmplt )
+        #self.set_bullets( self.styles_xml_obj.styles_tmplt.root )
+        styles_xml_str = self.styles_xml_obj.styles_tmplt.tostring().decode('utf-8')
+        styles_xml_str = styles_xml_str.replace(' xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0"','')
+        styles_xml_str = styles_xml_str.replace( '<number:date-style ', '<number:date-style xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" ' )
+        zipfile_insert( zipfileobj, 'styles.xml',  styles_xml_str.encode('utf-8'))
 
         # Gets new empty content with each save
-        content_elem = self.content_xml_obj.content_tmplt
-        #content_elem = init_internal_odp_files.get_empty_content_elem()
-        auto_style_elem = content_elem.find('office:automatic-styles')
-        body_pres_elem = content_elem.find('office:body/office:presentation')
+        content_tmplt = self.content_xml_obj.content_tmplt # make a shorter var name for content_tmplt
+        #content_tmplt = init_internal_odp_files.get_empty_content_elem()
+        auto_style_elem = content_tmplt.find('office:automatic-styles')
+        body_pres_elem = content_tmplt.find('office:body/office:presentation')
         
         for style_elem in self.new_content_styleL:
-            content_elem.acclimate_new_elem( style_elem )
+            content_tmplt.acclimate_new_elem( style_elem )
             auto_style_elem.append( style_elem )
         for page in self.new_content_pageL:
-            content_elem.acclimate_new_elem( page.draw_page )
+            content_tmplt.acclimate_new_elem( page.draw_page )
             body_pres_elem.append( page.draw_page )
             
         last_body_elem = init_internal_odp_files.get_final_presentation_elem()
-        content_elem.acclimate_new_elem( last_body_elem )
+        content_tmplt.acclimate_new_elem( last_body_elem )
         body_pres_elem.append( last_body_elem )
         
         self.content_xml_obj.set_background()
-        self.set_bullets( content_elem.root )
+        self.set_bullets( content_tmplt.root )
+        content_xml_str = content_tmplt.tostring().decode('utf-8')
         
         # <<<<<<<<<<<<<<<< Add new content objects here ===================
-        zipfile_insert( zipfileobj, 'content.xml', content_elem)
+        zipfile_insert( zipfileobj, 'content.xml', content_xml_str.encode('utf-8'))
         
         zipfile_insert( zipfileobj, 'settings.xml', init_internal_odp_files.get_settings_xml_str() )
 
@@ -253,8 +257,10 @@ class Presentation(object):
             self.launch_application()
  
     def set_bullets(self, top_elem ):
-        
-        return
+        """
+        I can't seem to find where my unicode bullet chars are getting messed up.
+        For now, set all bullets to the bullet character.
+        """
         
         bull_tag = force_to_tag( 'text:list-level-style-bullet' )
         for elem in top_elem.iter():
@@ -262,8 +268,8 @@ class Presentation(object):
                 level = elem.get(force_to_tag('text:level'),'')
                 if level:
                     i = int( level )
-                    bchar = u'\u25CF' # BULLET_L[ i-1 ]
-                    elem.set(force_to_tag('text:level'), bchar)
+                    bchar = u'\u2022' # BULLET_L[ i-1 ]  # u'\u25CF'
+                    elem.set(force_to_tag('text:bullet-char'), bchar)
                     #print(bchar, end='')
         
         
@@ -304,7 +310,7 @@ if __name__ == '__main__':
     
     C = Presentation(title='My Title', author='My Name',
         #background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
-        background_color='coral',
+        background_color='#ccffcc',
         #grad_start_color='ff0000', grad_end_color="#ffffff", grad_angle_deg=45, grad_draw_style='linear',
         show_date=True, date_font_color='lime',
         footer="testing 123", footer_font_color='lime',
