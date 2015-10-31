@@ -3,17 +3,15 @@
 TODO
 ====
 
-* Fix image1.png for background
-    - Also individual page image 
+* Complete page adding options for all master-pages.
 
-* Activate gradient background option.
+* Beef up unittests
 
-* outline object needs deepcopy of styles (i.e. at same indent level)
+* Make examples
 
 * Run history_from_github_api.py
 
 * Bullet chars are "funky" in OpenOffice/LibreOffice
   (LEAVE IT FOR NOW... LOOKS LIKE ALL ARE BY DESIGN)
 
-* Beef up unittests
 

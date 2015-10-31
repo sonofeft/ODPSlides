@@ -5,6 +5,7 @@ from __future__ import print_function
 
 import os
 import sys
+from copy import deepcopy
 
 from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 from odpslides.color_utils import getValidHexStr
@@ -120,6 +121,11 @@ class Page(object):
         if 'subtitle_font_color' in inpD:
             self.set_drawframe_font_color( frame_class='subtitle', font_color=inpD['subtitle_font_color'] )
         
+        if 'outline' in inpD:
+            self.set_textspan_text( frame_class='outline', text=inpD['outline'], num_frame=0, clear_all=True )
+            if 'text_font_color' in inpD:
+                self.set_drawframe_font_color( frame_class='outline', font_color=inpD['text_font_color'] )
+            
         
     def set_page_number(self, ipage):
         
@@ -159,6 +165,36 @@ class Page(object):
                     elem.set(DRAW_ID_ATTR, id_new)
             
     
+    def build_outline_list(self, outline):
+        """
+        Start building outlineL, i.e a list of tuples with indent level and string.
+        ( e.g. [(1,'Top'),(2,'Indent')] )
+        """
+        
+        if type(outline) == type('text'): # a single string with \r and \t
+            s = outline.replace('\n','\r')
+            tempL = s.split( '\r' )
+        elif type(outline) == type(['s','t']): # a list of strings
+            tempL = []
+            for s in outline:
+                s2 = s.replace('\n','\r')
+                sL = s2.split('\r')
+                tempL.extend( sL )
+        else:
+            tempL = ['No Outline Text']
+        
+        for i,s in enumerate( tempL ):
+            tempL[i] = s.replace('\t','    ') # replace tabs with 4 spaces
+        # change the list of strings into tuples of indent level and string, e.g. [(1,'Top'),(2,'Indent')]
+        outlineL = []
+        for s in tempL:
+            s2 = s.lstrip()
+            n = int( (len(s)-len(s2)) / 4 )
+            outlineL.append( (n, s2.strip()) ) # <======== outlineL sent to make outline chart
+            
+        return outlineL
+        
+    
     def set_textspan_text(self, frame_class='title', text='My Text', num_frame=0, 
                              num_textspan=0, clear_all=True ):
         
@@ -172,14 +208,44 @@ class Page(object):
                     draw_frame = frameD[frame_class][-1]
                     print('...ERROR... in Page.set_textspan_text, num_frame>len(frameL)')
                 
-                count_textspan = 0 # Use in case num_textspan is set
-                for subelem in draw_frame.iter():
-                    if subelem.tag == TEXT_SPAN_TAG:
-                        if count_textspan == num_textspan:
-                            subelem.text = text
-                        elif clear_all:
-                            subelem.text = ''
-                        count_textspan += 1
+                # ============================================ outline =========================================
+                if frame_class == 'outline':
+                    text_box = draw_frame.find( force_to_tag('draw:text-box') )
+                    text_listL = draw_frame.findall( force_to_tag('draw:text-box/text:list') )
+                    max_indent = len( text_listL )-1
+                    
+                    if (text_box is not None) and text_listL:
+                        print('max_indent = %i'%max_indent)
+                        text_box.clear_children()
+                        
+                        # text comes in w/o formatting for outline.
+                        outlineL = self.build_outline_list( text )
+                        for n, sInp in outlineL:
+                            n = min(n, max_indent)
+                            text_list = deepcopy( text_listL[n] )
+                            
+                            text_span = None
+                            target_tag = force_to_tag('text:span')
+                            for elem in text_list.iter():
+                                if elem.tag == target_tag:
+                                    text_span = elem
+                                    break
+                            
+                            if text_span is not None:
+                                text_span.text = sInp
+                                text_box.append( text_list )
+                    
+                    
+                # ============================================ title/subtitle ====================================
+                else: # NOT an outline
+                    count_textspan = 0 # Use in case num_textspan is set
+                    for subelem in draw_frame.iter():
+                        if subelem.tag == TEXT_SPAN_TAG:
+                            if count_textspan == num_textspan:
+                                subelem.text = text
+                            elif clear_all:
+                                subelem.text = ''
+                            count_textspan += 1
             
             
     

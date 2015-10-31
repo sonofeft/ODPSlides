@@ -17,11 +17,14 @@ from odpslides.color_utils import getValidHexStr
 from odpslides.odp_file import ODPFile, read_source_from_odp
 from odpslides.styles_xml import StylesXML
 from odpslides.content_xml import ContentXML
-
-import solidbg.page_layouts
+from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 
 
 here = os.path.abspath(os.path.dirname(__file__))
+
+#           right-arr  open-rt-arr  black-circ  bullet    open-circ   diamond  open-dmnd  arrow    open-arr    arr-circ   star
+#BULLET_L = [u'\u25B6', u'\u2587',  u'\u25CF',  u'\u2022',u'\u25CE',u'\u25C6',u'\u25C7', u'\u27A1',u'\u27B1',u'\u27B2',u'\u2730']
+BULLET_L = [ '-',       '-',       '-',       '-',       '-',       '-',       '-',       '-',       '-',       '-',       '-']
 
 
 class Presentation(object):
@@ -215,7 +218,8 @@ class Presentation(object):
         self.styles_xml_obj.make_clean_copy()
         self.styles_xml_obj.set_background()
 
-        zipfile_insert( zipfileobj, 'styles.xml', self.styles_xml_obj.styles_tmplt.tostring() )
+        self.set_bullets( self.styles_xml_obj.styles_tmplt.root )
+        zipfile_insert( zipfileobj, 'styles.xml', self.styles_xml_obj.styles_tmplt )
 
         # Gets new empty content with each save
         content_elem = self.content_xml_obj.content_tmplt
@@ -235,6 +239,7 @@ class Presentation(object):
         body_pres_elem.append( last_body_elem )
         
         self.content_xml_obj.set_background()
+        self.set_bullets( content_elem.root )
         
         # <<<<<<<<<<<<<<<< Add new content objects here ===================
         zipfile_insert( zipfileobj, 'content.xml', content_elem)
@@ -247,6 +252,21 @@ class Presentation(object):
         if launch:
             self.launch_application()
  
+    def set_bullets(self, top_elem ):
+        
+        return
+        
+        bull_tag = force_to_tag( 'text:list-level-style-bullet' )
+        for elem in top_elem.iter():
+            if elem.tag == bull_tag:
+                level = elem.get(force_to_tag('text:level'),'')
+                if level:
+                    i = int( level )
+                    bchar = u'\u25CF' # BULLET_L[ i-1 ]
+                    elem.set(force_to_tag('text:level'), bchar)
+                    #print(bchar, end='')
+        
+        
 
     def add_a_new_page(self, new_page ):
         
@@ -263,19 +283,29 @@ class Presentation(object):
         else:
             background_color = self.background_color
         
-        inpD = {'title':'My Title', 'subtitle':'My Subtitle', 'background_color':background_color,
+        inpD = {'title':title, 'subtitle':subtitle, 'background_color':background_color,
                 'title_font_color':title_font_color, 'subtitle_font_color':subtitle_font_color}
                     
         new_page = Page( self, disp_name="Title Slide", **inpD)
+        
+        self.add_a_new_page( new_page )
+        
+    def add_titled_outline_chart(self, title='My Title', outline='', title_font_color='',
+                                     text_font_color=''):
+                                         
+        
+        inpD = {'title':title,  'outline':outline,
+                'title_font_color':title_font_color, 'text_font_color':text_font_color}
+        new_page = Page( self, disp_name="Title and Text", **inpD)
         
         self.add_a_new_page( new_page )
  
 if __name__ == '__main__':
     
     C = Presentation(title='My Title', author='My Name',
-        background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
+        #background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
         background_color='coral',
-        grad_start_color='ff0000', grad_end_color="#ffffff", grad_angle_deg=45, grad_draw_style='linear',
+        #grad_start_color='ff0000', grad_end_color="#ffffff", grad_angle_deg=45, grad_draw_style='linear',
         show_date=True, date_font_color='lime',
         footer="testing 123", footer_font_color='lime',
         show_page_number=True, page_number_font_color='dm')
@@ -283,8 +313,9 @@ if __name__ == '__main__':
     C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='red',
                         subtitle_font_color='red')
     
-    C.add_title_chart( title='My Second Title', subtitle='My Second Subtitle', title_font_color='blue',
-                        subtitle_font_color='green')
+    sL = ['1st','\t2nd','\t\t3rd','            4th','Normal < 1st but > 9','    Indent 2nd']
+    C.add_titled_outline_chart( title='My Second Title', outline=sL, 
+                                title_font_color='blue', text_font_color='green')
     
     #C.new_content_pageL[-1].set_to_gradient(grad_start_color="#99ff99", grad_end_color="#ffffff", 
     #                                         grad_angle_deg=0, grad_draw_style='linear' )

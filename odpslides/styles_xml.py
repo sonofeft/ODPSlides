@@ -9,6 +9,7 @@ from copy import deepcopy
 
 from odpslides.color_utils import getValidHexStr
 
+
 class StylesXML(object):
     """
     StylesXML wraps the styles.xml internal file of the reference odp file
@@ -29,7 +30,6 @@ class StylesXML(object):
     def make_clean_copy(self):
         # Make a copy of the original styles.xml Elements
         self.styles_tmplt = deepcopy( self.odp_ref.styles_xml_obj )
-        
         
     def set_background(self):
         
