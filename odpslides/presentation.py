@@ -131,6 +131,10 @@ class Presentation(object):
         
         if file_sys_name in self.image_nameD:
             return self.image_nameD[ file_sys_name ]
+            
+        if not os.path.isfile( file_sys_name ):
+            print('...WARNING... image file: "%s" NOT FOUND'%file_sys_name)
+            file_sys_name = os.path.join(here, 'templates', 'no_image_found.png')
         
         head, tail = os.path.splitext( file_sys_name ) # tail is usually ".png"
         
@@ -293,7 +297,6 @@ class Presentation(object):
                 'title_font_color':title_font_color, 'subtitle_font_color':subtitle_font_color}
                     
         new_page = Page( self, disp_name="Title Slide", **inpD)
-        
         self.add_a_new_page( new_page )
         
     def add_titled_outline_chart(self, title='My Title', outline='', title_font_color='',
@@ -303,7 +306,13 @@ class Presentation(object):
         inpD = {'title':title,  'outline':outline,
                 'title_font_color':title_font_color, 'text_font_color':text_font_color}
         new_page = Page( self, disp_name="Title and Text", **inpD)
+        self.add_a_new_page( new_page )
         
+    def add_titled_image(self, title='My Picture', image_file='', title_font_color=''):
+        
+        image_name = self.get_next_image_name( image_file )
+        inpD = {'title':title,  'image_name':image_name, 'title_font_color':title_font_color}
+        new_page = Page( self, disp_name="Title and Content", **inpD)
         self.add_a_new_page( new_page )
  
 if __name__ == '__main__':
@@ -323,8 +332,8 @@ if __name__ == '__main__':
     C.add_titled_outline_chart( title='My Second Title', outline=sL, 
                                 title_font_color='blue', text_font_color='green')
     
-    #C.new_content_pageL[-1].set_to_gradient(grad_start_color="#99ff99", grad_end_color="#ffffff", 
-    #                                         grad_angle_deg=0, grad_draw_style='linear' )
+    C.add_titled_image( title='My Picture', image_file='./templates/planets.jpg', title_font_color='')
+    C.add_titled_image( title='My Picture', image_file='./templates/sysMass_vs_vol_Ptank.png', title_font_color='')
     
     C.save( filename='my_ppt.odp', launch=1 )
     

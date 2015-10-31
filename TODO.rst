@@ -5,6 +5,8 @@ TODO
 
 * Complete page adding options for all master-pages.
 
+* Need image aspect ratio adjustment
+
 * Beef up unittests
 
 * Make examples

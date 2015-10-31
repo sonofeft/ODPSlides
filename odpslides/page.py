@@ -123,7 +123,13 @@ class Page(object):
             if 'text_font_color' in inpD:
                 self.set_drawframe_font_color( frame_class='outline', font_color=inpD['text_font_color'] )
             
+        if 'image_name' in inpD:
+            print('NEED IMAGE LOGIC.... for image:"%s"'%inpD['image_name'])
+            self.set_image_href( frame_class='graphic', image_name=inpD['image_name'], num_image=0)
         
+    
+    
+    
     def set_page_number(self, ipage):
         
         self.draw_page.set( force_to_tag('draw:name'), 'Slide%i'%ipage )
@@ -244,8 +250,34 @@ class Page(object):
                         elif clear_all:
                             subelem.text = ''
                         count_textspan += 1
+    
+    def set_image_href(self, frame_class='graphic', image_name='', num_image=0):
+        """
+        Set the image xlink:href property in the draw:image element
         
+        May need to adjust sizing:
+        <draw:frame draw:name="Content Placeholder 3" draw:style-name="gr2" draw:text-style-name="P8" 
+        draw:layer="layout" svg:width="7.884cm" svg:height="9.815cm" svg:x="8.758cm" svg:y="4.618cm" 
+        presentation:class="graphic" 
+        presentation:user-transformed="true">  <============== NOTE: <<<<<<<<<<
+        
+        <draw:image xlink:href="media/image2.jpg" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad">
+        
+        """
+        DRAW_IMAGE_TAG = force_to_tag('draw:image')
+        
+        if image_name and (frame_class in self.draw_frameD):
+        
+            # make sure index does not overrun
+            if num_image >= len(self.draw_frameD[frame_class]):
+                print('...ERROR... image index too bit in set_image_href')
+                return
             
+            draw_frame = self.draw_frameD[frame_class][num_image]
+                    
+            elem = draw_frame.find( DRAW_IMAGE_TAG )
+            if elem is not None:
+                elem.set( force_to_tag('xlink:href'), 'media/%s'%image_name )
     
     def set_drawframe_font_color( self, frame_class='title', font_color='black' ):
         """
