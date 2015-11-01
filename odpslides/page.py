@@ -126,6 +126,11 @@ class Page(object):
             self.set_textspan_text( frame_class='outline', text=inpD['outline'], num_frame=0, clear_all=True )
             if 'text_font_color' in inpD:
                 self.set_drawframe_font_color( frame_class='outline', font_color=inpD['text_font_color'] )
+        
+        if 'outline_2' in inpD:
+            self.set_textspan_text( frame_class='outline', text=inpD['outline_2'], num_frame=1, clear_all=True )
+            if 'text_2_font_color' in inpD:
+                self.set_drawframe_font_color( frame_class='outline', font_color=inpD['text_2_font_color'], nskip=1 )
             
         if 'image_name' in inpD:
             keep_aspect_ratio = inpD.get('keep_aspect_ratio', True)
@@ -133,6 +138,24 @@ class Page(object):
             self.set_image_href( frame_class='graphic', image_name=inpD['image_name'], 
                                  num_image=0, keep_aspect_ratio=keep_aspect_ratio)
         
+        if 'image_2_file' in inpD:
+            keep_aspect_ratio = inpD.get('keep_aspect_ratio', True)
+            
+            self.set_image_href( frame_class='graphic', image_name=inpD['image_2_file'], 
+                                 num_image=1, keep_aspect_ratio=keep_aspect_ratio)
+        
+        if 'image_3_file' in inpD:
+            keep_aspect_ratio = inpD.get('keep_aspect_ratio', True)
+            
+            self.set_image_href( frame_class='graphic', image_name=inpD['image_3_file'], 
+                                 num_image=2, keep_aspect_ratio=keep_aspect_ratio)
+        
+        if 'image_4_file' in inpD:
+            keep_aspect_ratio = inpD.get('keep_aspect_ratio', True)
+            
+            self.set_image_href( frame_class='graphic', image_name=inpD['image_4_file'], 
+                                 num_image=3, keep_aspect_ratio=keep_aspect_ratio)
+            
     
     
     
@@ -268,7 +291,7 @@ class Page(object):
         
             # make sure index does not overrun
             if num_image >= len(self.draw_frameD[frame_class]):
-                print('...ERROR... image index too bit in set_image_href')
+                print('...ERROR... image index too big in set_image_href')
                 return
             
             draw_frame = self.draw_frameD[frame_class][num_image]
@@ -308,16 +331,48 @@ class Page(object):
                         # Need to tell app that things have changed from master
                         draw_frame.set( force_to_tag('presentation:user-transformed'),"true" )
     
-    def set_drawframe_font_color( self, frame_class='title', font_color='black' ):
+    def swap_svg_y_of_objects_and_outline(self):
+        """
+        Used to modify "Title and 2 Content over Text" page to put text on top
+        """
+        img_class = ''
+        if 'object' in self.draw_frameD:
+            img_class = 'object'
+        if 'graphic' in self.draw_frameD:
+            img_class = 'graphic'
+        
+        if img_class and ('outline' in self.draw_frameD):
+            
+            yobj = self.draw_frameD[img_class][0].get( force_to_tag('svg:y'), '' )
+            yout = self.draw_frameD['outline'][0].get( force_to_tag('svg:y'), '' )
+            
+            for draw_frame in self.draw_frameD[img_class]:
+                draw_frame.set(force_to_tag('svg:y'), yout)
+            
+            for draw_frame in self.draw_frameD['outline']:
+                draw_frame.set(force_to_tag('svg:y'), yobj)
+
+            # Need to tell app that things have changed from master
+            draw_frame.set( force_to_tag('presentation:user-transformed'),"true" )
+
+        else:
+            print('...ERROR... could NOT swap objects and outline svg:y values')
+            print('..........',self.draw_frameD.keys())
+    
+    def set_drawframe_font_color( self, frame_class='title', font_color='black', nskip=0 ):
         """
         Set the fo:color in all the style elements of the frame
         
         """
 
         hex_col_str = getValidHexStr( font_color, "#000000") # default to black
+        n_count = 0
         
         if frame_class in self.draw_frameD:
             for draw_frame in self.draw_frameD[frame_class]:
+                n_count += 1
+                if nskip >= n_count:
+                    continue
             
                 for subelem in draw_frame.iter():
                     if subelem.tag == TEXT_SPAN_TAG:

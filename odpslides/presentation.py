@@ -302,8 +302,8 @@ class Presentation(object):
         new_page = Page( self, disp_name="Title Slide", **inpD)
         self.add_a_new_page( new_page )
         
-    def add_titled_outline_chart(self, title='My Title', outline='', title_font_color='',
-                                     text_font_color='', 
+    def add_titled_outline_chart(self, title='My Title', title_font_color='',
+                                     outline='', text_font_color='', 
                                      pcent_stretch_center=0, pcent_stretch_content=0):
                                          
         
@@ -314,9 +314,24 @@ class Presentation(object):
                     
         new_page = Page( self, disp_name="Title and Text", **inpD)
         self.add_a_new_page( new_page )
+    
+    def add_titled_two_outline_chart(self, title='My Title', title_font_color='', 
+                                         outline='', text_font_color='', 
+                                         outline_2='', text_2_font_color='', 
+                                         pcent_stretch_center=0, pcent_stretch_content=0):
         
-    def add_titled_image(self, title='My Picture', image_file='', title_font_color='', 
-                            keep_aspect_ratio=True, 
+        inpD = {'title':title,  'outline':outline,
+                'title_font_color':title_font_color, 'text_font_color':text_font_color,
+                'outline_2':outline_2, 'text_2_font_color':text_2_font_color,
+                'pcent_stretch_center':pcent_stretch_center, 
+                'pcent_stretch_content':pcent_stretch_content}
+                    
+        new_page = Page( self, disp_name="Title and 2 Column Text", **inpD)
+        self.add_a_new_page( new_page )
+    
+    def add_titled_image(self, title='My Picture', title_font_color='', 
+                            image_file='', image_2_file='', image_3_file='', image_4_file='',
+                            keep_aspect_ratio=True, big_3rd_img_left=True,
                             pcent_stretch_center=0, pcent_stretch_content=0):
         
         image_name = self.get_next_image_name( image_file )
@@ -324,11 +339,86 @@ class Presentation(object):
                 'keep_aspect_ratio':keep_aspect_ratio,
                 'pcent_stretch_center':pcent_stretch_center, 
                     'pcent_stretch_content':pcent_stretch_content}
-                        
-        new_page = Page( self, disp_name="Title and Content", **inpD)
+        
+        
+        # do NOT do any checking of missing image inputs... just let the slide have blank entry
+        if image_4_file:
+            image2_name = self.get_next_image_name( image_2_file )
+            inpD['image_2_file'] = image2_name
+            
+            image3_name = self.get_next_image_name( image_3_file )
+            inpD['image_3_file'] = image3_name
+            
+            image4_name = self.get_next_image_name( image_4_file )
+            inpD['image_4_file'] = image4_name
+            new_page = Page( self, disp_name="Title and 4 Content", **inpD)
+            
+        elif image_3_file:
+            image2_name = self.get_next_image_name( image_2_file )
+            inpD['image_2_file'] = image2_name
+            
+            image3_name = self.get_next_image_name( image_3_file )
+            inpD['image_3_file'] = image3_name
+            
+            if big_3rd_img_left:
+                new_page = Page( self, disp_name="Title, Content, and 2 Content", **inpD)
+            else:
+                new_page = Page( self, disp_name="Title, 2 Content and Content", **inpD)
+            
+        elif image_2_file:
+            image2_name = self.get_next_image_name( image_2_file )
+            inpD['image_2_file'] = image2_name
+            new_page = Page( self, disp_name="Two Content", **inpD)
+        else:
+            new_page = Page( self, disp_name="Title and Content", **inpD)
+            
         self.add_a_new_page( new_page )
  
+    
+    def add_titled_text_and_image(self, text_location='top',  # can be "top", "bottom", "right", "left"
+                            title='My Picture', title_font_color='', 
+                            outline='', text_font_color='', 
+                            image_file='', keep_aspect_ratio=True,  image_2_file='',
+                            pcent_stretch_center=0, pcent_stretch_content=0):
+        
+        image_name = self.get_next_image_name( image_file )
+        inpD = {'title':title,  'title_font_color':title_font_color,
+                'outline':outline,   'text_font_color':text_font_color,
+                'image_name':image_name, 'keep_aspect_ratio':keep_aspect_ratio,
+                'pcent_stretch_center':pcent_stretch_center, 
+                'pcent_stretch_content':pcent_stretch_content}
+        
+        if image_2_file:
+            image2_name = self.get_next_image_name( image_2_file )
+            inpD['image_2_file'] = image2_name
+            
+            if text_location == 'left':
+                new_page = Page( self, disp_name= "Title, Text, and 2 Content", **inpD)
+            elif text_location == 'top':
+                new_page = Page( self, disp_name= "Title and 2 Content over Text", **inpD)
+                new_page.swap_svg_y_of_objects_and_outline() # There is no layout for this, so fake it
+            elif text_location == 'bottom':
+                new_page = Page( self, disp_name= "Title and 2 Content over Text", **inpD)
+            elif text_location == 'right':
+                new_page = Page( self, disp_name= "Title, 2 Content and Text", **inpD)
+        
+        else:
+            if text_location == 'left':
+                new_page = Page( self, disp_name= "Title, Text, and Content", **inpD)
+            elif text_location == 'top':
+                new_page = Page( self, disp_name= "Title and Text over Content", **inpD)
+            elif text_location == 'bottom':
+                new_page = Page( self, disp_name= "Title and Content over Text", **inpD)
+            elif text_location == 'right':
+                new_page = Page( self, disp_name= "Title, Content and Text", **inpD)
+            
+        self.add_a_new_page( new_page )
+ 
+
+ 
 if __name__ == '__main__':
+    sL = ['1st','\t2nd','\t\t3rd','            4th','Normal < 1st but > 9','    Indent 2nd']
+    s2L = ['1st(2)','\t2nd(2)','\t\t3rd(2)','            4th(2)','Normal < 1st but > 9(2)','    Indent 2nd(2)']
     
     C = Presentation(title='My Title', author='My Name',
         #background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
@@ -340,18 +430,58 @@ if __name__ == '__main__':
     
     C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='red',
                         subtitle_font_color='red')
+
     
-    sL = ['1st','\t2nd','\t\t3rd','            4th','Normal < 1st but > 9','    Indent 2nd']
+    C.add_titled_image( title='Tall Aspect Ratio', big_3rd_img_left=False,
+                        image_file='./templates/planets.jpg', image_2_file='./templates/robot.gif',
+                        image_3_file='./templates/planets.jpg',               
+                        title_font_color='dr', keep_aspect_ratio=True,
+                        pcent_stretch_center=1, pcent_stretch_content=100)
+
+    C.add_titled_text_and_image( text_location='top',
+                            title='Text on Top', title_font_color='',  image_2_file='./templates/robot.gif',
+                            outline=['My Favorite Duck','    under fire'], text_font_color='', 
+                            image_file='./templates/duck.gif', keep_aspect_ratio=True, 
+                            pcent_stretch_center=50, pcent_stretch_content=100)
+
+    C.add_titled_text_and_image( text_location='bottom',
+                            title='Text on Bottom', title_font_color='',  image_2_file='./templates/robot.gif',
+                            outline=['My Favorite Duck','    under fire'], text_font_color='', 
+                            image_file='./templates/duck.gif', keep_aspect_ratio=True, 
+                            pcent_stretch_center=0, pcent_stretch_content=0)
+
+    C.add_titled_text_and_image( text_location='right',
+                            title='Text on Right', title_font_color='',  image_2_file='./templates/robot.gif',
+                            outline=['My Favorite Duck','    under fire'], text_font_color='', 
+                            image_file='./templates/duck.gif', keep_aspect_ratio=True, 
+                            pcent_stretch_center=80, pcent_stretch_content=80)
+
+    C.add_titled_text_and_image( text_location='left',
+                            title='Text on Left', title_font_color='',  image_2_file='./templates/robot.gif',
+                            outline=['My Favorite Duck','    under fire'], text_font_color='', 
+                            image_file='./templates/duck.gif', keep_aspect_ratio=True, 
+                            pcent_stretch_center=20, pcent_stretch_content=20)
+    
+    
+    
     C.add_titled_outline_chart( title='My Second Title', outline=sL, 
                                 title_font_color='blue', text_font_color='green',
                                 pcent_stretch_center=80, pcent_stretch_content=80)
     
-    C.add_titled_image( title='Tall Aspect Ratio', image_file='./templates/planets.jpg', 
+    C.add_titled_two_outline_chart(title='2 Columns of Text', title_font_color='', 
+                                   outline=sL, text_font_color='r', 
+                                   outline_2=s2L, text_2_font_color='g', 
+                                   pcent_stretch_center=100, pcent_stretch_content=100)
+    
+    C.add_titled_image( title='Tall Aspect Ratio', 
+                        image_file='./templates/planets.jpg', image_2_file='./templates/robot.gif',
                         title_font_color='dr', keep_aspect_ratio=True,
+                        pcent_stretch_center=100, pcent_stretch_content=100)
+    C.add_titled_image( title='My 2nd Picture', image_file='./templates/ray_trace.gif', 
+                        title_font_color='g',
                         pcent_stretch_center=80, pcent_stretch_content=80)
-    C.add_titled_image( title='My 2nd Picture', image_file='./templates/sysMass_vs_vol_Ptank.png', 
-                        title_font_color='g')
-    C.add_titled_image( title='My Third Picture', image_file='./templates/Pressure_1T_Spin.gif')
+    C.add_titled_image( title='My Third Picture', image_file='./templates/Pressure_1T_Spin.gif',
+                        pcent_stretch_center=80, pcent_stretch_content=80)
     
     C.save( filename='my_ppt.odp', launch=1 )
     
