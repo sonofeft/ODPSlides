@@ -421,9 +421,9 @@ if __name__ == '__main__':
     s2L = ['1st(2)','\t2nd(2)','\t\t3rd(2)','            4th(2)','Normal < 1st but > 9(2)','    Indent 2nd(2)']
     
     C = Presentation(title='My Title', author='My Name',
-        #background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
+        background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
         background_color='#ccffcc',
-        #grad_start_color='ff0000', grad_end_color="#ffffff", grad_angle_deg=45, grad_draw_style='linear',
+        grad_start_color='ff0000', grad_end_color="#ffffff", grad_angle_deg=45, grad_draw_style='linear',
         show_date=True, date_font_color='lime',
         footer="testing 123", footer_font_color='lime',
         show_page_number=True, page_number_font_color='dm')

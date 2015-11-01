@@ -73,6 +73,9 @@ class Page(object):
             self.content_body_presentation = grad.content_body_presentation
             self.content_body_presentation = grad.content_body_presentation
             self.content_auto_styles = grad.content_auto_styles
+            
+            # Fix a name mis-match between grad and solidbg
+            self.page_layouts.layout_name_lookupD["Title and 2 Column Text"] = self.page_layouts.layout_name_lookupD["Title and 2-Column Text"]
         elif presObj.page_type == 'image':
             self.page_layouts = image.page_layouts
             self.content_body_presentation = image.content_body_presentation
@@ -84,6 +87,7 @@ class Page(object):
             self.content_body_presentation = solidbg.content_body_presentation
             self.content_auto_styles = solidbg.content_auto_styles
         
+        # grad missing 'Title and 2 Column Text'
         self.lay_name = self.page_layouts.layout_name_lookupD[ self.disp_name ] # like: "Master1-PPL1"
         
         # master_name like: Master1-Layout1-title-Title-Slide
