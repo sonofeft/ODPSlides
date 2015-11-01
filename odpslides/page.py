@@ -12,23 +12,23 @@ from odpslides.color_utils import getValidHexStr
 from odpslides.template_xml_file import TemplateXML_File
 from odpslides.svg_dimensions import force_svg_dim_to_float, adjust_draw_page_internal_dims
 
-import solidbg.content_auto_styles
-import solidbg.content_body_presentation
-import solidbg.page_layouts
-import solidbg.styles_auto_styles
-import solidbg.styles_master_pages
+import odpslides.solidbg.content_auto_styles
+import odpslides.solidbg.content_body_presentation
+import odpslides.solidbg.page_layouts
+import odpslides.solidbg.styles_auto_styles
+import odpslides.solidbg.styles_master_pages
 
-import image.content_auto_styles
-import image.content_body_presentation
-import image.page_layouts
-import image.styles_auto_styles
-import image.styles_master_pages
+import odpslides.image.content_auto_styles
+import odpslides.image.content_body_presentation
+import odpslides.image.page_layouts
+import odpslides.image.styles_auto_styles
+import odpslides.image.styles_master_pages
 
-import grad.content_auto_styles
-import grad.content_body_presentation
-import grad.page_layouts
-import grad.styles_auto_styles
-import grad.styles_master_pages
+import odpslides.grad.content_auto_styles
+import odpslides.grad.content_body_presentation
+import odpslides.grad.page_layouts
+import odpslides.grad.styles_auto_styles
+import odpslides.grad.styles_master_pages
 
 DRAW_FRAME_TAG = force_to_tag( 'draw:frame' )
 TEXT_SPAN_TAG =  force_to_tag( 'text:span' )
@@ -120,11 +120,15 @@ class Page(object):
         if 'subtitle' in inpD:
             self.set_textspan_text( frame_class='subtitle', text=inpD['subtitle'], num_frame=0, clear_all=True )
     
-        if 'title_font_color' in inpD:
+        if ('title_font_color' in inpD) and inpD.get('title_font_color', ''):
             self.set_drawframe_font_color( frame_class='title', font_color=inpD['title_font_color'] )
+        elif self.presObj.title_font_color:
+            self.set_drawframe_font_color( frame_class='title', font_color=self.presObj.title_font_color )
         
-        if 'subtitle_font_color' in inpD:
+        if 'subtitle_font_color' in inpD and inpD.get('subtitle_font_color', ''):
             self.set_drawframe_font_color( frame_class='subtitle', font_color=inpD['subtitle_font_color'] )
+        elif self.presObj.subtitle_font_color:
+            self.set_drawframe_font_color( frame_class='subtitle', font_color=self.presObj.subtitle_font_color )
         
         if 'outline' in inpD:
             self.set_textspan_text( frame_class='outline', text=inpD['outline'], num_frame=0, clear_all=True )

@@ -209,10 +209,12 @@ def getValidHexStr( name_or_hex, c_default):
     if len(c)==4:
         c = c[0] + c[1] + c[1] + c[2] + c[2] + c[3] + c[3]
 
+    # if c is already a typical defined "#xxxxxx" string, just return it.
     if c in BIG_COLOR_HEXSTR_LIST:
         #print('(in big list)', end='')
         return c.lower()
 
+    # if not a standard, see if it matches the regular expression
     if hexstr_pattern.match( c ):
         #print('(re match)', end='')
         return c.lower()
@@ -506,9 +508,10 @@ if __name__=="__main__":
         print('Testing valid %8s '%c, end='')
         print( getValidHexStr( c, "#000000") )
 
-    for c in ['red','#3ac', '#AA0099', '55AAFF', 'goober']:
+    for c in ['red','#3ac', '#AA0099', '55AAFF', 'goober', 'navy', 'darkgray', '123456', 'CYan']:
         test_valid(c)
 
+    #print(BIG_COLOR_HEXSTR_LIST)
     sys.exit()
 
     print( "get_best_gray_text('#121212') =",get_best_gray_text('#121212') )

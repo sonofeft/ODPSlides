@@ -41,20 +41,11 @@ This will execute the local ``setup.py`` file and insure that the pip-specific c
 Running ODPSlides
 -----------------
 
-After installing with ``pip``, there will be a launch command line program called **odpslides** or, on Windows, **odpslides.exe**. From a terminal or command prompt window simply type::
+ODPSlides is run from python scripts, typically from the command line.
 
-    odpslides
+If your editor supports script execution, most editors will execute the script when the function key **F5** is pressed.
 
-and ODPSlides will start. If not, then there may be an issue with your system path.
-The path for the odpslides executable might be something like::
-
-    /usr/local/bin/odpslides             (if installed with sudo pip install -e .)
-         or 
-    /home/<user>/.local/bin/odpslides    (if installed with pip install -e .)
-         or 
-    C:\Python27\Scripts\odpslides.exe    (on Windows)
-
-Make sure your system path includes the above path to **odpslides**.
+See the Examples page for getting started.
 
 
 .. _internal_pip_error:

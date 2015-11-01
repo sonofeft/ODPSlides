@@ -1,0 +1,23 @@
+
+
+========== styles for Pasted Image in content.xml
+
+
+<style:style style:family="graphic" style:name="a336" style:parent-style-name="Graphics">
+<style:graphic-properties draw:fill="none" fo:clip="rect(0in 0in 0in 0in)" draw:stroke="none"/>
+</style:style>
+
+
+========= Pasted Image in content.xml
+
+
+<draw:frame draw:id="id63" draw:style-name="a336" draw:name="Picture 2" svg:x="3.33333in" svg:y="2.70833in" svg:width="3.33333in" svg:height="2.08333in" style:rel-width="scale" style:rel-height="scale">
+<draw:image xlink:href="media/image1.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad"/>
+<svg:title/>
+<svg:desc/>
+</draw:frame>
+    
+============ Pasted Image in styles.xml,  part of office:styles, i.e. next to style:presentation-page-layout
+
+<style:style style:family="graphic" style:name="Graphics"/>
+

@@ -5,11 +5,7 @@ TODO
 
 * Place Text box onto chart
 
-* Place image onto chart ???
-
-* Complete page adding options for all master-pages.
-
-* Need image aspect ratio adjustment
+* Paste image onto chart ???
 
 * Beef up unittests
 

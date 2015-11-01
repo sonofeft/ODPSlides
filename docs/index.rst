@@ -15,7 +15,9 @@ Contents:
    :maxdepth: 2
 
    quickstart
-   excel_oo_differences
+   examples
+   ppt_oo_differences
+   colors
    functions
    copyright
    authors

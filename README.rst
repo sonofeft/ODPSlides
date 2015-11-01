@@ -13,7 +13,7 @@
     :target: https://pypi.python.org/pypi/odpslides
 
 
-Creates Opendocument Presentations For Microsoft Powerpoint, Libreoffice And Openoffice
+Creates Opendocument Presentations For Microsoft PowerPoint, LibreOffice And OpenOffice
 =======================================================================================
 
 
@@ -28,13 +28,14 @@ See PyPI page at:`<https://pypi.python.org/pypi/odpslides>`_
 
 
 
-ODPSlides will create odp files readable by Microsoft Excel, LibreOffice or OpenOffice.
+ODPSlides will create odp files readable by Microsoft PowerPoint, LibreOffice or OpenOffice.
 
-The format is a very narrow subset of full presentation support::
-    #. Slides are one of the following
-        - A slide with text
-        - A slide with a central image and text box
-        - A slide with drawing objects
+There are about a dozen slide page layouts that are supported with three slide background formats.
 
-There is no attempt to supply a full API interface.
+    * Solid color
+    * Color gradient
+    * Bitmat image
+
+
+There is no attempt to supply a full API interface, simply a mechanism for making cross-platform slide presentations.
 

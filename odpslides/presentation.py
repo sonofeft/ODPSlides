@@ -30,18 +30,34 @@ here = os.path.abspath(os.path.dirname(__file__))
 class Presentation(object):
     """
     Creates OpenDocument Presentations for Microsoft PowerPoint, LibreOffice and OpenOffice.
-    Output is a *.odp file.
+    Output is a ``*.odp`` file.
+        
+    :keyword str title_font_color:  (default=='black')
+    :keyword str subtitle_font_color:  (default=='#666666')
+    :keyword str background_image:  (default=="")
+    :keyword str background_color:  (default=="white")
+    :keyword str grad_start_color: Color Gradient start color. If blank then not used (default=="")
+    :keyword str grad_end_color: Color Gradient end color. If blank then not used  (default=="")
+    :keyword int grad_angle_deg:  Color Gradient angle, in degrees (default==0)
+    :keyword str grad_draw_style: Color Gradient style, "linear", "radial",  (default=='linear')
+    :keyword bool show_date:  (default==False)
+    :keyword str date_font_color:  (default=='#666666')
+    :keyword str footer: String displayed as footer on each slide (default=="")
+    :keyword str footer_font_color:  (default=='#666666')
+    :keyword bool show_page_numbers:  (default==True)
+    :keyword str page_number_font_color:  (default=="#666666")
     """
 
-    def __init__(self, title='My Title', author='My Name', 
+    def __init__(self, title_font_color='black', subtitle_font_color='#666666',
         background_image="", background_color="white",
         grad_start_color="", grad_end_color="", grad_angle_deg=0, grad_draw_style='linear',
-        show_date=False, date_font_color='gray',
-        footer="", footer_font_color='gray',
-        show_page_numbers=True, page_number_font_color="gray"):
+        show_date=False, date_font_color='#666666',
+        footer="", footer_font_color='#666666',
+        show_page_numbers=True, page_number_font_color="#666666"):
             
         """
-        Make Presentation object
+        Main Presentation object
+        
         """        
 
 
@@ -53,6 +69,9 @@ class Presentation(object):
         self.image_nameL = [] # ordered list of internal image names 
         self.image_sizeD = {} # index=internal image name, value=tuple of image size (w,h)
         self.max_image_int = 0
+        
+        self.title_font_color = title_font_color
+        self.subtitle_font_color = subtitle_font_color
         
         self.background_image = background_image
         if self.background_image:
@@ -292,10 +311,13 @@ class Presentation(object):
             if elem.tag == bull_tag:
                 level = elem.get(force_to_tag('text:level'),'')
                 if level:
-                    i = int( level )
-                    bchar = u'\u2022' # BULLET_L[ i-1 ]  # u'\u25CF'
-                    elem.set(force_to_tag('text:bullet-char'), bchar)
-                    #print(bchar, end='')
+                    c = elem.get(force_to_tag('text:bullet-char'), '')
+                    
+                    if len(c)>1:
+                        #i = int( level )
+                        bchar = u'\u2022' # BULLET_L[ i-1 ]  # u'\u25CF'
+                        elem.set(force_to_tag('text:bullet-char'), bchar)
+                        #print(bchar, end='')
         
         
 
@@ -308,7 +330,18 @@ class Presentation(object):
     def add_title_chart( self, title='My Title', subtitle='My Subtitle', title_font_color='',
                             subtitle_font_color='',background_color=""):
         
-        # <<<<==== Temporarily leave background color... does nothing for now, may delete later
+        """
+        Create a title slide with subtitle.
+        
+        :keyword str title:  (default=='My Title')
+        :keyword str subtitle:  (default=='My Subtitle')
+        :keyword str title_font_color:  (default=='')
+        :keyword str subtitle_font_color:  (default=='')
+        :keyword str background_color:  (default=="")
+        :return: None
+        :rtype: None
+        
+        """
         if background_color:
             background_color = getValidHexStr( background_color, "#ffffff" ) # default to white
         else:
@@ -324,7 +357,24 @@ class Presentation(object):
                                      outline='', text_font_color='', 
                                      pcent_stretch_center=0, pcent_stretch_content=0):
                                          
+        """
+        Create a slide with a title and a text outline below.
         
+        An outline string is a single string with embedded carriage returns and tab characters.
+        It can also follow a python-like format of four spaces being equal to a tab character.
+        
+        Tab characters(or 4 spaces) indicate indenting, carriage returns indicate a new line.
+        
+        :keyword str title:  (default=='My Title')
+        :keyword str title_font_color:  (default=='')
+        :keyword str outline: The text of the outline in indented format (see above) (default=='')
+        :keyword str text_font_color:  (default=='')
+        :keyword int pcent_stretch_center:  (default==0)
+        :keyword int pcent_stretch_content:  (default==0)
+        :return: None
+        :rtype: None
+        
+        """
         inpD = {'title':title,  'outline':outline,
                 'title_font_color':title_font_color, 'text_font_color':text_font_color,
                 'pcent_stretch_center':pcent_stretch_center, 
@@ -337,7 +387,26 @@ class Presentation(object):
                                          outline='', text_font_color='', 
                                          outline_2='', text_2_font_color='', 
                                          pcent_stretch_center=0, pcent_stretch_content=0):
+        """
+        Create a slide with a title and two side-by-side text outlines.
         
+        An outline string is a single string with embedded carriage returns and tab characters.
+        It can also follow a python-like format of four spaces being equal to a tab character.
+        
+        Tab characters(or 4 spaces) indicate indenting, carriage returns indicate a new line.
+        
+        :keyword str title:  (default=='My Title')
+        :keyword str title_font_color:  (default=='')
+        :keyword str outline: The text of the outline in indented format (see above)  (default=='')
+        :keyword str text_font_color:  (default=='')
+        :keyword str outline_2: The text of outline #2 in indented format (see above)  (default=='')
+        :keyword str text_2_font_color:  (default=='')
+        :keyword int pcent_stretch_center:  (default==0)
+        :keyword int pcent_stretch_content:  (default==0)
+        :return: None
+        :rtype: None
+        
+        """
         inpD = {'title':title,  'outline':outline,
                 'title_font_color':title_font_color, 'text_font_color':text_font_color,
                 'outline_2':outline_2, 'text_2_font_color':text_2_font_color,
@@ -351,7 +420,23 @@ class Presentation(object):
                             image_file='', image_2_file='', image_3_file='', image_4_file='',
                             keep_aspect_ratio=True, big_3rd_img_left=True,
                             pcent_stretch_center=0, pcent_stretch_content=0):
+        """
+        Create a slide with a title and 1 to 4 images.
         
+        :keyword str title:  (default=='My Picture')
+        :keyword str title_font_color:  (default=='')
+        :keyword str image_file: Full path to image #1 file on system (png, gif or jpg) (default=='')
+        :keyword str image_2_file: Full path to image #2 file on system (png, gif or jpg)  (default=='')
+        :keyword str image_3_file: Full path to image #3 file on system (png, gif or jpg)  (default=='')
+        :keyword str image_4_file: Full path to image #4 file on system (png, gif or jpg)  (default=='')
+        :keyword bool keep_aspect_ratio: If true then adjust slide to maintain original aspect ratio (default==True)
+        :keyword bool big_3rd_img_left: For three images, if True, put big image on the left (default==True)
+        :keyword int pcent_stretch_center: Percentage by which to enlarge the central, content area (default==0)
+        :keyword int pcent_stretch_content: Percentage by which to enlarge image(s) (default==0)
+        :return: None
+        :rtype: None
+        
+        """
         image_name = self.get_next_image_name( image_file )
         inpD = {'title':title,  'image_name':image_name, 'title_font_color':title_font_color,
                 'keep_aspect_ratio':keep_aspect_ratio,
@@ -398,7 +483,28 @@ class Presentation(object):
                             outline='', text_font_color='', 
                             image_file='', keep_aspect_ratio=True,  image_2_file='',
                             pcent_stretch_center=0, pcent_stretch_content=0):
+        """
+        Create a slide with a text outline and 1 or 2 image(s).
         
+        An outline string is a single string with embedded carriage returns and tab characters.
+        It can also follow a python-like format of four spaces being equal to a tab character.
+        
+        Tab characters(or 4 spaces) indicate indenting, carriage returns indicate a new line.
+                
+        :keyword str text_location: Text location ("top", "bottom", "right", "left") (default=='top')
+        :keyword str title:  (default=='My Picture')
+        :keyword str title_font_color:  (default=='')
+        :keyword str outline: The text of the outline in indented format (see above)  (default=='')
+        :keyword str text_font_color:  (default=='')
+        :keyword str image_file: Full path to image #1 file on system (png, gif or jpg) (default=='')
+        :keyword str image_2_file: Full path to image #2 file on system (png, gif or jpg) (default=='')
+        :keyword bool keep_aspect_ratio: If true then adjust slide to maintain original aspect ratio (default==True)
+        :keyword int pcent_stretch_center: Percentage by which to enlarge the central, content area (default==0)
+        :keyword int pcent_stretch_content: Percentage by which to enlarge image(s) (default==0)
+        :return: None
+        :rtype: None
+        
+        """
         image_name = self.get_next_image_name( image_file )
         inpD = {'title':title,  'title_font_color':title_font_color,
                 'outline':outline,   'text_font_color':text_font_color,
@@ -438,16 +544,16 @@ if __name__ == '__main__':
     sL = ['1st','\t2nd','\t\t3rd','            4th','Normal < 1st but > 9','    Indent 2nd']
     s2L = ['1st(2)','\t2nd(2)','\t\t3rd(2)','            4th(2)','Normal < 1st but > 9(2)','    Indent 2nd(2)']
     
-    C = Presentation(title='My Title', author='My Name',
+    C = Presentation(
         #background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
         background_color='#ccffcc',
         #grad_start_color='ff0000', grad_end_color="#ffffff", grad_angle_deg=45, grad_draw_style='linear',
-        show_date=True, date_font_color='dg',
+        show_date=True, date_font_color='',
         footer="testing 123", footer_font_color='dr',
         show_page_numbers=True, page_number_font_color='black')
     
-    C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='red',
-                        subtitle_font_color='red')
+    C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='',
+                        subtitle_font_color='')
 
     
     C.add_titled_image( title='Tall Aspect Ratio', big_3rd_img_left=False,
