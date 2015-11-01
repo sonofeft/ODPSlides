@@ -42,9 +42,15 @@ class ContentXML(object):
         
         
     def set_background(self):
-        
         if self.presObj.page_type == 'solidbg':
             hex_col_str = getValidHexStr(  self.presObj.background_color , "#ffffff") # default to white
             self.content_tmplt.set_all_attr_of_tag( 'style:drawing-page-properties', 'draw:fill-color', hex_col_str)
-        
-        
+               
+    def set_show_page_number(self):
+        self.content_tmplt.set_all_attr_of_tag( 'style:drawing-page-properties', 'presentation:display-page-number', 'true')
+    
+    def set_show_date(self):
+        self.content_tmplt.set_all_attr_of_tag( 'style:drawing-page-properties', 'presentation:display-date-time', 'true')
+
+    def set_show_footer(self):
+        self.content_tmplt.set_all_attr_of_tag( 'style:drawing-page-properties', 'presentation:display-footer', 'true')

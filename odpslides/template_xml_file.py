@@ -136,8 +136,8 @@ class TemplateXML_File(object):
             
             
         # set up dictionaries to hold style:name info (if init_all_annn_style8name)
-        self.annn_style8nameD = {} # index=style:name ("a123"), value=elem
-        self.style_refD = {} # index=xxxxx:style-name (e.g. "a123"), value=elem
+        self.annn_style8nameD = {} # index=style:name ("a123"), value=style elem
+        self.style_refD = {} # index=xxxxx:style-name (e.g. "a123"), value=elem with ref (not style itself)
         self.id_draw8idD = {} # index=draw:id (e.g. "id123"), value=elem
         
 
@@ -411,6 +411,56 @@ class TemplateXML_File(object):
             if elem.tag == tag:
                 elem.set( attr_name, attr_val )
             
+
+    def set_all_styles_of_tag_w_attr(self, targ_tag, targ_attr_name, targ_attr_val,
+                                         style_attr_name, style_attr_val):
+        """
+        dictionaries  hold style:name info (if init_all_annn_style8name)
+        self.annn_style8nameD = {} # index=style:name ("a123"), value=elem
+        self.style_refD = {} # index=xxxxx:style-name (e.g. "a123"), value=elem
+        """
+        targ_tag = force_to_tag( targ_tag )
+        targ_attr_name = force_to_tag( targ_attr_name )
+        style_attr_name = force_to_tag( style_attr_name )
+
+        for elem in self.root.iter():
+            # for example a 'draw:frame' with an attribute 'presentation:class' == "page-number",
+            if (elem.tag == targ_tag) and (elem.get(targ_attr_name,'') == targ_attr_val):
+                
+                # looking for a style element attribute (e.g. an attrib value like "a123")
+                for sub_elem in elem.iter():
+                    # looking for, for example text:style-name="a28"
+                    for attname, attval in sub_elem.items():
+                        if (attval in self.style_refD)  and (attval in self.annn_style8nameD):
+                            style_elem = self.annn_style8nameD[attval]
+                            
+                            # now look for the desired style attribute to set (e.g. 'fo:color' = '#000000')
+                            for sub_style_elem in style_elem.iter():
+                                if sub_style_elem.get(style_attr_name,''):
+                                    sub_style_elem.set(style_attr_name, style_attr_val)
+
+    def set_span_text_of_tag_w_attr(self, targ_tag, targ_attr_name, targ_attr_val,
+                                         span_text=''):
+        """
+        dictionaries  hold style:name info (if init_all_annn_style8name)
+        self.annn_style8nameD = {} # index=style:name ("a123"), value=elem
+        self.style_refD = {} # index=xxxxx:style-name (e.g. "a123"), value=elem
+        """
+        targ_tag = force_to_tag( targ_tag )
+        targ_attr_name = force_to_tag( targ_attr_name )
+        span_tag = force_to_tag( 'text:span' )
+
+        for elem in self.root.iter():
+            # for example a 'draw:frame' with an attribute 'presentation:class' == "footer",
+            if (elem.tag == targ_tag) and (elem.get(targ_attr_name,'') == targ_attr_val):
+                
+                # looking for a span element
+                for sub_elem in elem.iter():
+                    if sub_elem.tag == span_tag:
+                        sub_elem.text = span_text
+                        break
+                    
+
 
 if __name__ == "__main__":
 

@@ -38,7 +38,7 @@ class Presentation(object):
         grad_start_color="", grad_end_color="", grad_angle_deg=0, grad_draw_style='linear',
         show_date=False, date_font_color='gray',
         footer="", footer_font_color='gray',
-        show_page_number=False, page_number_font_color="gray"):
+        show_page_numbers=True, page_number_font_color="gray"):
             
         """
         Make Presentation object
@@ -95,7 +95,7 @@ class Presentation(object):
         self.footer = footer
         self.footer_font_color = footer_font_color
         
-        self.show_page_number = show_page_number
+        self.show_page_numbers = show_page_numbers
         self.page_number_font_color = page_number_font_color
         
         # style names will be in order, "a0", "a1", "a2", ...
@@ -224,6 +224,15 @@ class Presentation(object):
         # just duplicate reference file's styles.xml
         self.styles_xml_obj.make_clean_copy()
         self.styles_xml_obj.set_background()
+        if self.show_page_numbers:
+            self.styles_xml_obj.set_page_number_font_color()
+            
+        if self.show_date:
+            self.styles_xml_obj.set_date_font_color()
+            
+        if self.footer:
+            self.styles_xml_obj.set_footer_font_color()
+            self.styles_xml_obj.set_footer_text()
 
         #self.set_bullets( self.styles_xml_obj.styles_tmplt.root )
         styles_xml_str = self.styles_xml_obj.styles_tmplt.tostring().decode('utf-8')
@@ -249,6 +258,15 @@ class Presentation(object):
         body_pres_elem.append( last_body_elem )
         
         self.content_xml_obj.set_background()
+        if self.show_page_numbers:
+            self.content_xml_obj.set_show_page_number()
+            
+        if self.show_date:
+            self.content_xml_obj.set_show_date()
+            
+        if self.footer:
+            self.content_xml_obj.set_show_footer()
+        
         self.set_bullets( content_tmplt.root )
         content_xml_str = content_tmplt.tostring().decode('utf-8')
         
@@ -421,12 +439,12 @@ if __name__ == '__main__':
     s2L = ['1st(2)','\t2nd(2)','\t\t3rd(2)','            4th(2)','Normal < 1st but > 9(2)','    Indent 2nd(2)']
     
     C = Presentation(title='My Title', author='My Name',
-        background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
+        #background_image=r'D:\py_proj_2015\ODPSlides\odpslides\templates\image1.png',
         background_color='#ccffcc',
-        grad_start_color='ff0000', grad_end_color="#ffffff", grad_angle_deg=45, grad_draw_style='linear',
-        show_date=True, date_font_color='lime',
-        footer="testing 123", footer_font_color='lime',
-        show_page_number=True, page_number_font_color='dm')
+        #grad_start_color='ff0000', grad_end_color="#ffffff", grad_angle_deg=45, grad_draw_style='linear',
+        show_date=True, date_font_color='dg',
+        footer="testing 123", footer_font_color='dr',
+        show_page_numbers=True, page_number_font_color='black')
     
     C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='red',
                         subtitle_font_color='red')

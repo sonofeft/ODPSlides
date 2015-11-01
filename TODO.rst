@@ -3,13 +3,9 @@
 TODO
 ====
 
-* Add Maximize image size flag (percent_max_size = 0 to 100)
-
 * Place Text box onto chart
 
 * Place image onto chart ???
-
-* Show footer, date, page number
 
 * Complete page adding options for all master-pages.
 

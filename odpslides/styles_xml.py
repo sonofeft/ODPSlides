@@ -54,4 +54,30 @@ class StylesXML(object):
             img_name = 'media/%s'%self.presObj.image_nameL[0]
             self.styles_tmplt.set_all_attr_of_tag( 'draw:fill-image', 'xlink:href', img_name)
             
-            
+        
+    def set_page_number_font_color(self):
+        hex_col_str = getValidHexStr(  self.presObj.page_number_font_color , "#000000") # default to black
+        print('Setting page_number_font_color to',hex_col_str)
+        
+        self.styles_tmplt.set_all_styles_of_tag_w_attr( 'draw:frame', 'presentation:class', "page-number",
+                                         'fo:color', hex_col_str)
+
+    def set_date_font_color(self):
+        hex_col_str = getValidHexStr(  self.presObj.date_font_color , "#000000") # default to black
+        print('Setting page_number_font_color to',hex_col_str)
+        
+        self.styles_tmplt.set_all_styles_of_tag_w_attr( 'draw:frame', 'presentation:class', "date-time",
+                                         'fo:color', hex_col_str)
+
+    def set_footer_font_color(self):
+        hex_col_str = getValidHexStr(  self.presObj.footer_font_color , "#000000") # default to black
+        print('Setting page_number_font_color to',hex_col_str)
+        
+        self.styles_tmplt.set_all_styles_of_tag_w_attr( 'draw:frame', 'presentation:class', "footer",
+                                         'fo:color', hex_col_str)
+
+    def set_footer_text(self):
+        
+        self.styles_tmplt.set_span_text_of_tag_w_attr('draw:frame', 'presentation:class', "footer",
+                                         span_text=self.presObj.footer)        
+

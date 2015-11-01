@@ -42,7 +42,11 @@ def adjust_draw_page_internal_dims( pageObj, pcent_stretch_center=100, pcent_str
         draw_frame.set( force_to_tag('presentation:user-transformed'),"true" )
     
     ymin = 0.0
-    ymax = PAGE_HEIGHT
+    if pageObj.presObj.show_page_numbers or pageObj.presObj.show_date:
+        ymax = 6.95139
+    else:
+        ymax = PAGE_HEIGHT
+    
     xmin = 0.0
     xmax = PAGE_WIDTH
     N_content = 0 # count number of content objects
