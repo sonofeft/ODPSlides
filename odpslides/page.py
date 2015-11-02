@@ -69,23 +69,29 @@ class Page(object):
         #print('in class Page: inpD=%s'%inpD)
         
         if presObj.page_type == 'grad':
-            self.page_layouts = grad.page_layouts
-            self.content_body_presentation = grad.content_body_presentation
-            self.content_body_presentation = grad.content_body_presentation
-            self.content_auto_styles = grad.content_auto_styles
+            self.page_layouts = odpslides.grad.page_layouts
+            self.content_body_presentation = odpslides.grad.content_body_presentation
+            self.content_body_presentation = odpslides.grad.content_body_presentation
+            self.content_auto_styles = odpslides.grad.content_auto_styles
+            self.styles_master_pages = odpslides.grad.styles_master_pages
+            self.styles_auto_styles = odpslides.grad.styles_auto_styles
             
             # Fix a name mis-match between grad and solidbg
             self.page_layouts.layout_name_lookupD["Title and 2 Column Text"] = self.page_layouts.layout_name_lookupD["Title and 2-Column Text"]
         elif presObj.page_type == 'image':
-            self.page_layouts = image.page_layouts
-            self.content_body_presentation = image.content_body_presentation
-            self.content_body_presentation = image.content_body_presentation
-            self.content_auto_styles = image.content_auto_styles
+            self.page_layouts = odpslides.image.page_layouts
+            self.content_body_presentation = odpslides.image.content_body_presentation
+            self.content_body_presentation = odpslides.image.content_body_presentation
+            self.content_auto_styles = odpslides.image.content_auto_styles
+            self.styles_master_pages = odpslides.image.styles_master_pages
+            self.styles_auto_styles = odpslides.image.styles_auto_styles
         else:
-            self.page_layouts = solidbg.page_layouts
-            self.content_body_presentation = solidbg.content_body_presentation
-            self.content_body_presentation = solidbg.content_body_presentation
-            self.content_auto_styles = solidbg.content_auto_styles
+            self.page_layouts = odpslides.solidbg.page_layouts
+            self.content_body_presentation = odpslides.solidbg.content_body_presentation
+            self.content_body_presentation = odpslides.solidbg.content_body_presentation
+            self.content_auto_styles = odpslides.solidbg.content_auto_styles
+            self.styles_master_pages = odpslides.solidbg.styles_master_pages
+            self.styles_auto_styles = odpslides.solidbg.styles_auto_styles
         
         # grad missing 'Title and 2 Column Text'
         self.lay_name = self.page_layouts.layout_name_lookupD[ self.disp_name ] # like: "Master1-PPL1"
@@ -94,16 +100,42 @@ class Page(object):
         self.master_name = self.content_body_presentation.master_page_name_lookupD[ self.lay_name ]
         
         self.draw_page = self.content_body_presentation.func_quick_lookupD[ self.lay_name ]() # Element object
-        self.normalize_content_styles()
+        self.master_page = self.styles_master_pages.func_quick_lookupD[ self.lay_name ]() # Element object
                         
         self.draw_frameL = self.draw_page.findall( DRAW_FRAME_TAG )
+        self.master_frameL = self.master_page.findall( DRAW_FRAME_TAG )
+        
         self.draw_frameD = {} # index=frame_class (e.g. "title"), value = draw:frame element list
+        self.master_frameD = {} # index=frame_class (e.g. "title"), value = draw:frame element list
+        
         for draw_frame in self.draw_frameL:
             frame_class = draw_frame.get( PRESENTATION_CLASS_ATTR, '' )
             #print('frame_class:', frame_class)
             if frame_class:
                 self.draw_frameD[frame_class] = self.draw_frameD.get(frame_class, [])
                 self.draw_frameD[frame_class].append( draw_frame )
+        
+        
+        for master_frame in self.master_frameL:
+            frame_class = master_frame.get( PRESENTATION_CLASS_ATTR, '' )
+            #print('master frame_class:', frame_class)
+            if frame_class:
+                self.master_frameD[frame_class] = self.master_frameD.get(frame_class, [])
+                self.master_frameD[frame_class].append( master_frame )
+        
+        # Since master outlines have deeper indent than content templates, copy them over 
+        if 'outline' in self.draw_frameD:
+            for content_outline, master_outline in zip(self.draw_frameD['outline'], self.master_frameD['outline'] ):
+                content_outline.clear()
+                content_outline.extend( master_outline.getchildren() )
+                for key,val in master_outline.items():
+                    content_outline.set(key,val)
+                for key in self.styles_auto_styles.styles_style_name_lookupD.keys():
+                    if key not in self.content_auto_styles.content_style_name_lookupD:
+                        self.content_auto_styles.content_style_name_lookupD[key] = \
+                                self.styles_auto_styles.styles_style_name_lookupD[key]
+        
+        self.normalize_content_styles()
         
         # May adjust size of internal objects
         pcent_stretch_center = inpD.get('pcent_stretch_center', 0)
@@ -210,8 +242,7 @@ class Page(object):
         Start building outlineL, i.e a list of tuples with indent level and string.
         ( e.g. [(1,'Top'),(2,'Indent')] )
         """
-        
-        if type(outline) == type('text'): # a single string with \r and \t
+        if (type(outline) == type('text')) or (type(outline) == type(b'text')): # a single string with \r and \t
             s = outline.replace('\n','\r')
             tempL = s.split( '\r' )
         elif type(outline) == type(['s','t']): # a list of strings
@@ -229,15 +260,15 @@ class Page(object):
         outlineL = []
         for s in tempL:
             s2 = s.lstrip()
-            n = int( (len(s)-len(s2)) / 4 )
-            outlineL.append( (n, s2.strip()) ) # <======== outlineL sent to make outline chart
-            
+            if s2:
+                n = int( (len(s)-len(s2)) / 4 )
+                outlineL.append( (n, s2.strip()) ) # <======== outlineL sent to make outline chart
+
         return outlineL
         
     
     def set_textspan_text(self, frame_class='title', text='My Text', num_frame=0, 
                              num_textspan=0, clear_all=True ):
-        
         
         if frame_class in self.draw_frameD:
             try:
@@ -250,6 +281,7 @@ class Page(object):
             if frame_class == 'outline':
                 text_box = draw_frame.find( force_to_tag('draw:text-box') )
                 text_listL = draw_frame.findall( force_to_tag('draw:text-box/text:list') )
+                
                 max_indent = len( text_listL )-1
                 
                 if (text_box is not None) and text_listL:
