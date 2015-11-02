@@ -17,9 +17,6 @@ Creates Opendocument Presentations For Microsoft PowerPoint, LibreOffice And Ope
 =======================================================================================
 
 
-.. warning::
-    This is Alpha code, NOT READY FOR USE.
-
 See the Code at: `<https://github.com/sonofeft/ODPSlides>`_
 
 See the Docs at: `<http://odpslides.readthedocs.org/en/latest/>`_
