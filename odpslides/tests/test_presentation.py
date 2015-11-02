@@ -58,7 +58,7 @@ class MyTest(unittest.TestCase):
     def test_save(self):
         """Check that save operates cleanly"""
 
-        self.myclass = Presentation(title='My Title', author='My Name')
+        self.myclass = Presentation()
         
         self.myclass.save( filename=os.path.join(here,'my_ppt'), launch=False)
 
