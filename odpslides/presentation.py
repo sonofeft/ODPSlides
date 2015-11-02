@@ -557,33 +557,33 @@ if __name__ == '__main__':
 
     
     C.add_titled_image( title='Tall Aspect Ratio', big_3rd_img_left=False,
-                        image_file='./templates/planets.jpg', image_2_file='./templates/robot.gif',
-                        image_3_file='./templates/planets.jpg',               
+                        image_file='./examples/planets.jpg', image_2_file='./examples/robot.gif',
+                        image_3_file='./examples/planets.jpg',               
                         title_font_color='dr', keep_aspect_ratio=True,
                         pcent_stretch_center=1, pcent_stretch_content=100)
 
     C.add_titled_text_and_image( text_location='top',
-                            title='Text on Top', title_font_color='',  image_2_file='./templates/robot.gif',
+                            title='Text on Top', title_font_color='',  image_2_file='./examples/robot.gif',
                             outline=['My Favorite Duck','    under fire'], text_font_color='', 
-                            image_file='./templates/duck.gif', keep_aspect_ratio=True, 
+                            image_file='./examples/duck.gif', keep_aspect_ratio=True, 
                             pcent_stretch_center=50, pcent_stretch_content=100)
 
     C.add_titled_text_and_image( text_location='bottom',
-                            title='Text on Bottom', title_font_color='',  image_2_file='./templates/robot.gif',
+                            title='Text on Bottom', title_font_color='',  image_2_file='./examples/robot.gif',
                             outline=['My Favorite Duck','    under fire'], text_font_color='', 
-                            image_file='./templates/duck.gif', keep_aspect_ratio=True, 
+                            image_file='./examples/duck.gif', keep_aspect_ratio=True, 
                             pcent_stretch_center=0, pcent_stretch_content=0)
 
     C.add_titled_text_and_image( text_location='right',
-                            title='Text on Right', title_font_color='',  image_2_file='./templates/robot.gif',
+                            title='Text on Right', title_font_color='',  image_2_file='./examples/robot.gif',
                             outline=['My Favorite Duck','    under fire'], text_font_color='', 
-                            image_file='./templates/duck.gif', keep_aspect_ratio=True, 
+                            image_file='./examples/duck.gif', keep_aspect_ratio=True, 
                             pcent_stretch_center=80, pcent_stretch_content=80)
 
     C.add_titled_text_and_image( text_location='left',
-                            title='Text on Left', title_font_color='',  image_2_file='./templates/robot.gif',
+                            title='Text on Left', title_font_color='',  image_2_file='./examples/robot.gif',
                             outline=['My Favorite Duck','    under fire'], text_font_color='', 
-                            image_file='./templates/duck.gif', keep_aspect_ratio=True, 
+                            image_file='./examples/duck.gif', keep_aspect_ratio=True, 
                             pcent_stretch_center=20, pcent_stretch_content=20)
     
     
@@ -598,13 +598,13 @@ if __name__ == '__main__':
                                    pcent_stretch_center=100, pcent_stretch_content=100)
     
     C.add_titled_image( title='Tall Aspect Ratio', 
-                        image_file='./templates/planets.jpg', image_2_file='./templates/robot.gif',
+                        image_file='./examples/planets.jpg', image_2_file='./examples/robot.gif',
                         title_font_color='dr', keep_aspect_ratio=True,
                         pcent_stretch_center=100, pcent_stretch_content=100)
-    C.add_titled_image( title='My 2nd Picture', image_file='./templates/ray_trace.gif', 
+    C.add_titled_image( title='My 2nd Picture', image_file='./examples/ray_trace.gif', 
                         title_font_color='g',
                         pcent_stretch_center=80, pcent_stretch_content=80)
-    C.add_titled_image( title='My Third Picture', image_file='./templates/Pressure_1T_Spin.gif',
+    C.add_titled_image( title='My Third Picture', image_file='./examples/Pressure_1T_Spin.gif',
                         pcent_stretch_center=80, pcent_stretch_content=80)
     
     C.save( filename='my_ppt.odp', launch=1 )
