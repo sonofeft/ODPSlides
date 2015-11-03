@@ -1,35 +1,44 @@
 
-========== styles for Text Box in content.xml
+<!-- ========== styles for Text Box in content.xml -->
 
 
 <style:style style:family="text" style:name="a340">
 <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true"/>
 </style:style>
+
 <style:style style:family="text" style:name="a336">
 <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true"/>
 </style:style>
+
 <style:style style:family="text" style:name="a341">
 <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true"/>
 </style:style>
+
 <style:style style:family="paragraph" style:name="a337">
 <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
 <style:tab-stops/>
 </style:paragraph-properties>
 <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false"/>
 </style:style>
+
 <style:style style:family="paragraph" style:name="a342">
 <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
 <style:tab-stops/>
 </style:paragraph-properties>
 <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="false"/>
 </style:style>
+
 <style:style style:family="text" style:name="a338">
 <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:text-line-through-type="none" style:text-line-through-style="none" style:text-line-through-width="auto" style:text-line-through-color="font-color" style:text-position="0% 100%" fo:font-family="Calibri" fo:font-size="0.25in" style:font-size-asian="0.25in" style:font-size-complex="0.25in" fo:letter-spacing="0in" fo:language="en" fo:country="US" fo:font-style="normal" style:font-style-asian="normal" style:font-style-complex="normal" style:text-underline-type="none" style:text-underline-style="none" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal" style:text-underline-mode="continuous" style:letter-kerning="true"/>
 </style:style>
+
+<!-- ============ May try... fo:wrap-option="wrap" -->
+
 <style:style style:family="graphic" style:name="a343">
 <style:graphic-properties fo:wrap-option="no-wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" fo:padding-left="0.1in" fo:padding-right="0.1in" draw:textarea-vertical-align="top" draw:textarea-horizontal-align="left" draw:fill="none" draw:stroke="none" draw:auto-grow-width="true" draw:auto-grow-height="true"/>
 <style:paragraph-properties style:font-independent-line-spacing="true" style:writing-mode="lr-tb"/>
 </style:style>
+
 <style:style style:family="paragraph" style:name="a339">
 <style:paragraph-properties fo:line-height="100%" fo:text-align="left" style:tab-stop-distance="1in" fo:margin-left="0in" fo:margin-right="0in" fo:text-indent="0in" fo:margin-top="0in" fo:margin-bottom="0in" style:punctuation-wrap="hanging" style:vertical-align="auto" style:writing-mode="lr-tb">
 <style:tab-stops/>
@@ -39,23 +48,28 @@
 
 
 
-========= Text Box in content.xml
+<!-- ========= Text Box in content.xml -->
+<!-- ========= (note that <text:s text:c="1"/> inserts a space  -->
 
 <draw:frame draw:id="id63" draw:style-name="a343" draw:name="TextBox 1" svg:x="5.75in" svg:y="3in" svg:width="1.46192in" svg:height="1.00977in">
 <draw:text-box>
-<text:p text:style-name="a337" text:class-names="" text:cond-style-name="">
-<text:span text:style-name="a336" text:class-names="">This is a text</text:span>
-</text:p>
-<text:p text:style-name="a339" text:class-names="" text:cond-style-name="">
-<text:span text:style-name="a338" text:class-names="">
-Box with a
-<text:s text:c="1"/>
-</text:span>
-</text:p>
-<text:p text:style-name="a342" text:class-names="" text:cond-style-name="">
-<text:span text:style-name="a340" text:class-names="">Few lines</text:span>
-<text:span text:style-name="a341" text:class-names=""/>
-</text:p>
+
+    <text:p text:style-name="a337" text:class-names="" text:cond-style-name="">
+    <text:span text:style-name="a336" text:class-names="">This is a text</text:span>
+    </text:p>
+    
+    <text:p text:style-name="a339" text:class-names="" text:cond-style-name="">
+    <text:span text:style-name="a338" text:class-names="">
+    Box with a
+    <text:s text:c="1"/>
+    </text:span>
+    </text:p>
+    
+    <text:p text:style-name="a342" text:class-names="" text:cond-style-name="">
+    <text:span text:style-name="a340" text:class-names="">Few lines</text:span>
+    <text:span text:style-name="a341" text:class-names=""/>
+    </text:p>
+    
 </draw:text-box>
 <svg:title/>
 <svg:desc/>

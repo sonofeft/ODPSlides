@@ -2,7 +2,7 @@
 from odpslides.presentation import Presentation
 
 P = Presentation(grad_start_color='ff9999', grad_end_color="#ffffff", 
-                 grad_angle_deg=45, grad_draw_style='rectangle',
+                 grad_angle_deg=45, grad_draw_style='linear',
                  footer='Gaea Trilogy', show_date=True)
 
 P.add_title_chart( title='Titan, Wizard, Demon', subtitle='John Varley')
