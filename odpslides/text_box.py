@@ -20,7 +20,10 @@ style_re = re.compile( '\"a[0-9]+\"' )
 def build_text_list(text_or_list):
     """
     Start building textL, i.e a list of strings. Assume NO INDENTS.
+    
     """
+    
+    # build a text list (textL)
     if (type(text_or_list) == type('text')) or (type(text_or_list) == type(b'text')): # a single string with \r and \t
         s = text_or_list.replace('\n','\r')
         textL = s.split( '\r' )
@@ -34,21 +37,35 @@ def build_text_list(text_or_list):
         textL = ['No TextBox Text']
     return [s.strip() for s in textL]
 
-def add_text_box( presObj, text_or_list='Test Message', text_font_color='', 
+def add_text_box( presObj, text_or_list='Test Message', 
+                    text_font_colors='black #333333',
                     x=8.0, y=2.0):
-    
+    """
+    text_font_colors can be a list of colors or a single string with space-seperated colors
+    (e.g. "black #666666" or ["black", "#666666"])
+    """
     if not presObj.new_content_pageL:
         print('...WARNING... No Last Page for TextBox:', text_or_list)
         return
     
     last_page = presObj.new_content_pageL[-1] # Page object 
     
-    hex_col_str = getValidHexStr( text_font_color, "#000000") # default to black
+    # Build a color list (colorL)
+    # If not already in list form, make a list
+    if type(text_font_colors) != type(['r','b']):
+        # Create a list of colors
+        colorL = text_font_colors.split(' ') # <- make a list
+    else:
+        colorL = text_font_colors # <- already a list
+    # make the colors valid
+    colorL = [ getValidHexStr(c,'#000000') for c in colorL ]    
+    
+    # if there's a problem with the list, make a default list
+    if not colorL:
+        colorL = ['#000000']
     
     # get new style names (e.g. "a123")
     a_frame = presObj.get_next_a_style()
-    a_p = presObj.get_next_a_style()
-    a_span = presObj.get_next_a_style()
 
     # Make new Element objects and style Element objects
     s = TBOX_DRAW_FRAME.replace('svg:x="5.75in" svg:y="3in"','svg:x="%sin" svg:y="%sin"'%(x,y))
@@ -61,7 +78,11 @@ def add_text_box( presObj, text_or_list='Test Message', text_font_color='',
     textL = build_text_list(text_or_list)
     annn_styleElemL = [(a_frame, draw_frame_style)]
     
-    for text in textL:
+    for itext, text in enumerate(textL):
+        
+        hex_col_str = colorL[ itext % len(colorL) ]
+        a_p = presObj.get_next_a_style()
+        a_span = presObj.get_next_a_style()
     
         p_span_elem = TemplateXML_File( TBOX_TEXT_P_SPAN.replace('"a337"', '"%s"'%a_p).replace('"a336"', '"%s"'%a_span) ).root
         span_elem = p_span_elem.getchildren()[0]
@@ -121,6 +142,7 @@ TBOX_TEXT_P_STYLE = """
 </style:style>
 """%XMLNS_STR
 
+# can fill TextBox by using:    draw:fill="solid"  draw:fill-color="#ff0000"
 TBOX_DRAW_FRAME_STYLE = """
 <style:style %s style:family="graphic" style:name="a343">
     <style:graphic-properties fo:wrap-option="no-wrap" fo:padding-top="0.05in" fo:padding-bottom="0.05in" 

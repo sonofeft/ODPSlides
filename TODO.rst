@@ -4,6 +4,11 @@ TODO
 ====
 
 * Place Text box onto chart
+    - fill color option 
+    - text wrap option (PPT leaves x and y as input)
+    - justify along edge of content item #N 
+        - Adjust content position to maximize TextBox room
+    - alternating colors
 
 * Add left, right, top, bottom justify for content.
 

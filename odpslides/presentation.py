@@ -539,12 +539,12 @@ class Presentation(object):
             
         self.add_a_new_page( new_page )
  
-    def add_text_box_to_last_slide(self, text_or_list='', text_font_color='',
+    def add_text_box_to_last_slide(self, text_or_list='', text_font_colors='',
         x=8.0, y=2.0):
         """
         Add a text box to the last added slide in the presentation
         """
-        add_text_box( self, text_or_list=text_or_list, text_font_color=text_font_color, 
+        add_text_box( self, text_or_list=text_or_list, text_font_colors=text_font_colors, 
                       x=x, y=y)
  
 if __name__ == '__main__':
@@ -563,7 +563,7 @@ if __name__ == '__main__':
                         subtitle_font_color='')
 
     C.add_text_box_to_last_slide( text_or_list='This is my Title\n and I like it.\nDo not know why\nBut I do.\nJust No telling\nWhat will be liked', 
-                text_font_color='dm', x=2.)
+                text_font_colors=["black", "#666",'r'], x=2.)
     
     C.add_titled_image( title='Tall Aspect Ratio', big_3rd_img_left=False,
                         image_file='./examples/planets.jpg', image_2_file='./examples/robot.gif',
