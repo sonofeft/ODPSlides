@@ -5,6 +5,8 @@ TODO
 
 * Place Text box onto chart
 
+* Add left, right, top, bottom justify for content.
+
 * Enable "table" element on table chart
 
 * Paste image onto chart ???

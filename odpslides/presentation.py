@@ -20,6 +20,7 @@ from odpslides.content_xml import ContentXML
 from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 from odpslides.image_size import get_image_size
 
+from odpslides.text_box import add_text_box
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -538,7 +539,13 @@ class Presentation(object):
             
         self.add_a_new_page( new_page )
  
-
+    def add_text_box_to_last_slide(self, text_or_list='', text_font_color='',
+        x=8.0, y=2.0):
+        """
+        Add a text box to the last added slide in the presentation
+        """
+        add_text_box( self, text_or_list=text_or_list, text_font_color=text_font_color, 
+                      x=x, y=y)
  
 if __name__ == '__main__':
     sL = ['1st','\t2nd','\t\t3rd','            4th','Normal < 1st but > 9','    Indent 2nd']
@@ -555,6 +562,8 @@ if __name__ == '__main__':
     C.add_title_chart( title='My Title', subtitle='My Subtitle', title_font_color='',
                         subtitle_font_color='')
 
+    C.add_text_box_to_last_slide( text_or_list='This is my Title\n and I like it.\nDo not know why\nBut I do.\nJust No telling\nWhat will be liked', 
+                text_font_color='dm', x=2.)
     
     C.add_titled_image( title='Tall Aspect Ratio', big_3rd_img_left=False,
                         image_file='./examples/planets.jpg', image_2_file='./examples/robot.gif',
