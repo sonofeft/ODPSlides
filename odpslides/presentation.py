@@ -356,7 +356,8 @@ class Presentation(object):
         
     def add_titled_outline_chart(self, title='My Title', title_font_color='',
                                      outline='', text_font_color='', 
-                                     pcent_stretch_center=0, pcent_stretch_content=0):
+                                     pcent_stretch_center=0, pcent_stretch_content=0,
+                                     pcent_move_content_right=None, pcent_move_content_up=None):
                                          
         """
         Create a slide with a title and a text outline below.
@@ -372,6 +373,9 @@ class Presentation(object):
         :keyword str text_font_color:  (default=='')
         :keyword int pcent_stretch_center:  (default==0)
         :keyword int pcent_stretch_content:  (default==0)
+        :keyword None pcent_move_content_right: Move content items left/right. (list of values from -100 to 100) (default==None)
+        :keyword None pcent_move_content_up: Move content items up/down. (list of values from -100 to 100) (default==None)
+        
         :return: None
         :rtype: None
         
@@ -379,7 +383,9 @@ class Presentation(object):
         inpD = {'title':title,  'outline':outline,
                 'title_font_color':title_font_color, 'text_font_color':text_font_color,
                 'pcent_stretch_center':pcent_stretch_center, 
-                'pcent_stretch_content':pcent_stretch_content}
+                'pcent_stretch_content':pcent_stretch_content,
+                'pcent_move_content_right':pcent_move_content_right, 
+                'pcent_move_content_up':pcent_move_content_up}
                     
         new_page = Page( self, disp_name="Title and Text", **inpD)
         self.add_a_new_page( new_page )
@@ -387,7 +393,8 @@ class Presentation(object):
     def add_titled_two_outline_chart(self, title='My Title', title_font_color='', 
                                          outline='', text_font_color='', 
                                          outline_2='', text_2_font_color='', 
-                                         pcent_stretch_center=0, pcent_stretch_content=0):
+                                         pcent_stretch_center=0, pcent_stretch_content=0,
+                                         pcent_move_content_right=None, pcent_move_content_up=None):
         """
         Create a slide with a title and two side-by-side text outlines.
         
@@ -404,6 +411,8 @@ class Presentation(object):
         :keyword str text_2_font_color:  (default=='')
         :keyword int pcent_stretch_center:  (default==0)
         :keyword int pcent_stretch_content:  (default==0)
+        :keyword None pcent_move_content_right: Move content items left/right. (list of values from -100 to 100) (default==None)
+        :keyword None pcent_move_content_up: Move content items up/down. (list of values from -100 to 100) (default==None)
         :return: None
         :rtype: None
         
@@ -412,7 +421,9 @@ class Presentation(object):
                 'title_font_color':title_font_color, 'text_font_color':text_font_color,
                 'outline_2':outline_2, 'text_2_font_color':text_2_font_color,
                 'pcent_stretch_center':pcent_stretch_center, 
-                'pcent_stretch_content':pcent_stretch_content}
+                'pcent_stretch_content':pcent_stretch_content,
+                'pcent_move_content_right':pcent_move_content_right, 
+                'pcent_move_content_up':pcent_move_content_up}
                     
         new_page = Page( self, disp_name="Title and 2 Column Text", **inpD)
         self.add_a_new_page( new_page )
@@ -420,7 +431,8 @@ class Presentation(object):
     def add_titled_image(self, title='My Picture', title_font_color='', 
                             image_file='', image_2_file='', image_3_file='', image_4_file='',
                             keep_aspect_ratio=True, big_3rd_img_left=True,
-                            pcent_stretch_center=0, pcent_stretch_content=0):
+                            pcent_stretch_center=0, pcent_stretch_content=0,
+                            pcent_move_content_right=None, pcent_move_content_up=None):
         """
         Create a slide with a title and 1 to 4 images.
         
@@ -434,6 +446,8 @@ class Presentation(object):
         :keyword bool big_3rd_img_left: For three images, if True, put big image on the left (default==True)
         :keyword int pcent_stretch_center: Percentage by which to enlarge the central, content area (default==0)
         :keyword int pcent_stretch_content: Percentage by which to enlarge image(s) (default==0)
+        :keyword None pcent_move_content_right: Move content items left/right. (list of values from -100 to 100) (default==None)
+        :keyword None pcent_move_content_up: Move content items up/down. (list of values from -100 to 100) (default==None)
         :return: None
         :rtype: None
         
@@ -442,7 +456,9 @@ class Presentation(object):
         inpD = {'title':title,  'image_name':image_name, 'title_font_color':title_font_color,
                 'keep_aspect_ratio':keep_aspect_ratio,
                 'pcent_stretch_center':pcent_stretch_center, 
-                    'pcent_stretch_content':pcent_stretch_content}
+                'pcent_stretch_content':pcent_stretch_content,
+                'pcent_move_content_right':pcent_move_content_right, 
+                'pcent_move_content_up':pcent_move_content_up}
         
         
         # do NOT do any checking of missing image inputs... just let the slide have blank entry
@@ -483,7 +499,8 @@ class Presentation(object):
                             title='My Picture', title_font_color='', 
                             outline='', text_font_color='', 
                             image_file='', keep_aspect_ratio=True,  image_2_file='',
-                            pcent_stretch_center=0, pcent_stretch_content=0):
+                            pcent_stretch_center=0, pcent_stretch_content=0,
+                            pcent_move_content_right=None, pcent_move_content_up=None):
         """
         Create a slide with a text outline and 1 or 2 image(s).
         
@@ -502,6 +519,8 @@ class Presentation(object):
         :keyword bool keep_aspect_ratio: If true then adjust slide to maintain original aspect ratio (default==True)
         :keyword int pcent_stretch_center: Percentage by which to enlarge the central, content area (default==0)
         :keyword int pcent_stretch_content: Percentage by which to enlarge image(s) (default==0)
+        :keyword None pcent_move_content_right: Move content items left/right. (list of values from -100 to 100) (default==None)
+        :keyword None pcent_move_content_up: Move content items up/down. (list of values from -100 to 100) (default==None)
         :return: None
         :rtype: None
         
@@ -511,7 +530,9 @@ class Presentation(object):
                 'outline':outline,   'text_font_color':text_font_color,
                 'image_name':image_name, 'keep_aspect_ratio':keep_aspect_ratio,
                 'pcent_stretch_center':pcent_stretch_center, 
-                'pcent_stretch_content':pcent_stretch_content}
+                'pcent_stretch_content':pcent_stretch_content,
+                'pcent_move_content_right':pcent_move_content_right, 
+                'pcent_move_content_up':pcent_move_content_up}
         
         if image_2_file:
             image2_name = self.get_next_image_name( image_2_file )
@@ -569,51 +590,52 @@ if __name__ == '__main__':
                         image_file='./examples/planets.jpg', image_2_file='./examples/robot.gif',
                         image_3_file='./examples/planets.jpg',               
                         title_font_color='dr', keep_aspect_ratio=True,
-                        pcent_stretch_center=1, pcent_stretch_content=100)
+                        pcent_stretch_center=1, pcent_stretch_content=90,
+                            pcent_move_content_right=[100, 100, -100], pcent_move_content_up=[100, 100, 100])
 
     C.add_titled_text_and_image( text_location='top',
                             title='Text on Top', title_font_color='',  image_2_file='./examples/robot.gif',
                             outline=['My Favorite Duck','    under fire'], text_font_color='', 
                             image_file='./examples/duck.gif', keep_aspect_ratio=True, 
-                            pcent_stretch_center=50, pcent_stretch_content=100)
+                            pcent_stretch_center=50, pcent_stretch_content=100, pcent_move_content_right=[100, 100, 100])
 
     C.add_titled_text_and_image( text_location='bottom',
                             title='Text on Bottom', title_font_color='',  image_2_file='./examples/robot.gif',
                             outline=['My Favorite Duck','    under fire'], text_font_color='', 
                             image_file='./examples/duck.gif', keep_aspect_ratio=True, 
-                            pcent_stretch_center=0, pcent_stretch_content=0)
-
-    C.add_titled_text_and_image( text_location='right',
-                            title='Text on Right', title_font_color='',  image_2_file='./examples/robot.gif',
-                            outline=['My Favorite Duck','    under fire'], text_font_color='', 
-                            image_file='./examples/duck.gif', keep_aspect_ratio=True, 
-                            pcent_stretch_center=80, pcent_stretch_content=80)
-
-    C.add_titled_text_and_image( text_location='left',
-                            title='Text on Left', title_font_color='',  image_2_file='./examples/robot.gif',
-                            outline=['My Favorite Duck','    under fire'], text_font_color='', 
-                            image_file='./examples/duck.gif', keep_aspect_ratio=True, 
-                            pcent_stretch_center=20, pcent_stretch_content=20)
-    
-    
-    
-    C.add_titled_outline_chart( title='My Second Title', outline=sL, 
-                                title_font_color='blue', text_font_color='green',
+                            pcent_stretch_center=0, pcent_stretch_content=0, pcent_move_content_right=[-100, -100, 100])
+    if 0:
+        C.add_titled_text_and_image( text_location='right',
+                                title='Text on Right', title_font_color='',  image_2_file='./examples/robot.gif',
+                                outline=['My Favorite Duck','    under fire'], text_font_color='', 
+                                image_file='./examples/duck.gif', keep_aspect_ratio=True, 
                                 pcent_stretch_center=80, pcent_stretch_content=80)
-    
-    C.add_titled_two_outline_chart(title='2 Columns of Text', title_font_color='', 
-                                   outline=sL, text_font_color='r', 
-                                   outline_2=s2L, text_2_font_color='g', 
-                                   pcent_stretch_center=100, pcent_stretch_content=100)
-    
-    C.add_titled_image( title='Tall Aspect Ratio', 
-                        image_file='./examples/planets.jpg', image_2_file='./examples/robot.gif',
-                        title_font_color='dr', keep_aspect_ratio=True,
-                        pcent_stretch_center=100, pcent_stretch_content=100)
-    C.add_titled_image( title='My 2nd Picture', image_file='./examples/ray_trace.gif', 
-                        title_font_color='g',
-                        pcent_stretch_center=80, pcent_stretch_content=80)
-    C.add_titled_image( title='My Third Picture', image_file='./examples/Pressure_1T_Spin.gif',
+
+        C.add_titled_text_and_image( text_location='left',
+                                title='Text on Left', title_font_color='',  image_2_file='./examples/robot.gif',
+                                outline=['My Favorite Duck','    under fire'], text_font_color='', 
+                                image_file='./examples/duck.gif', keep_aspect_ratio=True, 
+                                pcent_stretch_center=20, pcent_stretch_content=20)
+        
+        
+        
+        C.add_titled_outline_chart( title='My Second Title', outline=sL, 
+                                    title_font_color='blue', text_font_color='green',
+                                    pcent_stretch_center=80, pcent_stretch_content=80)
+        
+        C.add_titled_two_outline_chart(title='2 Columns of Text', title_font_color='', 
+                                       outline=sL, text_font_color='r', 
+                                       outline_2=s2L, text_2_font_color='g', 
+                                       pcent_stretch_center=100, pcent_stretch_content=100)
+        
+        C.add_titled_image( title='Tall Aspect Ratio', 
+                            image_file='./examples/planets.jpg', image_2_file='./examples/robot.gif',
+                            title_font_color='dr', keep_aspect_ratio=True,
+                            pcent_stretch_center=100, pcent_stretch_content=100)
+        C.add_titled_image( title='My 2nd Picture', image_file='./examples/ray_trace.gif', 
+                            title_font_color='g',
+                            pcent_stretch_center=80, pcent_stretch_content=80)
+        C.add_titled_image( title='My Third Picture', image_file='./examples/Pressure_1T_Spin.gif',
                         pcent_stretch_center=80, pcent_stretch_content=80)
     
     C.save( filename='my_ppt.odp', launch=1 )

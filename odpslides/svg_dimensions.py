@@ -144,7 +144,7 @@ def adjust_draw_page_internal_dims( pageObj, pcent_stretch_center=100, pcent_str
             # horizontal and vertical lines that exit out the edges of the page
             horz_lineL = []
             vert_lineL = []
-            for frac in [0., .25,  .5, .75,  1.0]:
+            for frac in [0.0, .25,  .5, .75,  1.0]:
                 yval = y0 + frac*(y1-y0)
                 horz_lineL.append( (Point(x0-PAGE_WIDTH, yval), Point(x0+PAGE_WIDTH,yval)) )
                 
@@ -154,13 +154,13 @@ def adjust_draw_page_internal_dims( pageObj, pcent_stretch_center=100, pcent_str
             
             for i in range( len(content_dimL) ):
                 if i == index:
-                    continue
+                    continue # don't check for intersect with itself
                 
                 # create bounding segments for each other content
                 x0_i, y0_i, x1_i, y1_i = content_boxL[i]
                 h_i_segL = []
                 v_i_segL = []
-                for frac in [0., .25,  .5, .75,  1.0]:
+                for frac in [0.0, .25,  .5, .75,  1.0]:
                     yval = y0_i + frac*(y1_i-y0_i)
                     h_i_segL.append( (Point(x0_i,yval), Point(x1_i,yval)) )
                     
@@ -174,7 +174,7 @@ def adjust_draw_page_internal_dims( pageObj, pcent_stretch_center=100, pcent_str
                             #print('Intersecting y=',h[0].y)
                             #print('        with',vi[0],vi[1])
                             
-                            if vi[0].x < x0:
+                            if vi[0].x < x0:# if intersect is to the left of index
                                 xmn = max(xmn, x1_i + (x0 - x1_i)/2.0)
                             elif vi[0].x > x1:
                                 xmx = min(xmx, x1 + (x0_i - x1)/2.0)
@@ -184,7 +184,7 @@ def adjust_draw_page_internal_dims( pageObj, pcent_stretch_center=100, pcent_str
                     for hi in h_i_segL:
                         if segment_intersect(v, hi):
                             
-                            if hi[0].y < y0:
+                            if hi[0].y < y0:# if intersect is above index
                                 ymn = max(ymn, y1_i + (y0 - y1_i)/2.0)
                             elif hi[0].y > y1:
                                 ymx = min(ymx, y1 + (y0_i - y1)/2.0)

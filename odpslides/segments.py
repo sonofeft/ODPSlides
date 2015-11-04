@@ -61,7 +61,17 @@ class Point(object):
         """Returns the point's Numpy point representation"""
         return [self.x, self.y]
    
-
+class BBox( object ):
+    
+    def __init__(self, left_x, right_x, top_y, bottom_y):
+        
+        self.left_x   = left_x
+        self.right_x  = right_x
+        self.top_y    = top_y
+        self.bottom_y = bottom_y
+        
+    def __str__(self):
+        return 'BBox(%s, %s, %s, %s)'%(self.left_x, self.right_x, self.top_y, self.bottom_y)
 
 if __name__=="__main__":
     

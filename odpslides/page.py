@@ -11,6 +11,9 @@ from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 from odpslides.color_utils import getValidHexStr
 from odpslides.template_xml_file import TemplateXML_File
 from odpslides.svg_dimensions import force_svg_dim_to_float, adjust_draw_page_internal_dims
+from odpslides.blockade import Blockade
+from odpslides.segments import segment_intersect, Point, BBox
+from odpslides.frame_dimensions import PAGE_WIDTH, PAGE_HEIGHT, FOOTER_HEIGHT, FrameDim, force_svg_dim_to_float
 
 import odpslides.solidbg.content_auto_styles
 import odpslides.solidbg.content_body_presentation
@@ -46,7 +49,6 @@ PRESENTATION_BG_VISIBLE_ATTR = force_to_tag( 'presentation:background-visible' )
 PRESENTATION_BG_OBJ_VISIBLE_ATTR = force_to_tag('presentation:background-objects-visible' )
 
 STYLE_DRAWING_PAGE_PROPS_TAG = force_to_tag( 'style:drawing-page-properties' )
-
 
 class Page(object):
     """
@@ -108,14 +110,42 @@ class Page(object):
         self.draw_frameD = {} # index=frame_class (e.g. "title"), value = draw:frame element list
         self.master_frameD = {} # index=frame_class (e.g. "title"), value = draw:frame element list
         
+        # Make initial values of Blockade objects (title, footer, date and page number change later)
+        self.left_blockade   = Blockade( Point(0.,         0.),  Point(0.,         PAGE_HEIGHT) )
+        self.right_blockade  = Blockade( Point(PAGE_WIDTH, 0.),  Point(PAGE_WIDTH, PAGE_HEIGHT) )
+        self.top_blockade    = Blockade( Point(0.,         0.),  Point(PAGE_WIDTH, 0.) )
+        
+        if presObj.show_page_numbers or presObj.show_date or presObj.footer:
+            self.bottom_blockade = Blockade( Point(0.,FOOTER_HEIGHT),  Point(PAGE_WIDTH, FOOTER_HEIGHT) )
+        else:
+            self.bottom_blockade = Blockade( Point(0.,PAGE_HEIGHT),  Point(PAGE_WIDTH, PAGE_HEIGHT) )
+        
+        # organize frames by frame:class and modify initial Blockade objects
         for draw_frame in self.draw_frameL:
             frame_class = draw_frame.get( PRESENTATION_CLASS_ATTR, '' )
             #print('frame_class:', frame_class)
             if frame_class:
                 self.draw_frameD[frame_class] = self.draw_frameD.get(frame_class, [])
                 self.draw_frameD[frame_class].append( draw_frame )
-        
-        
+
+            # Modify blockade values based on title, footer, date and page number
+            #if frame_class in ['date-time', 'footer', 'page-number', 'title']:
+            #    svg_y = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:y'), '' ) )
+            #    svg_h = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:height'), '' ) )
+            #    
+            #    if frame_class in ['date-time', 'footer', 'page-number']:
+            #        self.bottom_blockade.set_new_y_value( svg_y )
+            #    elif frame_class == 'title':
+            #        self.top_blockade.set_new_y_value( svg_y + svg_h )
+
+        # Build FrameDim objects for each draw:frame object
+        self.frame_dimL = []
+        for draw_frame in self.draw_frameL:
+            self.frame_dimL.append( FrameDim(self, draw_frame) )
+
+        for frame_dim in self.frame_dimL:
+            frame_dim.calc_local_blockades()
+
         for master_frame in self.master_frameL:
             frame_class = master_frame.get( PRESENTATION_CLASS_ATTR, '' )
             #print('master frame_class:', frame_class)
@@ -341,6 +371,7 @@ class Page(object):
                 elem.set( force_to_tag('xlink:href'), 'media/%s'%image_name )
                 
                 if keep_aspect_ratio:
+                    # Gather info to set dimensions
                     svg_x = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:x'), '' ) )
                     svg_y = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:y'), '' ) )
                     svg_w = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:width'), '' ) )
