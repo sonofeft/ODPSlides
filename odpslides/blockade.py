@@ -10,6 +10,7 @@ from copy import deepcopy
 from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 from odpslides.segments import segment_intersect, Point
 
+EPSILON = 0.01 # threshold for testing Blockade equality
 
 class Blockade(object):
     """
@@ -25,7 +26,7 @@ class Blockade(object):
         
         dx = abs(p0.x - p1.x)
         dy = abs(p0.y - p1.y)
-        if dx > dy:
+        if dx > dy: # ...VERY LOOSE on the definition of horizontal and vertical
             self.direction = 'horiz'
             y = (p0.y + p1.y) / 2.0
             p0 = Point( p0.x, y)
@@ -40,6 +41,24 @@ class Blockade(object):
         self.p1 = p1
         
         self.segment = (p0, p1) # segment defined by end points
+    
+    def desc(self):
+        if self.direction=='horiz':
+            return 'H(%.2f)'%self.p0.y
+        else:
+            return 'V(%.2f)'%self.p0.x
+    
+    def __ne__(self, other):
+        return not self == other
+    
+    def __eq__(self, other):
+        if (self.direction=='horiz') and (other.direction=='horiz') and abs(self.p0.y-other.p0.y)<=EPSILON:
+            return True
+            
+        if (self.direction=='vert') and (other.direction=='vert') and abs(self.p0.x-other.p0.x)<=EPSILON:
+            return True
+            
+        return False
         
     def set_new_x_value(self, x):
         self.p0.x = x

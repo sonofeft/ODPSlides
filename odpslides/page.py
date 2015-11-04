@@ -145,6 +145,7 @@ class Page(object):
 
         for frame_dim in self.frame_dimL:
             frame_dim.calc_local_blockades()
+        self.build_dict_of_unique_blockades()
 
         for master_frame in self.master_frameL:
             frame_class = master_frame.get( PRESENTATION_CLASS_ATTR, '' )
@@ -226,8 +227,39 @@ class Page(object):
             self.set_image_href( frame_class='graphic', image_name=inpD['image_4_file'], 
                                  num_image=3, keep_aspect_ratio=keep_aspect_ratio)
             
-    
-    
+    def build_dict_of_unique_blockades(self):
+        """
+        Reduce the number of Blockade objects to just the unique values.
+        Have all frames point to just those, so when they change, they affect all appropriate frames.
+        """
+        self.unique_blockadeD = {} # index=B.desc,  value=Blockade object
+        for b in [self.left_blockade, self.right_blockade, self.top_blockade, self.bottom_blockade]:
+            self.unique_blockadeD[ b.desc() ] = b
+        
+        for fd in self.frame_dimL:
+            for fb in [fd.left_blockade, fd.right_blockade, fd.top_blockade, fd.bottom_blockade]:
+                self.unique_blockadeD[ fb.desc() ] = fb
+                
+        print('Unique Blockade Objects =',len(self.unique_blockadeD), sorted( self.unique_blockadeD.keys() ))
+        
+        # Now set all equal Blockade objects to the same Blockade object
+        for fd in self.frame_dimL:
+            fd.left_blockade   = self.unique_blockadeD[ fd.left_blockade.desc() ]
+            fd.right_blockade  = self.unique_blockadeD[ fd.right_blockade.desc() ]
+            fd.top_blockade    = self.unique_blockadeD[ fd.top_blockade.desc() ]
+            fd.bottom_blockade = self.unique_blockadeD[ fd.bottom_blockade.desc() ]
+            
+        # Need a correction for 3 image charts
+        if self.disp_name in ["Title, Content, and 2 Content", "Title, 2 Content and Content"]:
+            for fd in self.frame_dimL:
+                if fd.top_blockade.desc() == 'H(2.11)':
+                    fd.top_blockade = self.unique_blockadeD[ 'H(1.65)' ]
+                if fd.bottom_blockade.desc() == 'H(2.11)':
+                    fd.bottom_blockade = self.unique_blockadeD[ 'H(1.65)' ]
+                    
+            del self.unique_blockadeD[ 'H(2.11)' ]
+            
+        
     
     def set_page_number(self, ipage):
         
@@ -425,6 +457,17 @@ class Page(object):
 
             # Need to tell app that things have changed from master
             draw_frame.set( force_to_tag('presentation:user-transformed'),"true" )
+            
+            # ----------- need to rebuild FrameDim and Blockade objects -------------
+            # Build FrameDim objects for each draw:frame object
+            self.frame_dimL = []
+            for draw_frame in self.draw_frameL:
+                self.frame_dimL.append( FrameDim(self, draw_frame) )
+            
+            # Need to recalc Blockade objects
+            for frame_dim in self.frame_dimL:
+                frame_dim.calc_local_blockades()
+            self.build_dict_of_unique_blockades()
 
         else:
             print('...ERROR... could NOT swap objects and outline svg:y values')
