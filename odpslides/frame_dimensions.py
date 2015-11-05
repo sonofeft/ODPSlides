@@ -56,7 +56,128 @@ class FrameDim(object):
         self.bbox = BBox( svg_x, svg_x + svg_w, svg_y, svg_y + svg_h )
         
         self.make_side_segments() # for current state of BBox
+    
+    def move_item_up(self, pcent ):
         
+        if pcent<0.0:# move down if < 0.0
+            dh_down = (self.bottom_blockade.p0.y - self.bbox.bottom_y ) * abs(pcent)/100.0
+            self.bbox.top_y += dh_down
+            self.bbox.bottom_y += dh_down
+        else:
+            dh_up = (self.bbox.top_y - self.top_blockade.p0.y) * abs(pcent)/100.0
+            self.bbox.top_y -= dh_up
+            self.bbox.bottom_y -= dh_up
+            
+        self.make_side_segments()
+        self.set_frame_svg_dimensions()
+    
+    
+    def move_item_right(self, pcent ):
+        
+        if pcent<0.0:# move left if < 0.0
+            dh_left = (self.bbox.left_x - self.left_blockade.p0.x) * abs(pcent)/100.0
+            self.bbox.left_x -= dh_left
+            self.bbox.right_x -= dh_left
+        else:
+            dh_right =(self.right_blockade.p0.x - self.bbox.right_x ) * abs(pcent)/100.0
+            self.bbox.left_x += dh_right
+            self.bbox.right_x += dh_right
+            
+        self.make_side_segments()
+        self.set_frame_svg_dimensions()
+    
+    def expand_content(self, pcent):
+        # get aspect ratio of up/down
+        dh_ud_cont = (self.bbox.bottom_y - self.bbox.top_y)
+        dh_ud_bloc = (self.bottom_blockade.p0.y - self.top_blockade.p0.y )
+        rat_lr = dh_ud_bloc / dh_ud_cont
+        
+        # get aspect ratio of left/right
+        dh_lr_cont = (self.bbox.right_x - self.bbox.left_x)
+        dh_lr_bloc = (self.right_blockade.p0.x - self.left_blockade.p0.x)
+        rat_ud = dh_lr_bloc / dh_lr_cont
+        
+        # Use whichever direction limits
+        if rat_ud < rat_lr:
+            new_ratio =  (rat_ud - 1.0)*pcent/100.0
+        else:
+            new_ratio =  (rat_lr - 1.0)*pcent/100.0
+            
+        dh_top = (self.bbox.top_y - self.top_blockade.p0.y) * new_ratio
+        dh_bot = (self.bottom_blockade.p0.y - self.bbox.bottom_y ) * new_ratio
+        
+        dh_left = (self.bbox.left_x - self.left_blockade.p0.x) * new_ratio
+        dh_right =(self.right_blockade.p0.x - self.bbox.right_x ) * new_ratio
+        
+        
+        self.bbox.top_y -= dh_top
+        self.bbox.bottom_y += dh_bot
+        
+        self.bbox.left_x -= dh_left
+        self.bbox.right_x += dh_right
+            
+        self.make_side_segments()
+        self.set_frame_svg_dimensions()
+        
+        
+    
+    def squeeze_bottom_up(self, pcent):
+        
+        dh_top = (self.bbox.top_y - self.top_blockade.p0.y) * pcent/100.0
+        dh_bot = (self.bottom_blockade.p0.y - self.bbox.bottom_y ) * pcent/100.0
+        
+        self.bbox.top_y -= dh_top
+        self.bbox.bottom_y -= dh_top
+        self.bottom_blockade.set_new_y_value( self.bottom_blockade.p0.y - dh_bot - dh_top )
+            
+        self.make_side_segments()
+        self.set_frame_svg_dimensions()
+    
+    def get_width(self):
+        return self.bbox.right_x - self.bbox.left_x
+        
+    def get_height(self):
+        return self.bbox.bottom_y - self.bbox.top_y
+    
+    def set_aspect_ratio(self, w, h):
+        
+        svg_x = self.bbox.left_x
+        svg_y = self.bbox.top_y
+        svg_w = self.get_width()
+        svg_h = self.get_height()
+        
+        if h/w > svg_h/svg_w:
+            # Leave svg_h and svg_y alone, change svg_w and svg_x
+            svg_w_old = svg_w
+            svg_w = svg_h * w/h
+            svg_x = svg_x + (svg_w_old - svg_w) / 2.0
+            self.bbox.left_x = svg_x
+            self.bbox.right_x = svg_x + svg_w
+        else:
+            # Leave svg_w and svg_x alone, change svg_h and svg_y
+            svg_h_old = svg_h
+            svg_h = svg_w * h/w
+            svg_y = svg_y + (svg_h_old - svg_h) / 2.0
+            self.bbox.top_y = svg_y
+            self.bbox.bottom_y = svg_y + svg_h
+            
+        self.make_side_segments()
+        self.set_frame_svg_dimensions()
+    
+    def set_frame_svg_dimensions(self):
+        
+        svg_x = self.bbox.left_x
+        svg_w = self.bbox.right_x - self.bbox.left_x
+        svg_y = self.bbox.top_y
+        svg_h = self.bbox.bottom_y - self.bbox.top_y
+        
+        self.my_draw_frame.set( force_to_tag('svg:x'), '%gin'%svg_x )
+        self.my_draw_frame.set( force_to_tag('svg:width'), '%gin'%svg_w )
+        self.my_draw_frame.set( force_to_tag('svg:y'), '%gin'%svg_y )
+        self.my_draw_frame.set( force_to_tag('svg:height'), '%gin'%svg_h )
+        
+        self.my_draw_frame.set( force_to_tag('presentation:user-transformed'),"true" )
+    
     def make_side_segments(self):
         """
         Use current state of bbox to make side segments

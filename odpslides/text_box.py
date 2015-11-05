@@ -11,7 +11,6 @@ import re
 from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 from odpslides.color_utils import getValidHexStr
 from odpslides.template_xml_file import TemplateXML_File
-from odpslides.svg_dimensions import force_svg_dim_to_float, adjust_draw_page_internal_dims
 
 
 style_re = re.compile( '\"a[0-9]+\"' )

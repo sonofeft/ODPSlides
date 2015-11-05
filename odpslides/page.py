@@ -10,7 +10,7 @@ from copy import deepcopy
 from odpslides.namespace import XMLNS_STR, force_to_short, force_to_tag
 from odpslides.color_utils import getValidHexStr
 from odpslides.template_xml_file import TemplateXML_File
-from odpslides.svg_dimensions import force_svg_dim_to_float, adjust_draw_page_internal_dims
+
 from odpslides.blockade import Blockade
 from odpslides.segments import segment_intersect, Point, BBox
 from odpslides.frame_dimensions import PAGE_WIDTH, PAGE_HEIGHT, FOOTER_HEIGHT, FrameDim, force_svg_dim_to_float
@@ -128,20 +128,15 @@ class Page(object):
                 self.draw_frameD[frame_class] = self.draw_frameD.get(frame_class, [])
                 self.draw_frameD[frame_class].append( draw_frame )
 
-            # Modify blockade values based on title, footer, date and page number
-            #if frame_class in ['date-time', 'footer', 'page-number', 'title']:
-            #    svg_y = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:y'), '' ) )
-            #    svg_h = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:height'), '' ) )
-            #    
-            #    if frame_class in ['date-time', 'footer', 'page-number']:
-            #        self.bottom_blockade.set_new_y_value( svg_y )
-            #    elif frame_class == 'title':
-            #        self.top_blockade.set_new_y_value( svg_y + svg_h )
+        if inpD.get('swap_svg_y_of_objects_and_outline',False):
+            self.swap_svg_y_of_objects_and_outline()
 
         # Build FrameDim objects for each draw:frame object
+        self.frame_dimD = {} # index=draw_frame object, value = FrameDim object
         self.frame_dimL = []
         for draw_frame in self.draw_frameL:
             self.frame_dimL.append( FrameDim(self, draw_frame) )
+            self.frame_dimD[ draw_frame ] = self.frame_dimL[-1]
 
         for frame_dim in self.frame_dimL:
             frame_dim.calc_local_blockades()
@@ -167,12 +162,6 @@ class Page(object):
                                 self.styles_auto_styles.styles_style_name_lookupD[key]
         
         self.normalize_content_styles()
-        
-        # May adjust size of internal objects
-        pcent_stretch_center = inpD.get('pcent_stretch_center', 0)
-        pcent_stretch_content = inpD.get('pcent_stretch_content', 0)
-        adjust_draw_page_internal_dims( self, pcent_stretch_center=pcent_stretch_center, 
-                                        pcent_stretch_content=pcent_stretch_content )
 
 
         #print( self.draw_frameD )
@@ -226,7 +215,36 @@ class Page(object):
             
             self.set_image_href( frame_class='graphic', image_name=inpD['image_4_file'], 
                                  num_image=3, keep_aspect_ratio=keep_aspect_ratio)
+
+        
+        # May adjust size of internal objects
+        pcent_stretch_center = inpD.get('pcent_stretch_center', 0)
+        pcent_stretch_content = inpD.get('pcent_stretch_content', 0)
+        pcent_move_content_right = inpD.get('pcent_move_content_right',[])
+        pcent_move_content_up = inpD.get('pcent_move_content_up', [])
+        
+        if pcent_stretch_center > 0:
+            titleL = self.draw_frameD.get('title',[])
+            if titleL:
+                draw_frame = titleL[0]
+                frame_dim = self.frame_dimD[ draw_frame ]
+                frame_dim.squeeze_bottom_up( pcent_stretch_center )
+                
+        if pcent_stretch_content > 0:
+            for frame_dim in self.frame_dimL:
+                if frame_dim.my_frame_class not in ['date-time', 'footer', 'page-number', 'title']:
+                    frame_dim.expand_content( pcent_stretch_content )
+                    
+        if pcent_move_content_right:
+            for pcent, frame_dim in zip(pcent_move_content_right, self.frame_dimL):
+                frame_dim.move_item_right( pcent )
             
+        if pcent_move_content_up:
+            for pcent, frame_dim in zip(pcent_move_content_up, self.frame_dimL):
+                frame_dim.move_item_up( pcent )
+        
+
+
     def build_dict_of_unique_blockades(self):
         """
         Reduce the number of Blockade objects to just the unique values.
@@ -240,7 +258,7 @@ class Page(object):
             for fb in [fd.left_blockade, fd.right_blockade, fd.top_blockade, fd.bottom_blockade]:
                 self.unique_blockadeD[ fb.desc() ] = fb
                 
-        print('Unique Blockade Objects =',len(self.unique_blockadeD), sorted( self.unique_blockadeD.keys() ))
+        #print('Unique Blockade Objects =',len(self.unique_blockadeD), sorted( self.unique_blockadeD.keys() ))
         
         # Now set all equal Blockade objects to the same Blockade object
         for fd in self.frame_dimL:
@@ -397,42 +415,21 @@ class Page(object):
                 return
             
             draw_frame = self.draw_frameD[frame_class][num_image]
+            frame_dim = self.frame_dimD[ draw_frame ]
                     
             elem = draw_frame.find( DRAW_IMAGE_TAG )
             if elem is not None:
                 elem.set( force_to_tag('xlink:href'), 'media/%s'%image_name )
                 
                 if keep_aspect_ratio:
-                    # Gather info to set dimensions
-                    svg_x = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:x'), '' ) )
-                    svg_y = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:y'), '' ) )
-                    svg_w = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:width'), '' ) )
-                    svg_h = force_svg_dim_to_float( draw_frame.get( force_to_tag('svg:height'), '' ) )
-                    #print('%s: x=%s, y=%s, w=%s, h=%s'%(image_name, svg_x, svg_y, svg_w, svg_h))
                     w_img,h_img = self.presObj.image_sizeD[ image_name ]
                     
-                    # only continue if dimenstions are available
+                    # only continue if dimensions are available
                     if w_img and h_img:
                         w = float(w_img)
                         h = float(h_img)
+                        frame_dim.set_aspect_ratio(w, h)
                         
-                        if h/w > svg_h/svg_w:
-                            # Leave svg_h and svg_y alone, change svg_w and svg_x
-                            svg_w_old = svg_w
-                            svg_w = svg_h * w/h
-                            svg_x = svg_x + (svg_w_old - svg_w) / 2.0
-                            draw_frame.set( force_to_tag('svg:width'), '%sin'%svg_w )
-                            draw_frame.set( force_to_tag('svg:x'), '%sin'%svg_x )
-                        else:
-                            # Leave svg_w and svg_x alone, change svg_h and svg_y
-                            svg_h_old = svg_h
-                            svg_h = svg_w * h/w
-                            svg_y = svg_y + (svg_h_old - svg_h) / 2.0
-                            draw_frame.set( force_to_tag('svg:height'), '%sin'%svg_h )
-                            draw_frame.set( force_to_tag('svg:y'), '%sin'%svg_y )
-                        
-                        # Need to tell app that things have changed from master
-                        draw_frame.set( force_to_tag('presentation:user-transformed'),"true" )
     
     def swap_svg_y_of_objects_and_outline(self):
         """
@@ -460,14 +457,14 @@ class Page(object):
             
             # ----------- need to rebuild FrameDim and Blockade objects -------------
             # Build FrameDim objects for each draw:frame object
-            self.frame_dimL = []
-            for draw_frame in self.draw_frameL:
-                self.frame_dimL.append( FrameDim(self, draw_frame) )
+            #self.frame_dimL = []
+            #for draw_frame in self.draw_frameL:
+            #    self.frame_dimL.append( FrameDim(self, draw_frame) )
             
             # Need to recalc Blockade objects
-            for frame_dim in self.frame_dimL:
-                frame_dim.calc_local_blockades()
-            self.build_dict_of_unique_blockades()
+            #for frame_dim in self.frame_dimL:
+            #    frame_dim.calc_local_blockades()
+            #self.build_dict_of_unique_blockades()
 
         else:
             print('...ERROR... could NOT swap objects and outline svg:y values')

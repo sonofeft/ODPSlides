@@ -48,9 +48,6 @@ class Blockade(object):
         else:
             return 'V(%.2f)'%self.p0.x
     
-    def __ne__(self, other):
-        return not self == other
-    
     def __eq__(self, other):
         if (self.direction=='horiz') and (other.direction=='horiz') and abs(self.p0.y-other.p0.y)<=EPSILON:
             return True

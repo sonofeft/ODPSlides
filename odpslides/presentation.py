@@ -329,7 +329,9 @@ class Presentation(object):
         
 
     def add_title_chart( self, title='My Title', subtitle='My Subtitle', title_font_color='',
-                            subtitle_font_color='',background_color=""):
+                            subtitle_font_color='',background_color="", 
+                            pcent_stretch_center=0, pcent_stretch_content=0,
+                            pcent_move_content_right=None, pcent_move_content_up=None):
         
         """
         Create a title slide with subtitle.
@@ -349,7 +351,11 @@ class Presentation(object):
             background_color = self.background_color
         
         inpD = {'title':title, 'subtitle':subtitle, 'background_color':background_color,
-                'title_font_color':title_font_color, 'subtitle_font_color':subtitle_font_color}
+                'title_font_color':title_font_color, 'subtitle_font_color':subtitle_font_color,
+                'pcent_stretch_center':pcent_stretch_center, 
+                'pcent_stretch_content':pcent_stretch_content,
+                'pcent_move_content_right':pcent_move_content_right, 
+                'pcent_move_content_up':pcent_move_content_up}
                     
         new_page = Page( self, disp_name="Title Slide", **inpD)
         self.add_a_new_page( new_page )
@@ -541,8 +547,9 @@ class Presentation(object):
             if text_location == 'left':
                 new_page = Page( self, disp_name= "Title, Text, and 2 Content", **inpD)
             elif text_location == 'top':
+                inpD['swap_svg_y_of_objects_and_outline'] = True
                 new_page = Page( self, disp_name= "Title and 2 Content over Text", **inpD)
-                new_page.swap_svg_y_of_objects_and_outline() # There is no layout for this, so fake it
+                #new_page.swap_svg_y_of_objects_and_outline() # There is no layout for this, so fake it
             elif text_location == 'bottom':
                 new_page = Page( self, disp_name= "Title and 2 Content over Text", **inpD)
             elif text_location == 'right':
