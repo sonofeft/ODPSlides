@@ -1,12 +1,12 @@
 import matplotlib.pyplot as plt
 from odpslides.presentation import Presentation
 
-H = 7.5
-PC_CENTER = 80
+
+PC_CENTER = 0
 PC_CONTENT = 0
-PC_RIGHT = [100,100,100,100,100]
+PC_RIGHT = None # [100,100,100,100,100]
 #PC_RIGHT = [-100,-100,-100,-100,-100]
-PC_UP = [100,100,100,100,100]
+PC_UP = None # [100,100,100,100,100]
 #PC_UP = [-100,-100,-100,-100,-100]
 
 P = Presentation(background_color='#ccffcc',
@@ -143,8 +143,10 @@ for ipage,page in enumerate(P.new_content_pageL):
         
 
         
-        plt.ylim(8.0, 0.0)
-        plt.xlim(0.0, 10.)
+    plt.ylim(8.0, 0.0)
+    plt.xlim(0.0, 10.)
+    
+    #plt.savefig( 'Page%i_%s.png'%(ipage+1, page.disp_name.replace(' ','_')) )
         
         
     print '-'*77
